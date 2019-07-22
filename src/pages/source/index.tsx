@@ -31,27 +31,30 @@ export default class Source extends Component {
     const { current } = this.state;
     return (
       <View className='source'>
-        <Swiper
-          indicator-dots={false}
-          autoplay={true}
-          circular={true}
-          onChange={this.changeSwiperIndex}>
-          <SwiperItem>
-            <Image className="swiper-image" mode={'scaleToFill'} src={'https://img.zhichiwangluo.com/zcimgdir/album/file_5b6d529765dba.png'}></Image>
-          </SwiperItem>
-          <SwiperItem>
-            <Image className="swiper-image" mode={'scaleToFill'} src={'https://img.zhichiwangluo.com/zcimgdir/album/file_5b6d654d93e73.png'}></Image>
-          </SwiperItem>
-          <SwiperItem>
-            <Image className="swiper-image" mode={'scaleToFill'} src={'https://img.zhichiwangluo.com/zcimgdir/album/file_5b695409bab59.jpg'}></Image>
-          </SwiperItem>
-        </Swiper>
-        <View className="swiper-dots">
-          {['', '', ''].map((item, index) => {
-            return <View className={classnames('swiper-dot', { 'swiper-active': index === current })}></View>
-          })}
+        <View className="swiper-wap">
+          <Swiper
+            indicator-dots={false}
+            autoplay={true}
+            circular={true}
+            onChange={this.changeSwiperIndex}>
+            <SwiperItem>
+              <Image className="swiper-image" mode={'scaleToFill'} src={'https://img.zhichiwangluo.com/zcimgdir/album/file_5b6d529765dba.png'}></Image>
+            </SwiperItem>
+            <SwiperItem>
+              <Image className="swiper-image" mode={'scaleToFill'} src={'https://img.zhichiwangluo.com/zcimgdir/album/file_5b6d654d93e73.png'}></Image>
+            </SwiperItem>
+            <SwiperItem>
+              <Image className="swiper-image" mode={'scaleToFill'} src={'https://img.zhichiwangluo.com/zcimgdir/album/file_5b695409bab59.jpg'}></Image>
+            </SwiperItem>
+          </Swiper>
+          <View className="swiper-dots">
+            {['', '', ''].map((item, index) => {
+              return <View className={classnames('swiper-dot', { 'swiper-active': index === current })}></View>
+            })}
+          </View>
         </View>
 
+        
       </View>
     )
   }
