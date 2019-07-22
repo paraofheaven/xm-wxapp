@@ -1,0 +1,28 @@
+
+.source .swiper-image {
+  width: 100%;
+  height: 340rpx;
+}
+.source .swiper-dots {
+  position: absolute;
+  top: 310rpx;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+.source .swiper-dots .swiper-dot {
+  display: inline-block;
+  margin: 0 8rpx;
+  width: 20rpx;
+  height: 20rpx;
+  background: #bababa;
+  -webkit-transition: background 0.5s;
+  -o-transition: background 0.5s;
+  transition: background 0.5s;
+  border-radius: 100%;
+}
+.source .swiper-dots .swiper-dot.swiper-active {
+  background: #fff;
+}

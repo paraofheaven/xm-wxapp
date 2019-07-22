@@ -1,0 +1,29 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="contact">
+        <image mode="widthFix" class="contact-image" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b6be3707fcd1.png"></image>
+        <view class="contact-block"><text class="cb-word1">地址  |  Address</text>
+            <view class="cb-word2">广东省深圳市南山区芒果网大厦</view>
+            <view class="sb-icon icon-address"></view>
+        </view>
+        <view class="contact-block"><text class="cb-word1">电话  |  Telephone</text>
+            <view class="cb-word2">13860677744</view>
+            <view class="sb-icon icon-phone"></view>
+        </view>
+        <view class="contact-block"><text class="cb-word1">邮箱  |  Email</text>
+            <view class="cb-word2">3434@163.com</view>
+            <view class="sb-icon icon-phone"></view>
+        </view>
+        <view class="contact-block">
+            <view class="cb-word3">加入我们</view>
+            <view class="sb-icon icon-join-us"></view>
+        </view>
+        <view class="contact-block">
+            <view class="cb-word3">客服 | Serve</view>
+            <view class="sb-icon icon-serve"></view>
+        </view>
+        <view class="contact-block">
+            <view class="cb-word3">常见问题</view>
+            <view class="sb-icon icon-question"></view>
+        </view>
+    </view>
+</block>

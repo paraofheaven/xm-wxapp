@@ -1,0 +1,18 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="source">
+        <swiper indicator-dots="{{false}}" autoplay="{{true}}" circular="{{true}}" bindchange="changeSwiperIndex">
+            <swiper-item>
+                <image class="swiper-image" mode="scaleToFill" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b6d529765dba.png"></image>
+            </swiper-item>
+            <swiper-item>
+                <image class="swiper-image" mode="scaleToFill" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b6d654d93e73.png"></image>
+            </swiper-item>
+            <swiper-item>
+                <image class="swiper-image" mode="scaleToFill" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b695409bab59.jpg"></image>
+            </swiper-item>
+        </swiper>
+        <view class="swiper-dots">
+            <view class="{{item.$loopState__temp2}}" wx:for="{{loopArray20}}" wx:for-item="item" wx:for-index="index"></view>
+        </view>
+    </view>
+</block>
