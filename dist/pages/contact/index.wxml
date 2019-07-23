@@ -5,7 +5,7 @@
             <view class="cb-word2">上海市静安区中兴路科技园305号</view>
             <view class="sb-icon icon-address"></view>
         </view>
-        <view class="contact-block"><text class="cb-word1">电话  |  Telephone</text>
+        <view class="contact-block" bindtap="callingPhone"><text class="cb-word1">电话  |  Telephone</text>
             <view class="cb-word2">17301631743</view>
             <view class="sb-icon icon-phone"></view>
         </view>

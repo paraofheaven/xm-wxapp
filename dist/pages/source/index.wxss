@@ -1,10 +1,17 @@
 
+.source {
+  position: relative;
+}
 .source .swiper-wap {
   position: relative;
+  height: 400rpx;
+}
+.source .swiper-wap swiper {
+  height: 100%;
 }
 .source .swiper-image {
   width: 100%;
-  height: 340rpx;
+  height: 400rpx;
 }
 .source .swiper-dots {
   position: absolute;
@@ -28,4 +35,47 @@
 }
 .source .swiper-dots .swiper-dot.swiper-active {
   background: #fff;
+}
+.source .souce-image {
+  width: 100%;
+  z-index: 1;
+}
+.source .source-pan {
+  position: absolute;
+  width: 650rpx;
+  margin: -80rpx auto 10rpx;
+  padding: 30rpx 20rpx;
+  z-index: 101;
+  border-radius: 8rpx;
+  left: 50%;
+  top: 440rpx;
+  overflow: hidden;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #fff;
+  -webkit-box-shadow: 2rpx 0 20rpx 3rpx rgba(0, 0, 0, 0.08);
+          box-shadow: 2rpx 0 20rpx 3rpx rgba(0, 0, 0, 0.08);
+}
+.source .source-pan .sp-title {
+  color: #333;
+  font-size: 26rpx;
+  font-weight: bold;
+}
+.source .source-pan .sp-content {
+  margin: 10rpx 0 30rpx;
+  font-size: 26rpx;
+  color: #666;
+  line-height: 42rpx;
+}
+.source .content-title {
+  padding: 30rpx 40rpx;
+  font-size: 28rpx;
+  color: #333;
+  margin-top: 200rpx;
+}
+.source .content-title .ct-word2 {
+  font-size: 26rpx;
+  color: #999;
+  margin-top: 10rpx;
 }

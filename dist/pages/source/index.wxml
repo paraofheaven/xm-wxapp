@@ -3,7 +3,7 @@
         <view class="swiper-wap">
             <swiper indicator-dots="{{false}}" autoplay="{{true}}" circular="{{true}}" bindchange="changeSwiperIndex">
                 <swiper-item>
-                    <image class="swiper-image" mode="scaleToFill" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b6d529765dba.png"></image>
+                    <image class="swiper-image" mode="scaleToFill" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b6bf1aa298fc.png"></image>
                 </swiper-item>
                 <swiper-item>
                     <image class="swiper-image" mode="scaleToFill" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b6d654d93e73.png"></image>
@@ -13,7 +13,24 @@
                 </swiper-item>
             </swiper>
             <view class="swiper-dots">
-                <view class="{{item.$loopState__temp2}}" wx:for="{{loopArray1}}" wx:for-item="item" wx:for-index="index"></view>
+                <view class="{{item.$loopState__temp2}}" wx:for="{{loopArray347}}" wx:for-item="item" wx:for-index="index"></view>
+            </view>
+        </view>
+        <view class="source-pan">
+            <view class="sp-title">公司服务</view>
+            <view class="sp-content">开辟属于自己的稳定的营销渠道，能扩大市场份额，建立连锁、分销的统一电商运营管理系统。</view>
+        </view>
+        <view class="content-title">
+            <view class="ct-word1">精选案例</view>
+            <view class="ct-word2">company development</view>
+        </view>
+        <view class="source-list">
+            <view class="sl-item">
+                <image mode="scaleToFill" class="sli-ave" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b87bca3a6fb2.png"></image>
+                <view class="sli-title">网上商城</view>
+                <view class="sli-desc">提供稳定的营销渠道，扩大市场份额</view>
+                <view class="sli-tips"><text>在线销售</text>|<text>运营管理</text>|<text>活动营销</text>
+                </view>
             </view>
         </view>
     </view>

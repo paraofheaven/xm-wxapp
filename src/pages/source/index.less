@@ -1,11 +1,18 @@
 .source {
+  position: relative;
+
   .swiper-wap {
     position: relative;
+    height: 400px;
+
+    swiper {
+      height: 100%;
+    }
   }
 
   .swiper-image {
     width: 100%;
-    height: 340px;
+    height: 400px;
   }
 
   .swiper-dots {
@@ -30,6 +37,52 @@
       &.swiper-active {
         background: #fff;
       }
+    }
+  }
+
+  .souce-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+  .source-pan {
+    position: absolute;
+    width: 650px;
+    margin: -80px auto 10px;
+    padding: 30px 20px;
+    z-index: 101;
+    border-radius: 8px;
+    left: 50%;
+    top: 440px;
+    overflow: hidden;
+    transform: translateX(-50%);
+    background-color: #fff;
+    box-shadow: 2px 0 20px 3px rgba(0, 0, 0, 0.08);
+
+    .sp-title {
+      color: #333;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .sp-content {
+      margin: 10px 0 30px;
+      font-size: 26px;
+      color: #666;
+      line-height: 42px;
+    }
+  }
+
+  .content-title {
+    padding: 30px 40px;
+    font-size: 28px;
+    color: #333;
+    margin-top: 200px;
+
+    .ct-word2 {
+      font-size: 26px;
+      color: #999;
+      margin-top: 10px;
     }
   }
 

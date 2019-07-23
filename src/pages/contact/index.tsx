@@ -17,6 +17,12 @@ export default class Source extends Component {
 
   componentDidMount() { }
 
+  public callingPhone = () => {
+    Taro.makePhoneCall({
+      phoneNumber: '17301631743',
+    });
+  }
+
   render() {
     return (
       <View className='contact'>
@@ -26,7 +32,7 @@ export default class Source extends Component {
           <View className="cb-word2">上海市静安区中兴路科技园305号</View>
           <View className="sb-icon icon-address"></View>
         </View>
-        <View className="contact-block">
+        <View className="contact-block" onClick={this.callingPhone}>
           <Text className="cb-word1">电话  |  Telephone</Text>
           <View className="cb-word2">17301631743</View>
           <View className="sb-icon icon-phone"></View>

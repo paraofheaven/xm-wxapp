@@ -1,5 +1,5 @@
 import Taro, { Component, Config } from '@tarojs/taro'
-import { View, Image, Swiper, SwiperItem } from '@tarojs/components'
+import { View, Image, Swiper, SwiperItem, Text } from '@tarojs/components'
 import classnames from 'classnames';
 import './index.less'
 
@@ -38,7 +38,7 @@ export default class Source extends Component {
             circular={true}
             onChange={this.changeSwiperIndex}>
             <SwiperItem>
-              <Image className="swiper-image" mode={'scaleToFill'} src={'https://img.zhichiwangluo.com/zcimgdir/album/file_5b6d529765dba.png'}></Image>
+              <Image className="swiper-image" mode={'scaleToFill'} src={'https://img.zhichiwangluo.com/zcimgdir/album/file_5b6bf1aa298fc.png'}></Image>
             </SwiperItem>
             <SwiperItem>
               <Image className="swiper-image" mode={'scaleToFill'} src={'https://img.zhichiwangluo.com/zcimgdir/album/file_5b6d654d93e73.png'}></Image>
@@ -53,8 +53,27 @@ export default class Source extends Component {
             })}
           </View>
         </View>
-
-        
+        {/* <Image className="souce-image" mode="widthFix" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b6bf1aa298fc.png"></Image> */}
+        <View className="source-pan">
+          <View className="sp-title">公司服务</View>
+          <View className="sp-content">开辟属于自己的稳定的营销渠道，能扩大市场份额，建立连锁、分销的统一电商运营管理系统。</View>
+        </View>
+        <View className="content-title">
+          <View className="ct-word1">精选案例</View>
+          <View className="ct-word2">company development</View>
+        </View>
+        <View className="source-list">
+          <View className="sl-item">
+            <Image mode="scaleToFill" className="sli-ave" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b87bca3a6fb2.png"></Image>
+            <View className="sli-title">网上商城</View>
+            <View className="sli-desc">提供稳定的营销渠道，扩大市场份额</View>
+            <View className="sli-tips">
+              <Text>在线销售</Text>|
+              <Text>运营管理</Text>|
+              <Text>活动营销</Text>
+            </View>
+          </View>
+        </View>
       </View>
     )
   }

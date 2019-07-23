@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/source/index",
-    "pages/contact/index"
+    "pages/contact/index",
+    "pages/joinus/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -43,5 +44,6 @@
         "text": "联系我们"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

@@ -14,10 +14,6 @@ var _index = require("../../npm/@tarojs/taro-weapp/index.js");
 
 var _index2 = _interopRequireDefault(_index);
 
-var _index3 = require("../../npm/classnames/index.js");
-
-var _index4 = _interopRequireDefault(_index3);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26,41 +22,29 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Index = (_temp2 = _class = function (_BaseComponent) {
-  _inherits(Index, _BaseComponent);
+var Source = (_temp2 = _class = function (_BaseComponent) {
+  _inherits(Source, _BaseComponent);
 
-  function Index() {
+  function Source() {
     var _ref;
 
     var _temp, _this, _ret;
 
-    _classCallCheck(this, Index);
+    _classCallCheck(this, Source);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "loopArray292", "scrollIntoView", "current"], _this.config = {
-      navigationBarTitleText: '首页'
-    }, _this.changeSwiperIndex = function (e) {
-      _this.setState({
-        current: e.detail.current
-      });
-    }, _this.callingPhone = function () {
-      _index2.default.makePhoneCall({
-        phoneNumber: '17301631743'
-      });
-    }, _this.scrollToElement = function (ele) {
-      _this.setState({
-        scrollIntoView: ele
-      });
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Source.__proto__ || Object.getPrototypeOf(Source)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = [], _this.config = {
+      navigationBarTitleText: '加入我们'
     }, _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  _createClass(Index, [{
+  _createClass(Source, [{
     key: "_constructor",
     value: function _constructor() {
-      _get(Index.prototype.__proto__ || Object.getPrototypeOf(Index.prototype), "_constructor", this).apply(this, arguments);
+      _get(Source.prototype.__proto__ || Object.getPrototypeOf(Source.prototype), "_constructor", this).apply(this, arguments);
       /**
        * 指定config的类型声明为: Taro.Config
        *
@@ -68,16 +52,8 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
        * 对于像 navigationBarTextStyle: 'black' 这样的推导出的类型是 string
        * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
        */
-
-      this.state = {
-        current: 0,
-        scrollIntoView: ''
-      };
       this.$$refs = [];
     }
-  }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {}
   }, {
     key: "_createData",
     value: function _createData() {
@@ -86,35 +62,13 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-
-      var _state = this.__state,
-          current = _state.current,
-          scrollIntoView = _state.scrollIntoView;
-
-      var scrollStyle = { height: '600px' };
-      var anonymousState__temp = (0, _index.internal_inline_style)(scrollStyle);
-      var loopArray292 = ['', ''].map(function (item, index) {
-        item = {
-          $original: (0, _index.internal_get_original)(item)
-        };
-        var $loopState__temp3 = (0, _index4.default)('swiper-dot', { 'swiper-active': index === current });
-        var $loopState__temp5 = String(index);
-        return {
-          $loopState__temp3: $loopState__temp3,
-          $loopState__temp5: $loopState__temp5,
-          $original: item.$original
-        };
-      });
-      Object.assign(this.__state, {
-        anonymousState__temp: anonymousState__temp,
-        loopArray292: loopArray292
-      });
+      Object.assign(this.__state, {});
       return this.__state;
     }
   }]);
 
-  return Index;
-}(_index.Component), _class.$$events = ["changeSwiperIndex", "scrollToElement", "callingPhone"], _class.$$componentPath = "pages/index/index", _temp2);
-exports.default = Index;
+  return Source;
+}(_index.Component), _class.$$events = [], _class.$$componentPath = "pages/joinus/index", _temp2);
+exports.default = Source;
 
-Component(require('../../npm/@tarojs/taro-weapp/index.js').default.createComponent(Index, true));
+Component(require('../../npm/@tarojs/taro-weapp/index.js').default.createComponent(Source, true));

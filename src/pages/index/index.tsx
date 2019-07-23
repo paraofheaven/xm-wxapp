@@ -1,5 +1,5 @@
 import Taro, { Component, Config } from '@tarojs/taro'
-import { View, Swiper, SwiperItem, Image, Text, Navigator } from '@tarojs/components'
+import { View, Swiper, SwiperItem, Image, Text, ScrollView } from '@tarojs/components'
 import classnames from 'classnames';
 import './index.less'
 
@@ -18,6 +18,7 @@ export default class Index extends Component {
 
   public state = {
     current: 0,
+    scrollIntoView: '',
   }
 
   componentDidMount() { }
@@ -30,14 +31,26 @@ export default class Index extends Component {
 
   public callingPhone = () => {
     Taro.makePhoneCall({
-      phoneNumber: '11111111',
+      phoneNumber: '17301631743',
     });
   }
 
+  public scrollToElement = (ele) => {
+    this.setState({
+      scrollIntoView: ele
+    });
+
+  }
+
   render() {
-    const { current } = this.state;
+    const { current, scrollIntoView } = this.state;
+    const scrollStyle = { height: '600px' }
     return (
-      <View className='index'>
+      <ScrollView className='index'
+        scrollY={true}
+        style={scrollStyle}
+        scrollIntoView={scrollIntoView}
+        scrollWithAnimation={true}>
         <View className="swiper-wap">
           <Swiper
             indicator-dots={false}
@@ -45,52 +58,49 @@ export default class Index extends Component {
             circular={true}
             onChange={this.changeSwiperIndex}>
             <SwiperItem>
-              <Image className="swiper-image" mode={'scaleToFill'} src={'https://img.zhichiwangluo.com/zcimgdir/album/file_5b6d529765dba.png'}></Image>
+              <Image className="swiper-image" mode={'scaleToFill'} src={'https://file.40017.cn/css40017cnproduct/jinrong/files/i/ttb/open/bg-1.png'}></Image>
             </SwiperItem>
             <SwiperItem>
-              <Image className="swiper-image" mode={'scaleToFill'} src={'https://img.zhichiwangluo.com/zcimgdir/album/file_5b6d654d93e73.png'}></Image>
-            </SwiperItem>
-            <SwiperItem>
-              <Image className="swiper-image" mode={'scaleToFill'} src={'https://img.zhichiwangluo.com/zcimgdir/album/file_5b695409bab59.jpg'}></Image>
+              <Image className="swiper-image" mode={'scaleToFill'} src={'https://file.40017.cn/css40017cnproduct/jinrong/files/i/ttb/open/bg-2.png'}></Image>
             </SwiperItem>
           </Swiper>
           <View className="swiper-dots">
-            {['', '', ''].map((item, index) => {
-              return <View className={classnames('swiper-dot', { 'swiper-active': index === current })}></View>
+            {['', ''].map((item, index) => {
+              return <View className={classnames('swiper-dot', { 'swiper-active': index === current })} key={String(index)}></View>
             })}
           </View>
         </View>
         <View className="portal-list">
-          <View className="portal-item">
+          <View className="portal-item" onClick={this.scrollToElement.bind(this, 'introduction')}>
             <View className="portal-item-icon pi-icon-1"></View>
             <Text className="portal-item-text">公司简介</Text>
           </View>
-          <View className="portal-item">
+          <View className="portal-item" onClick={this.scrollToElement.bind(this, 'production')}>
             <View className="portal-item-icon pi-icon-2"></View>
             <Text className="portal-item-text">产品介绍</Text>
           </View>
-          <View className="portal-item">
+          <View className="portal-item" onClick={this.scrollToElement.bind(this, 'success')}>
             <View className="portal-item-icon pi-icon-3"></View>
             <Text className="portal-item-text">成功案例</Text>
           </View>
-          <View className="portal-item">
+          <View className="portal-item" onClick={this.scrollToElement.bind(this, 'contact')}>
             <View className="portal-item-icon pi-icon-4"></View>
             <Text className="portal-item-text">联系我们</Text>
           </View>
         </View>
         <View className="empty-padding"></View>
-        <View className="block">
+        <View className="block" id="introduction">
           <View className="block-head">
             <View className="iff-icon left"></View>
             <Text className="bh-word">公司简介</Text>
             <View className="iff-icon right"></View>
           </View>
           <View>
-            <Image className="block-image" mode="center" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b7d08801e46b.png"></Image>
+            <Image className="block-image" mode="scaleToFill" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b7d08801e46b.png"></Image>
           </View>
         </View>
         <View className="empty-padding"></View>
-        <View className="block">
+        <View className="block" id="production">
           <View className="block-head">
             <View className="iff-icon left"></View>
             <Text className="bh-word">主要产品</Text>
@@ -117,7 +127,7 @@ export default class Index extends Component {
           </View>
         </View>
         <View className="empty-padding"></View>
-        <View className="block">
+        <View className="block" id="success">
           <View className="block-head">
             <View className="iff-icon left"></View>
             <Text className="bh-word">成功案例</Text>
@@ -134,7 +144,7 @@ export default class Index extends Component {
           </View>
         </View>
         <View className="empty-padding"></View>
-        <View className="block">
+        <View className="block" id="contact">
           <View className="block-head">
             <View className="iff-icon left"></View>
             <Text className="bh-word">联系我们</Text>
@@ -152,8 +162,9 @@ export default class Index extends Component {
             <View className="sb-icon icon-phone"></View>
           </View>
         </View>
+        <View className="float-phone" onClick={this.callingPhone}></View>
         <View className="company-ties">由<Text className="ct-name">湘昕科技</Text>提供技术服务支持</View>
-      </View>
+      </ScrollView>
     )
   }
 }

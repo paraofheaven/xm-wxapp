@@ -38,6 +38,10 @@ var Source = (_temp2 = _class = function (_BaseComponent) {
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Source.__proto__ || Object.getPrototypeOf(Source)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = [], _this.config = {
       navigationBarTitleText: '联系我们'
+    }, _this.callingPhone = function () {
+      _index2.default.makePhoneCall({
+        phoneNumber: '17301631743'
+      });
     }, _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -71,7 +75,7 @@ var Source = (_temp2 = _class = function (_BaseComponent) {
   }]);
 
   return Source;
-}(_index.Component), _class.$$events = [], _class.$$componentPath = "pages/contact/index", _temp2);
+}(_index.Component), _class.$$events = ["callingPhone"], _class.$$componentPath = "pages/contact/index", _temp2);
 exports.default = Source;
 
 Component(require('../../npm/@tarojs/taro-weapp/index.js').default.createComponent(Source, true));
