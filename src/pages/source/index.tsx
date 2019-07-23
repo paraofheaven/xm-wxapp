@@ -79,7 +79,7 @@ export default class Source extends Component {
             <View className="sli-title">OSS平台</View>
             <View className="sli-tips">
               <Text className="slit-word">OA系统</Text>
-              <Text className="slit-word">OSS平台</Text>
+              <Text className="slit-word">OSS后台</Text>
               <Text className="slit-word">流量监控</Text>
             </View>
             <View className="sli-desc">覆盖个行业解决方案，提供数据录入、数据可视化、数据分析</View>
