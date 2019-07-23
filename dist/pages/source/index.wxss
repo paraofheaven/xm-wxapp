@@ -36,6 +36,13 @@
 .source .swiper-dots .swiper-dot.swiper-active {
   background: #fff;
 }
+.source .empty-padding {
+  height: 12rpx;
+  background-color: #F8F8FB;
+}
+.source .empty-padding.ep-small {
+  height: 5rpx;
+}
 .source .souce-image {
   width: 100%;
   z-index: 1;
@@ -78,4 +85,48 @@
   font-size: 26rpx;
   color: #999;
   margin-top: 10rpx;
+}
+.source .sl-item {
+  position: relative;
+  overflow: hidden;
+  padding: 0 40rpx;
+  margin: 30rpx 0;
+}
+.source .sl-item:first-of-type {
+  margin-top: 0;
+}
+.source .sl-item .sli-ave {
+  float: left;
+  width: 150rpx;
+  height: 150rpx;
+}
+.source .sl-item .sli-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+  margin-left: 170rpx;
+}
+.source .sl-item .sli-tips {
+  color: #3091f2;
+  font-size: 24rpx;
+  margin: 10rpx 0 0 170rpx;
+}
+.source .sl-item .sli-tips .slit-word {
+  padding: 0 10rpx;
+}
+.source .sl-item .sli-tips .slit-word:first-of-type {
+  padding-left: 0;
+}
+.source .sl-item .sli-desc {
+  position: absolute;
+  left: 210rpx;
+  bottom: 0;
+  font-size: 24rpx;
+  color: #666;
+}
+.source .wantOccu {
+  text-align: center;
+  margin: 80rpx auto 100rpx;
+  font-size: 26rpx;
+  color: #999;
 }

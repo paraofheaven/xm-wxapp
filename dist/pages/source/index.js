@@ -40,7 +40,7 @@ var Source = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Source.__proto__ || Object.getPrototypeOf(Source)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray347", "current"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Source.__proto__ || Object.getPrototypeOf(Source)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray380", "current"], _this.config = {
       navigationBarTitleText: '公司业务'
     }, _this.changeSwiperIndex = function (e) {
       _this.setState({
@@ -80,7 +80,7 @@ var Source = (_temp2 = _class = function (_BaseComponent) {
 
       var current = this.__state.current;
 
-      var loopArray347 = ['', '', ''].map(function (item, index) {
+      var loopArray380 = ['', '', ''].map(function (item, index) {
         item = {
           $original: (0, _index.internal_get_original)(item)
         };
@@ -91,7 +91,7 @@ var Source = (_temp2 = _class = function (_BaseComponent) {
         };
       });
       Object.assign(this.__state, {
-        loopArray347: loopArray347
+        loopArray380: loopArray380
       });
       return this.__state;
     }

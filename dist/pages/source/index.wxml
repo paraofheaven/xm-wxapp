@@ -13,7 +13,7 @@
                 </swiper-item>
             </swiper>
             <view class="swiper-dots">
-                <view class="{{item.$loopState__temp2}}" wx:for="{{loopArray347}}" wx:for-item="item" wx:for-index="index"></view>
+                <view class="{{item.$loopState__temp2}}" wx:for="{{loopArray380}}" wx:for-item="item" wx:for-index="index"></view>
             </view>
         </view>
         <view class="source-pan">
@@ -28,10 +28,27 @@
             <view class="sl-item">
                 <image mode="scaleToFill" class="sli-ave" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b87bca3a6fb2.png"></image>
                 <view class="sli-title">网上商城</view>
-                <view class="sli-desc">提供稳定的营销渠道，扩大市场份额</view>
-                <view class="sli-tips"><text>在线销售</text>|<text>运营管理</text>|<text>活动营销</text>
+                <view class="sli-tips"><text class="slit-word">在线销售</text>|<text class="slit-word">运营管理</text>|<text class="slit-word">活动营销</text>
                 </view>
+                <view class="sli-desc">提供稳定的营销渠道，扩大市场份额</view>
+            </view>
+            <view class="empty-padding"></view>
+            <view class="sl-item">
+                <image mode="scaleToFill" class="sli-ave" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b87bca3a6fb2.png"></image>
+                <view class="sli-title">OSS平台搭建</view>
+                <view class="sli-tips"><text class="slit-word">OA系统</text>|<text class="slit-word">OSS平台</text>|<text class="slit-word">流量监控</text>
+                </view>
+                <view class="sli-desc">覆盖个行业解决方案，提供数据录入、数据可视化、数据分析</view>
+            </view>
+            <view class="empty-padding"></view>
+            <view class="sl-item">
+                <image mode="scaleToFill" class="sli-ave" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b87bca3a6fb2.png"></image>
+                <view class="sli-title">美业类小程序</view>
+                <view class="sli-tips"><text class="slit-word">美容服务</text>|<text class="slit-word">一键预定</text>|<text class="slit-word">广告营销</text>
+                </view>
+                <view class="sli-desc">覆盖微信端强大的社交生态，高效实现拉新和导流</view>
             </view>
         </view>
+        <view class="wantOccu">期待与您的合作</view>
     </view>
 </block>

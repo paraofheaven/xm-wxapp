@@ -40,6 +40,15 @@
     }
   }
 
+  .empty-padding {
+    height: 12px;
+    background-color: #F8F8FB;
+
+    &.ep-small {
+      height: 5px;
+    }
+  }
+
   .souce-image {
     width: 100%;
     z-index: 1;
@@ -84,6 +93,59 @@
       color: #999;
       margin-top: 10px;
     }
+  }
+
+  .sl-item {
+    position: relative;
+    overflow: hidden;
+    padding: 0 40px;
+    margin: 30px 0;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    .sli-ave {
+      float: left;
+      width: 150px;
+      height: 150px;
+    }
+
+    .sli-title {
+      font-size: 30px;
+      font-weight: bold;
+      color: #333;
+      margin-left: 150px+20px;
+    }
+
+    .sli-tips {
+      color: #3091f2;
+      font-size: 24px;
+      margin: 10px 0 0 150px+20px;
+
+      .slit-word {
+        padding: 0 10px;
+
+        &:first-of-type {
+          padding-left: 0;
+        }
+      }
+    }
+
+    .sli-desc {
+      position: absolute;
+      left: 150px+20px+40px;
+      bottom: 0;
+      font-size: 24px;
+      color: #666;
+    }
+  }
+
+  .wantOccu {
+    text-align: center;
+    margin: 80px auto 100px;
+    font-size: 26px;
+    color: #999;
   }
 
 }
