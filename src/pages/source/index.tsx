@@ -67,8 +67,8 @@ export default class Source extends Component {
             <Image mode="scaleToFill" className="sli-ave" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b87bca3a6fb2.png"></Image>
             <View className="sli-title">网上商城</View>
             <View className="sli-tips">
-              <Text className="slit-word">在线销售</Text>|
-              <Text className="slit-word">运营管理</Text>|
+              <Text className="slit-word">在线销售</Text>
+              <Text className="slit-word">运营管理</Text>
               <Text className="slit-word">活动营销</Text>
             </View>
             <View className="sli-desc">提供稳定的营销渠道，扩大市场份额</View>
@@ -76,10 +76,10 @@ export default class Source extends Component {
           <View className="empty-padding"></View>
           <View className="sl-item">
             <Image mode="scaleToFill" className="sli-ave" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b87bca3a6fb2.png"></Image>
-            <View className="sli-title">OSS平台搭建</View>
+            <View className="sli-title">OSS平台</View>
             <View className="sli-tips">
-              <Text className="slit-word">OA系统</Text>|
-              <Text className="slit-word">OSS平台</Text>|
+              <Text className="slit-word">OA系统</Text>
+              <Text className="slit-word">OSS平台</Text>
               <Text className="slit-word">流量监控</Text>
             </View>
             <View className="sli-desc">覆盖个行业解决方案，提供数据录入、数据可视化、数据分析</View>
@@ -89,8 +89,8 @@ export default class Source extends Component {
             <Image mode="scaleToFill" className="sli-ave" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b87bca3a6fb2.png"></Image>
             <View className="sli-title">美业类小程序</View>
             <View className="sli-tips">
-              <Text className="slit-word">美容服务</Text>|
-              <Text className="slit-word">一键预定</Text>|
+              <Text className="slit-word">美容服务</Text>
+              <Text className="slit-word">一键预定</Text>
               <Text className="slit-word">广告营销</Text>
             </View>
             <View className="sli-desc">覆盖微信端强大的社交生态，高效实现拉新和导流</View>
