@@ -1,5 +1,5 @@
 import Taro, { Component, Config } from '@tarojs/taro'
-import { View, Swiper, SwiperItem, Image, Text } from '@tarojs/components'
+import { View, Swiper, SwiperItem, Image, Text, Navigator } from '@tarojs/components'
 import classnames from 'classnames';
 import './index.less'
 
@@ -26,6 +26,12 @@ export default class Index extends Component {
     this.setState({
       current: e.detail.current,
     })
+  }
+
+  public callingPhone = () => {
+    Taro.makePhoneCall({
+      phoneNumber: '11111111',
+    });
   }
 
   render() {
@@ -137,16 +143,16 @@ export default class Index extends Component {
           <View className="empty-padding ep-small"></View>
           <View className="contact-block">
             <Text className="cb-word1">地址  |  Address</Text>
-            <View className="cb-word2">广东省深圳市南山区芒果网大厦</View>
+            <View className="cb-word2">上海市静安区中兴路科技园305号</View>
             <View className="sb-icon icon-address"></View>
           </View>
-          <View className="contact-block">
+          <View className="contact-block" onClick={this.callingPhone}>
             <Text className="cb-word1">电话  |  Telephone</Text>
-            <View className="cb-word2">13860677744</View>
+            <View className="cb-word2">17301631743</View>
             <View className="sb-icon icon-phone"></View>
           </View>
         </View>
-        <View className="company-ties">由xxx提供技术服务支持</View>
+        <View className="company-ties">由<Text className="ct-name">湘昕科技</Text>提供技术服务支持</View>
       </View>
     )
   }

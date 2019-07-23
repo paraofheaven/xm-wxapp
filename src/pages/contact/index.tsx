@@ -23,17 +23,17 @@ export default class Source extends Component {
         <Image mode="widthFix" className="contact-image" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b6be3707fcd1.png"></Image>
         <View className="contact-block">
           <Text className="cb-word1">地址  |  Address</Text>
-          <View className="cb-word2">广东省深圳市南山区芒果网大厦</View>
+          <View className="cb-word2">上海市静安区中兴路科技园305号</View>
           <View className="sb-icon icon-address"></View>
         </View>
         <View className="contact-block">
           <Text className="cb-word1">电话  |  Telephone</Text>
-          <View className="cb-word2">13860677744</View>
+          <View className="cb-word2">17301631743</View>
           <View className="sb-icon icon-phone"></View>
         </View>
         <View className="contact-block">
           <Text className="cb-word1">邮箱  |  Email</Text>
-          <View className="cb-word2">3434@163.com</View>
+          <View className="cb-word2">rodgersince2015@126.com</View>
           <View className="sb-icon icon-phone"></View>
         </View>
         <View className="contact-block">
