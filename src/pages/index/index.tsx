@@ -1,6 +1,7 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Swiper, SwiperItem, Image, Text, ScrollView } from '@tarojs/components'
 import classnames from 'classnames';
+import { AtNoticebar } from 'taro-ui';
 import './index.less'
 
 export default class Index extends Component {
@@ -21,7 +22,15 @@ export default class Index extends Component {
     scrollIntoView: '',
   }
 
-  componentDidMount() { }
+  componentWillMount() {
+    Taro.showLoading({
+      title: '正在加载...'
+    });
+  }
+
+  componentDidMount() {
+    Taro.hideLoading();
+  }
 
   public changeSwiperIndex = (e) => {
     this.setState({
@@ -88,6 +97,8 @@ export default class Index extends Component {
             <Text className="portal-item-text">联系我们</Text>
           </View>
         </View>
+        <View className="empty-padding ep-small"></View>
+        <AtNoticebar icon="volume-minus" className="index-notice" marquee={true} speed={40} single>认真提供技术服务，提供各领域专业的解决方案，打通线上线下营销场景</AtNoticebar>
         <View className="empty-padding"></View>
         <View className="block" id="introduction">
           <View className="block-head">

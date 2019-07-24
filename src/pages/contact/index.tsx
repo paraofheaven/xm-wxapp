@@ -1,5 +1,6 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Image, Text } from '@tarojs/components'
+import { AtToast } from "taro-ui"
 import './index.less'
 
 export default class Source extends Component {
@@ -15,11 +16,25 @@ export default class Source extends Component {
     navigationBarTitleText: '联系我们'
   }
 
-  componentDidMount() { }
+  componentWillMount() {
+    Taro.showLoading({
+      title: '正在加载...'
+    });
+  }
+
+  componentDidMount() {
+    Taro.hideLoading();
+  }
 
   public callingPhone = () => {
     Taro.makePhoneCall({
       phoneNumber: '17301631743',
+    });
+  }
+
+  public joinus = () => {
+    Taro.navigateTo({
+      url: '/pages/joinus/index',
     });
   }
 
@@ -42,7 +57,7 @@ export default class Source extends Component {
           <View className="cb-word2">rodgersince2015@126.com</View>
           <View className="sb-icon icon-phone"></View>
         </View>
-        <View className="contact-block">
+        <View className="contact-block" onClick={this.joinus}>
           <View className="cb-word3">加入我们</View>
           <View className="sb-icon icon-join-us"></View>
         </View>

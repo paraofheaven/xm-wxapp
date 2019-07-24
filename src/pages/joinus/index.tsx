@@ -15,9 +15,16 @@ export default class Source extends Component {
     navigationBarTitleText: '加入我们'
   }
 
+  public callingPhone = () => {
+    Taro.makePhoneCall({
+      phoneNumber: '17301631743',
+    });
+  }
+
   render() {
     return (
       <View className='joinus'>
+        <Image className="joinus-image" mode="scaleToFill" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b695409bab59.jpg"></Image>
         <View className="block-title">招聘英才 | Join Us</View>
         <View className="ju-block">
           <View className="jub-me">UI设计师</View>
@@ -30,6 +37,7 @@ export default class Source extends Component {
           <View>6、善于发现和提出给用户带来方便的界面特性设计； </View>
           <View>7、独立工作和学习能力强，有良好的沟通能力、团队协作能力，富有责任心。</View>
         </View>
+        <View className="float-phone" onClick={this.callingPhone}></View>
       </View>
     )
   }

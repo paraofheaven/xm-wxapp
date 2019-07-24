@@ -1,1 +1,18 @@
-<block wx:if="{{$taroCompReady}}"><view class="joinus"><view class="block-title">招聘英才 | Join Us</view><view class="ju-block"><view class="jub-me">UI设计师</view><view>岗位要求 </view><view>1、视觉传达/平面设计专业，本科学历，2年至以上 UI设计经验； </view><view>2、精通Photoshop、AI、Axure等软件； </view><view>3、能根据需求文档作出产品原型，对互联网产品风格有独立的见解。 </view><view>4、对移动终端人机交互、界面设计和其他相关理论有较系统的认识； </view><view>5、对色彩运用有深刻的把握力、创新的设计风格，有创新和服务意识；</view><view>6、善于发现和提出给用户带来方便的界面特性设计； </view><view>7、独立工作和学习能力强，有良好的沟通能力、团队协作能力，富有责任心。</view></view></view></block>
+<block wx:if="{{$taroCompReady}}">
+    <view class="joinus">
+        <image class="joinus-image" mode="scaleToFill" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b695409bab59.jpg"></image>
+        <view class="block-title">招聘英才 | Join Us</view>
+        <view class="ju-block">
+            <view class="jub-me">UI设计师</view>
+            <view>岗位要求</view>
+            <view>1、视觉传达/平面设计专业，本科学历，2年至以上 UI设计经验；</view>
+            <view>2、精通Photoshop、AI、Axure等软件；</view>
+            <view>3、能根据需求文档作出产品原型，对互联网产品风格有独立的见解。</view>
+            <view>4、对移动终端人机交互、界面设计和其他相关理论有较系统的认识；</view>
+            <view>5、对色彩运用有深刻的把握力、创新的设计风格，有创新和服务意识；</view>
+            <view>6、善于发现和提出给用户带来方便的界面特性设计；</view>
+            <view>7、独立工作和学习能力强，有良好的沟通能力、团队协作能力，富有责任心。</view>
+        </view>
+        <view class="float-phone" bindtap="callingPhone"></view>
+    </view>
+</block>

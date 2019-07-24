@@ -19,7 +19,15 @@ export default class Source extends Component {
     current: 0,
   }
 
-  componentDidMount() { }
+  componentWillMount() {
+    Taro.showLoading({
+      title: '正在加载...'
+    });
+  }
+
+  componentDidMount() {
+    Taro.hideLoading();
+  }
 
   public changeSwiperIndex = (e) => {
     this.setState({
