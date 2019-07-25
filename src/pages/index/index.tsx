@@ -2,7 +2,7 @@ import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Swiper, SwiperItem, Image, Text, ScrollView } from '@tarojs/components'
 import classnames from 'classnames';
 import { AtNoticebar } from 'taro-ui';
-import './index.less'
+import './index.less';
 
 export default class Index extends Component {
 

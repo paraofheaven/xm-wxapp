@@ -10,9 +10,17 @@ var _get = function get(object, property, receiver) { if (object === null) objec
 
 var _class, _temp2;
 
-var _index = require("../../npm/@tarojs/taro-weapp/index.js");
+var _index = require("../../../../../@tarojs/taro-weapp/index.js");
 
 var _index2 = _interopRequireDefault(_index);
+
+var _index3 = require("../../../../../prop-types/index.js");
+
+var _index4 = _interopRequireDefault(_index3);
+
+var _component = require("../../common/component.js");
+
+var _component2 = _interopRequireDefault(_component);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22,65 +30,28 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Source = (_temp2 = _class = function (_BaseComponent) {
-  _inherits(Source, _BaseComponent);
+var AtLoading = (_temp2 = _class = function (_AtComponent) {
+  _inherits(AtLoading, _AtComponent);
 
-  function Source() {
+  function AtLoading() {
     var _ref;
 
     var _temp, _this, _ret;
 
-    _classCallCheck(this, Source);
+    _classCallCheck(this, AtLoading);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Source.__proto__ || Object.getPrototypeOf(Source)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__1", "isActionOpened"], _this.config = {
-      navigationBarTitleText: '联系我们'
-    }, _this.callingPhone = function () {
-      _index2.default.makePhoneCall({
-        phoneNumber: '17301631743'
-      });
-    }, _this.joinus = function () {
-      _index2.default.navigateTo({
-        url: '/pages/joinus/index'
-      });
-    }, _this.showActionSheet = function () {
-      _this.setState({
-        isActionOpened: true
-      });
-    }, _this.customComponents = ["AtActionSheet", "AtActionSheetItem"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = AtLoading.__proto__ || Object.getPrototypeOf(AtLoading)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "anonymousState__temp4", "color", "size"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  _createClass(Source, [{
+  _createClass(AtLoading, [{
     key: "_constructor",
     value: function _constructor() {
-      _get(Source.prototype.__proto__ || Object.getPrototypeOf(Source.prototype), "_constructor", this).apply(this, arguments);
-      /**
-       * 指定config的类型声明为: Taro.Config
-       *
-       * 由于 typescript 对于 object 类型推导只能推出 Key 的基本类型
-       * 对于像 navigationBarTextStyle: 'black' 这样的推导出的类型是 string
-       * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
-       */
-
-      this.state = {
-        isActionOpened: false
-      };
+      _get(AtLoading.prototype.__proto__ || Object.getPrototypeOf(AtLoading.prototype), "_constructor", this).apply(this, arguments);
       this.$$refs = [];
-    }
-  }, {
-    key: "componentWillMount",
-    value: function componentWillMount() {
-      _index2.default.showLoading({
-        title: '正在加载...'
-      });
-    }
-  }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      _index2.default.hideLoading();
     }
   }, {
     key: "_createData",
@@ -90,24 +61,48 @@ var Source = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__1 = (0, _index.genCompid)(__prefix + "$compid__1");
 
-      var isActionOpened = this.__state.isActionOpened;
+      var _props = this.__props,
+          color = _props.color,
+          size = _props.size;
 
-      var $props__1 = {
-        "className": "contact-action-sheet",
-        "isOpened": isActionOpened
+      var sizeStyle = {
+        width: size ? "" + _index2.default.pxTransform(parseInt(size)) : '',
+        height: size ? "" + _index2.default.pxTransform(parseInt(size)) : ''
       };
-      _index.propsManager.set($props__1, $compid__1);
+      var colorStyle = {
+        'border': color ? "1px solid " + color : '',
+        'border-color': color ? color + " transparent transparent transparent" : ''
+      };
+      var ringStyle = Object.assign({}, colorStyle, sizeStyle);
+
+      var anonymousState__temp = (0, _index.internal_inline_style)(sizeStyle);
+      var anonymousState__temp2 = (0, _index.internal_inline_style)(ringStyle);
+      var anonymousState__temp3 = (0, _index.internal_inline_style)(ringStyle);
+      var anonymousState__temp4 = (0, _index.internal_inline_style)(ringStyle);
       Object.assign(this.__state, {
-        $compid__1: $compid__1
+        anonymousState__temp: anonymousState__temp,
+        anonymousState__temp2: anonymousState__temp2,
+        anonymousState__temp3: anonymousState__temp3,
+        anonymousState__temp4: anonymousState__temp4
       });
       return this.__state;
     }
   }]);
 
-  return Source;
-}(_index.Component), _class.$$events = ["callingPhone", "joinus", "showActionSheet"], _class.$$componentPath = "pages/contact/index", _temp2);
-exports.default = Source;
+  return AtLoading;
+}(_component2.default), _class.$$events = [], _class.$$componentPath = "Users/ly/Documents/GT_workspace/xmWeb/node_modules/taro-ui/dist/weapp/components/loading/index", _temp2);
 
-Component(require('../../npm/@tarojs/taro-weapp/index.js').default.createComponent(Source, true));
+
+AtLoading.defaultProps = {
+  size: 0,
+  color: ''
+};
+
+AtLoading.propTypes = {
+  size: _index4.default.oneOfType([_index4.default.string, _index4.default.number]),
+  color: _index4.default.oneOfType([_index4.default.string, _index4.default.number])
+};
+exports.default = AtLoading;
+
+Component(require('../../../../../@tarojs/taro-weapp/index.js').default.createComponent(AtLoading));

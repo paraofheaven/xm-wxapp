@@ -10,25 +10,13 @@ var _get = function get(object, property, receiver) { if (object === null) objec
 
 var _class, _temp2;
 
-var _index = require("../../../../../@tarojs/taro-weapp/index.js");
+var _index = require("../../npm/@tarojs/taro-weapp/index.js");
 
 var _index2 = _interopRequireDefault(_index);
 
-var _index3 = require("../../../../../prop-types/index.js");
-
-var _index4 = _interopRequireDefault(_index3);
-
-var _index5 = require("../../../../../classnames/index.js");
-
-var _index6 = _interopRequireDefault(_index5);
-
-var _isFunction2 = require("../../../../../lodash/isFunction.js");
+var _isFunction2 = require("../../npm/lodash/isFunction.js");
 
 var _isFunction3 = _interopRequireDefault(_isFunction2);
-
-var _component = require("../../common/component.js");
-
-var _component2 = _interopRequireDefault(_component);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -38,62 +26,77 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var AtActionSheet = (_temp2 = _class = function (_AtComponent) {
-  _inherits(AtActionSheet, _AtComponent);
+var BottomUp = (_temp2 = _class = function (_BaseComponent) {
+  _inherits(BottomUp, _BaseComponent);
 
-  function AtActionSheet() {
+  function BottomUp() {
     var _ref;
 
     var _temp, _this, _ret;
 
-    _classCallCheck(this, AtActionSheet);
+    _classCallCheck(this, BottomUp);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = AtActionSheet.__proto__ || Object.getPrototypeOf(AtActionSheet)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__3", "rootClass", "title", "cancelText", "_isOpened", "className", "isOpened", "children"], _this.handleClose = function () {
-      if ((0, _isFunction3.default)(_this.props.onClose)) {
-        _this.props.onClose();
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BottomUp.__proto__ || Object.getPrototypeOf(BottomUp)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__156", "visible", "bottomClassName", "hideMask", "title", "_isOpened", "className", "closeOnClickOverlay", "isOpen", "children"], _this.closeByDocument = function () {
+      if (_this.props.closeOnClickOverlay) {
+        _this.handleClose();
       }
-    }, _this.handleCancel = function () {
-      if ((0, _isFunction3.default)(_this.props.onCancel)) {
-        return _this.props.onCancel();
+    }, _this.handleClose = function () {
+      if (!_this.state._isOpened) {
+        return;
       }
-      _this.close();
-    }, _this.close = function () {
       _this.setState({
         _isOpened: false
-      }, _this.handleClose);
+      }, function () {
+        setTimeout(function () {
+          _this.setState({ visible: false });
+          if ((0, _isFunction3.default)(_this.props.onClose)) {
+            _this.props.onClose();
+          }
+        }, 400);
+      });
     }, _this.handleTouchMove = function (e) {
       e.stopPropagation();
-      e.preventDefault();
-    }, _this.customComponents = ["AtActionSheetHeader", "AtActionSheetBody", "AtActionSheetFooter"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.customComponents = ["MyIcon"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  _createClass(AtActionSheet, [{
+  _createClass(BottomUp, [{
     key: "_constructor",
     value: function _constructor(props) {
-      _get(AtActionSheet.prototype.__proto__ || Object.getPrototypeOf(AtActionSheet.prototype), "_constructor", this).apply(this, arguments);
-      var isOpened = props.isOpened;
+      _get(BottomUp.prototype.__proto__ || Object.getPrototypeOf(BottomUp.prototype), "_constructor", this).apply(this, arguments);
+      this.defaultProps = {
+        closeOnClickOverlay: true,
+        isOpen: false,
+        className: '',
+        hideMask: true,
+        title: ''
+      };
+      this.state = {
+        _isOpened: false,
+        visible: false
+      };
 
+      var isOpen = props.isOpen;
 
       this.state = {
-        _isOpened: isOpened
+        _isOpened: isOpen,
+        visible: isOpen
       };
       this.$$refs = [];
     }
   }, {
     key: "componentWillReceiveProps",
     value: function componentWillReceiveProps(nextProps) {
-      var isOpened = nextProps.isOpened;
+      var isOpen = nextProps.isOpen;
 
-      if (isOpened !== this.state._isOpened) {
+      if (isOpen !== this.state._isOpened) {
         this.setState({
-          _isOpened: isOpened
+          _isOpened: isOpen,
+          visible: isOpen
         });
-
-        !isOpened && this.handleClose();
       }
     }
   }, {
@@ -104,50 +107,40 @@ var AtActionSheet = (_temp2 = _class = function (_AtComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__3 = (0, _index.genCompid)(__prefix + "$compid__3");
+      var $compid__156 = (0, _index.genCompid)(__prefix + "$compid__156");
 
+      var _state = this.__state,
+          _isOpened = _state._isOpened,
+          visible = _state.visible;
       var _props = this.__props,
-          title = _props.title,
-          cancelText = _props.cancelText,
-          className = _props.className;
-      var _isOpened = this.__state._isOpened;
+          className = _props.className,
+          hideMask = _props.hideMask,
+          title = _props.title;
 
-
-      var rootClass = (0, _index6.default)('at-action-sheet', {
-        'at-action-sheet--active': _isOpened
-      }, className);
-
-      var $props__3 = {
-        "onClick": this.handleCancel
+      var bottomClassName = "v-bottomup " + (_isOpened ? 'v-bottomup-open' : 'v-bottomup-close') + " " + className;
+      if (!visible) {
+        return null;
+      }
+      var $props__156 = {
+        "value": "close",
+        "size": 22,
+        "color": "#999",
+        "className": "v-bottomup-close",
+        "onClick": this.handleClose
       };
-      cancelText && _index.propsManager.set($props__3, $compid__3);
+      title && _index.propsManager.set($props__156, $compid__156);
       Object.assign(this.__state, {
-        $compid__3: $compid__3,
-        rootClass: rootClass,
-        title: title,
-        cancelText: cancelText
+        $compid__156: $compid__156,
+        bottomClassName: bottomClassName,
+        hideMask: hideMask,
+        title: title
       });
       return this.__state;
     }
   }]);
 
-  return AtActionSheet;
-}(_component2.default), _class.$$events = ["handleTouchMove", "close"], _class.$$componentPath = "Users/ly/Documents/GT_workspace/xmWeb/node_modules/taro-ui/dist/weapp/components/action-sheet/index", _temp2);
+  return BottomUp;
+}(_index.Component), _class.$$events = ["handleTouchMove", "closeByDocument"], _class.$$componentPath = "_components/bottomup/index", _temp2);
+exports.default = BottomUp;
 
-
-AtActionSheet.defaultProps = {
-  title: '',
-  cancelText: '',
-  isOpened: false
-};
-
-AtActionSheet.propTypes = {
-  title: _index4.default.string,
-  onClose: _index4.default.func,
-  onCancel: _index4.default.func,
-  isOpened: _index4.default.bool,
-  cancelText: _index4.default.string
-};
-exports.default = AtActionSheet;
-
-Component(require('../../../../../@tarojs/taro-weapp/index.js').default.createComponent(AtActionSheet));
+Component(require('../../npm/@tarojs/taro-weapp/index.js').default.createComponent(BottomUp));

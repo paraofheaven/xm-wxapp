@@ -14,7 +14,13 @@ var _index = require("../../npm/@tarojs/taro-weapp/index.js");
 
 var _index2 = _interopRequireDefault(_index);
 
+var _index3 = require("../../npm/classnames/index.js");
+
+var _index4 = _interopRequireDefault(_index3);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -22,65 +28,35 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Source = (_temp2 = _class = function (_BaseComponent) {
-  _inherits(Source, _BaseComponent);
+var Icon = (_temp2 = _class = function (_BaseComponent) {
+  _inherits(Icon, _BaseComponent);
 
-  function Source() {
+  function Icon() {
     var _ref;
 
     var _temp, _this, _ret;
 
-    _classCallCheck(this, Source);
+    _classCallCheck(this, Icon);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Source.__proto__ || Object.getPrototypeOf(Source)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__1", "isActionOpened"], _this.config = {
-      navigationBarTitleText: '联系我们'
-    }, _this.callingPhone = function () {
-      _index2.default.makePhoneCall({
-        phoneNumber: '17301631743'
-      });
-    }, _this.joinus = function () {
-      _index2.default.navigateTo({
-        url: '/pages/joinus/index'
-      });
-    }, _this.showActionSheet = function () {
-      _this.setState({
-        isActionOpened: true
-      });
-    }, _this.customComponents = ["AtActionSheet", "AtActionSheetItem"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Icon.__proto__ || Object.getPrototypeOf(Icon)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "value", "size", "color", "className"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  _createClass(Source, [{
+  _createClass(Icon, [{
     key: "_constructor",
     value: function _constructor() {
-      _get(Source.prototype.__proto__ || Object.getPrototypeOf(Source.prototype), "_constructor", this).apply(this, arguments);
-      /**
-       * 指定config的类型声明为: Taro.Config
-       *
-       * 由于 typescript 对于 object 类型推导只能推出 Key 的基本类型
-       * 对于像 navigationBarTextStyle: 'black' 这样的推导出的类型是 string
-       * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
-       */
-
-      this.state = {
-        isActionOpened: false
+      _get(Icon.prototype.__proto__ || Object.getPrototypeOf(Icon.prototype), "_constructor", this).apply(this, arguments);
+      this.defaultProps = {
+        value: '',
+        size: 20,
+        color: '',
+        className: '',
+        onClick: function onClick() {}
       };
       this.$$refs = [];
-    }
-  }, {
-    key: "componentWillMount",
-    value: function componentWillMount() {
-      _index2.default.showLoading({
-        title: '正在加载...'
-      });
-    }
-  }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      _index2.default.hideLoading();
     }
   }, {
     key: "_createData",
@@ -90,24 +66,30 @@ var Source = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__1 = (0, _index.genCompid)(__prefix + "$compid__1");
 
-      var isActionOpened = this.__state.isActionOpened;
+      var _props = this.__props,
+          value = _props.value,
+          size = _props.size,
+          color = _props.color,
+          className = _props.className;
 
-      var $props__1 = {
-        "className": "contact-action-sheet",
-        "isOpened": isActionOpened
-      };
-      _index.propsManager.set($props__1, $compid__1);
+      var anonymousState__temp = (0, _index4.default)('v-icon', _defineProperty({}, "v-icon-" + value, value), className);
+      var anonymousState__temp2 = (0, _index.internal_inline_style)({ fontSize: size + "px", color: color });
       Object.assign(this.__state, {
-        $compid__1: $compid__1
+        anonymousState__temp: anonymousState__temp,
+        anonymousState__temp2: anonymousState__temp2
       });
       return this.__state;
     }
+  }, {
+    key: "funPrivateJhkeQ",
+    value: function funPrivateJhkeQ() {
+      return this.props.onClick.apply(undefined, Array.prototype.slice.call(arguments, 1));
+    }
   }]);
 
-  return Source;
-}(_index.Component), _class.$$events = ["callingPhone", "joinus", "showActionSheet"], _class.$$componentPath = "pages/contact/index", _temp2);
-exports.default = Source;
+  return Icon;
+}(_index.Component), _class.$$events = ["funPrivateJhkeQ"], _class.$$componentPath = "_components/myicon/index", _temp2);
+exports.default = Icon;
 
-Component(require('../../npm/@tarojs/taro-weapp/index.js').default.createComponent(Source, true));
+Component(require('../../npm/@tarojs/taro-weapp/index.js').default.createComponent(Icon));

@@ -13,7 +13,7 @@
                 </swiper-item>
             </swiper>
             <view class="swiper-dots">
-                <view class="{{item.$loopState__temp2}}" wx:key="$original" wx:for="{{loopArray2}}" wx:for-item="item" wx:for-index="index"></view>
+                <view class="{{item.$loopState__temp2}}" wx:key="$original" wx:for="{{loopArray1}}" wx:for-item="item" wx:for-index="index"></view>
             </view>
         </view>
         <view class="source-pan">

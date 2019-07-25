@@ -9,7 +9,7 @@
                 <slot></slot>
             </at-action-sheet-body>
             <block wx:if="{{cancelText}}">
-                <at-action-sheet-footer compid="{{$compid__13}}">{{cancelText}}</at-action-sheet-footer>
+                <at-action-sheet-footer compid="{{$compid__3}}">{{cancelText}}</at-action-sheet-footer>
             </block>
         </view>
     </view>

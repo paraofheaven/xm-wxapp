@@ -22,65 +22,38 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Source = (_temp2 = _class = function (_BaseComponent) {
-  _inherits(Source, _BaseComponent);
+var Demo = (_temp2 = _class = function (_BaseComponent) {
+  _inherits(Demo, _BaseComponent);
 
-  function Source() {
+  function Demo() {
     var _ref;
 
     var _temp, _this, _ret;
 
-    _classCallCheck(this, Source);
+    _classCallCheck(this, Demo);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Source.__proto__ || Object.getPrototypeOf(Source)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__1", "isActionOpened"], _this.config = {
-      navigationBarTitleText: '联系我们'
-    }, _this.callingPhone = function () {
-      _index2.default.makePhoneCall({
-        phoneNumber: '17301631743'
-      });
-    }, _this.joinus = function () {
-      _index2.default.navigateTo({
-        url: '/pages/joinus/index'
-      });
-    }, _this.showActionSheet = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Demo.__proto__ || Object.getPrototypeOf(Demo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__134", "$compid__135", "bottomupOpen"], _this.config = {
+      navigationBarTitleText: 'demo'
+    }, _this.openBottomUp = function () {
       _this.setState({
-        isActionOpened: true
+        bottomupOpen: true
       });
-    }, _this.customComponents = ["AtActionSheet", "AtActionSheetItem"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.customComponents = ["AtButton", "BottomUp"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  _createClass(Source, [{
+  _createClass(Demo, [{
     key: "_constructor",
     value: function _constructor() {
-      _get(Source.prototype.__proto__ || Object.getPrototypeOf(Source.prototype), "_constructor", this).apply(this, arguments);
-      /**
-       * 指定config的类型声明为: Taro.Config
-       *
-       * 由于 typescript 对于 object 类型推导只能推出 Key 的基本类型
-       * 对于像 navigationBarTextStyle: 'black' 这样的推导出的类型是 string
-       * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
-       */
+      _get(Demo.prototype.__proto__ || Object.getPrototypeOf(Demo.prototype), "_constructor", this).apply(this, arguments);
 
       this.state = {
-        isActionOpened: false
+        bottomupOpen: false
       };
       this.$$refs = [];
-    }
-  }, {
-    key: "componentWillMount",
-    value: function componentWillMount() {
-      _index2.default.showLoading({
-        title: '正在加载...'
-      });
-    }
-  }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      _index2.default.hideLoading();
     }
   }, {
     key: "_createData",
@@ -90,24 +63,43 @@ var Source = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__1 = (0, _index.genCompid)(__prefix + "$compid__1");
+      var $compid__134 = (0, _index.genCompid)(__prefix + "$compid__134");
+      var $compid__135 = (0, _index.genCompid)(__prefix + "$compid__135");
 
-      var isActionOpened = this.__state.isActionOpened;
+      var bottomupOpen = this.__state.bottomupOpen;
 
-      var $props__1 = {
-        "className": "contact-action-sheet",
-        "isOpened": isActionOpened
+
+      this.anonymousFunc0 = function () {
+        console.log('1111');
       };
-      _index.propsManager.set($props__1, $compid__1);
+
+      var $props__134 = {
+        "onClick": this.openBottomUp
+      };
+      var $props__135 = {
+        "className": "demo-bottomup",
+        "title": "\u6807\u9898",
+        "isOpen": bottomupOpen,
+        "closeOnClickOverlay": true,
+        "onClose": this.anonymousFunc0
+      };
+      _index.propsManager.set($props__134, $compid__134);
+      _index.propsManager.set($props__135, $compid__135);
       Object.assign(this.__state, {
-        $compid__1: $compid__1
+        $compid__134: $compid__134,
+        $compid__135: $compid__135
       });
       return this.__state;
     }
+  }, {
+    key: "anonymousFunc0",
+    value: function anonymousFunc0(e) {
+      ;
+    }
   }]);
 
-  return Source;
-}(_index.Component), _class.$$events = ["callingPhone", "joinus", "showActionSheet"], _class.$$componentPath = "pages/contact/index", _temp2);
-exports.default = Source;
+  return Demo;
+}(_index.Component), _class.$$events = [], _class.$$componentPath = "pages/demo/index", _temp2);
+exports.default = Demo;
 
-Component(require('../../npm/@tarojs/taro-weapp/index.js').default.createComponent(Source, true));
+Component(require('../../npm/@tarojs/taro-weapp/index.js').default.createComponent(Demo, true));

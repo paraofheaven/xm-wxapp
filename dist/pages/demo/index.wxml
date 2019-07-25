@@ -1,0 +1,12 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="demo">
+        <at-button compid="{{$compid__134}}">底部弹窗</at-button>
+        <view>
+            <bottom-up compid="{{$compid__135}}">
+                <view class="bottom-block"></view>
+                <view class="bottom-block"></view>
+                <view class="bottom-block"></view>
+            </bottom-up>
+        </view>
+    </view>
+</block>

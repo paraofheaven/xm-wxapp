@@ -24,6 +24,7 @@ class App extends Component {
       'pages/source/index',
       'pages/contact/index',
       'pages/joinus/index',
+      'pages/demo/index',
     ],
     window: {
       backgroundTextStyle: 'light',
