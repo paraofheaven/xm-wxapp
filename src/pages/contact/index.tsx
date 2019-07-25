@@ -1,6 +1,6 @@
-import Taro, { Component, Config } from '@tarojs/taro'
+import Taro, { Component, Config, showActionSheet } from '@tarojs/taro'
 import { View, Image, Text } from '@tarojs/components'
-import { AtToast } from "taro-ui"
+import { AtActionSheet, AtActionSheetItem } from "taro-ui"
 import './index.less'
 
 export default class Source extends Component {
@@ -14,6 +14,10 @@ export default class Source extends Component {
    */
   config: Config = {
     navigationBarTitleText: '联系我们'
+  }
+
+  public state = {
+    isActionOpened: false,
   }
 
   componentWillMount() {
@@ -38,7 +42,14 @@ export default class Source extends Component {
     });
   }
 
+  public showActionSheet = () => {
+    this.setState({
+      isActionOpened: true,
+    });
+  }
+
   render() {
+    const { isActionOpened } = this.state;
     return (
       <View className='contact'>
         <Image mode="widthFix" className="contact-image" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b6be3707fcd1.png"></Image>
@@ -62,13 +73,22 @@ export default class Source extends Component {
           <View className="sb-icon icon-join-us"></View>
         </View>
         <View className="contact-block">
-          <View className="cb-word3">客服 | Serve</View>
+          <View className="cb-word3" onClick={this.callingPhone}>客服 | Serve</View>
           <View className="sb-icon icon-serve"></View>
         </View>
         <View className="contact-block">
-          <View className="cb-word3">常见问题</View>
+          <View className="cb-word3" onClick={this.showActionSheet}>常见问题</View>
           <View className="sb-icon icon-question"></View>
         </View>
+
+        <AtActionSheet className="contact-action-sheet" isOpened={isActionOpened}>
+          <AtActionSheetItem>
+            我想做后台OA系统，大数据整合系统，可以找你们吗？
+          </AtActionSheetItem>
+          <AtActionSheetItem>
+            我想做多平台小程序和营销H5，可以找你们吗？
+          </AtActionSheetItem>
+        </AtActionSheet>
       </View>
     )
   }

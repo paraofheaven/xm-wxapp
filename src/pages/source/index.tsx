@@ -57,7 +57,7 @@ export default class Source extends Component {
           </Swiper>
           <View className="swiper-dots">
             {['', '', ''].map((item, index) => {
-              return <View className={classnames('swiper-dot', { 'swiper-active': index === current })}></View>
+              return <View className={classnames('swiper-dot', { 'swiper-active': index === current })} key={item}></View>
             })}
           </View>
         </View>

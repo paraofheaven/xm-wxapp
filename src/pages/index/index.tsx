@@ -35,7 +35,7 @@ export default class Index extends Component {
   public changeSwiperIndex = (e) => {
     this.setState({
       current: e.detail.current,
-    })
+    });
   }
 
   public callingPhone = () => {
@@ -62,9 +62,9 @@ export default class Index extends Component {
         scrollWithAnimation={true}>
         <View className="swiper-wap">
           <Swiper
-            indicator-dots={false}
-            autoplay={true}
-            circular={true}
+            indicatorDots={false}
+            autoplay
+            circular
             onChange={this.changeSwiperIndex}>
             <SwiperItem>
               <Image className="swiper-image" mode={'scaleToFill'} src={'https://file.40017.cn/css40017cnproduct/jinrong/files/i/ttb/open/bg-1.png'}></Image>
@@ -98,7 +98,7 @@ export default class Index extends Component {
           </View>
         </View>
         <View className="empty-padding ep-small"></View>
-        <AtNoticebar icon="volume-minus" className="index-notice" marquee={true} speed={40} single>认真提供技术服务，提供各领域专业的解决方案，打通线上线下营销场景</AtNoticebar>
+        <AtNoticebar icon="volume-minus" className="index-notice" marquee={false} speed={40} single>认真提供技术服务，提供各领域专业的解决方案，打通线上线下营销场景</AtNoticebar>
         <View className="empty-padding"></View>
         <View className="block" id="introduction">
           <View className="block-head">
