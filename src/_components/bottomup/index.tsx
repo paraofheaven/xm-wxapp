@@ -6,7 +6,6 @@ import './index.less';
 
 interface IBottomUp {
   isOpen: boolean;
-  className?: string;
   hideMask?: boolean;
   title?: string;
   closeOnClickOverlay?: boolean;
@@ -27,7 +26,6 @@ export default class BottomUp extends Component<IBottomUp, {}> {
   public defaultProps = {
     closeOnClickOverlay: true,
     isOpen: false,
-    className: '',
     hideMask: true,
     title: ''
   }
@@ -36,6 +34,8 @@ export default class BottomUp extends Component<IBottomUp, {}> {
     _isOpened: false,
     visible: false,
   }
+
+  public static externalClasses = ['v-class'];
 
   public componentWillReceiveProps(nextProps) {
     const { isOpen } = nextProps;
@@ -79,8 +79,8 @@ export default class BottomUp extends Component<IBottomUp, {}> {
 
   render() {
     const { _isOpened, visible } = this.state;
-    const { className, hideMask, title } = this.props;
-    const bottomClassName = `v-bottomup ${_isOpened ? 'v-bottomup-open' : 'v-bottomup-close'} ${className}`;
+    const { hideMask, title } = this.props;
+    const bottomClassName = `v-bottomup ${_isOpened ? 'v-bottomup-open' : 'v-bottomup-close'} v-bottomup-class`;
     if (!visible) {
       return;
     }
@@ -91,7 +91,7 @@ export default class BottomUp extends Component<IBottomUp, {}> {
           <View className="v-bottomup-content">
             {title ? <View className="v-class-title v-bottomup-header">
               <Text className="v-bottomup-title">{title}</Text>
-              <MyIcon value="close" size={22} color="#999" v-class="v-icon-bottom-close" onClick={this.handleClose}></MyIcon>
+              <MyIcon value="close" size={22} color="#999" v-class="v-icon-class" onClick={this.handleClose}></MyIcon>
             </View> : null}
             {this.props.children}
           </View>

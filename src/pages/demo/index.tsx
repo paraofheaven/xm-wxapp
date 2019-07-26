@@ -1,7 +1,8 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View } from '@tarojs/components';
-import { AtButton } from 'taro-ui';
+import { AtButton, AtInput, AtForm, AtMessage } from 'taro-ui';
 import BottomUp from '../../_components/bottomup';
+import KeyBoard from '../../_components/keyboard';
 import './index.less';
 
 export default class Demo extends Component {
@@ -12,6 +13,7 @@ export default class Demo extends Component {
 
   public state = {
     bottomupOpen: false,
+    value1: '',
   }
 
   openBottomUp = () => {
@@ -20,18 +22,67 @@ export default class Demo extends Component {
     });
   }
 
+  closeBottomUp = () => {
+    this.setState({
+      bottomupOpen: false,
+    });
+  }
+
+  public handleChange = (value) => {
+    this.setState({
+      value1: value,
+    });
+  }
+
+  public handleInputDelete = () => {
+    this.setState({
+      value1: this.state.value1.substring(0, this.state.value1.length - 1)
+    });
+  }
+
+  public handleInputConfirm = () => {
+    Taro.atMessage({
+      message: `当前input值:${this.state.value1}`
+    });
+  }
+
+  public handleInput = (text) => {
+    this.setState({
+      value1: this.state.value1 + text
+    });
+  }
+
   render() {
-    const { bottomupOpen } = this.state;
+    const { bottomupOpen, value1 } = this.state;
     return (
       <View className="demo">
         <AtButton onClick={this.openBottomUp}>底部弹窗</AtButton>
+        <AtForm>
+          <AtInput
+            name='value1'
+            type='text'
+            disabled
+            placeholder='点击键盘输入'
+            value={value1}
+            onChange={this.handleChange.bind(this)}
+          />
+        </AtForm>
         <View>
-          <BottomUp className="demo-bottomup" title="标题" isOpen={bottomupOpen} closeOnClickOverlay onClose={() => { console.log('1111') }}>
+          <BottomUp title="标题" isOpen={bottomupOpen} closeOnClickOverlay onClose={this.closeBottomUp}>
             <View className="bottom-block"></View>
             <View className="bottom-block"></View>
             <View className="bottom-block"></View>
           </BottomUp>
         </View>
+        <View>
+          <KeyBoard
+            v-class="demo-keyboard"
+            onKeyboradClear={this.handleInputDelete}
+            onKeyboradFinish={this.handleInputConfirm}
+            onKeyboradNumber={this.handleInput}
+          ></KeyBoard>
+        </View>
+        <AtMessage />
       </View>
     )
   }

@@ -53,7 +53,7 @@ class App extends Component {
           "text": "首页"
         },
         {
-          "pagePath": "pages/demo/index",
+          "pagePath": "pages/source/index",
           "iconPath": "_assets/star.png",
           "selectedIconPath": "_assets/star-s.png",
           "text": "公司业务"
