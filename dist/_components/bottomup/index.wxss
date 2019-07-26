@@ -83,6 +83,11 @@
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
+.v-icon-bottom-close {
+  float: right;
+  padding-left: 30rpx;
+  font-weight: normal;
+}
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;

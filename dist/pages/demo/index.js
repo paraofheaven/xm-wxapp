@@ -36,7 +36,7 @@ var Demo = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Demo.__proto__ || Object.getPrototypeOf(Demo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__134", "$compid__135", "bottomupOpen"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Demo.__proto__ || Object.getPrototypeOf(Demo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__33", "$compid__34", "bottomupOpen"], _this.config = {
       navigationBarTitleText: 'demo'
     }, _this.openBottomUp = function () {
       _this.setState({
@@ -63,8 +63,8 @@ var Demo = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__134 = (0, _index.genCompid)(__prefix + "$compid__134");
-      var $compid__135 = (0, _index.genCompid)(__prefix + "$compid__135");
+      var $compid__33 = (0, _index.genCompid)(__prefix + "$compid__33");
+      var $compid__34 = (0, _index.genCompid)(__prefix + "$compid__34");
 
       var bottomupOpen = this.__state.bottomupOpen;
 
@@ -73,21 +73,21 @@ var Demo = (_temp2 = _class = function (_BaseComponent) {
         console.log('1111');
       };
 
-      var $props__134 = {
+      var $props__33 = {
         "onClick": this.openBottomUp
       };
-      var $props__135 = {
+      var $props__34 = {
         "className": "demo-bottomup",
         "title": "\u6807\u9898",
         "isOpen": bottomupOpen,
         "closeOnClickOverlay": true,
         "onClose": this.anonymousFunc0
       };
-      _index.propsManager.set($props__134, $compid__134);
-      _index.propsManager.set($props__135, $compid__135);
+      _index.propsManager.set($props__33, $compid__33);
+      _index.propsManager.set($props__34, $compid__34);
       Object.assign(this.__state, {
-        $compid__134: $compid__134,
-        $compid__135: $compid__135
+        $compid__33: $compid__33,
+        $compid__34: $compid__34
       });
       return this.__state;
     }

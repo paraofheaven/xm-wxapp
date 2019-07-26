@@ -91,7 +91,7 @@ export default class BottomUp extends Component<IBottomUp, {}> {
           <View className="v-bottomup-content">
             {title ? <View className="v-class-title v-bottomup-header">
               <Text className="v-bottomup-title">{title}</Text>
-              <MyIcon value="close" size={22} color="#999" className="v-bottomup-close" onClick={this.handleClose}></MyIcon>
+              <MyIcon value="close" size={22} color="#999" v-class="v-icon-bottom-close" onClick={this.handleClose}></MyIcon>
             </View> : null}
             {this.props.children}
           </View>

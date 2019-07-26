@@ -42,7 +42,7 @@ var Icon = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Icon.__proto__ || Object.getPrototypeOf(Icon)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "value", "size", "color", "className"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Icon.__proto__ || Object.getPrototypeOf(Icon)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "value", "size", "color"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(Icon, [{
@@ -53,7 +53,6 @@ var Icon = (_temp2 = _class = function (_BaseComponent) {
         value: '',
         size: 20,
         color: '',
-        className: '',
         onClick: function onClick() {}
       };
       this.$$refs = [];
@@ -70,10 +69,9 @@ var Icon = (_temp2 = _class = function (_BaseComponent) {
       var _props = this.__props,
           value = _props.value,
           size = _props.size,
-          color = _props.color,
-          className = _props.className;
+          color = _props.color;
 
-      var anonymousState__temp = (0, _index4.default)('v-icon', _defineProperty({}, "v-icon-" + value, value), className);
+      var anonymousState__temp = (0, _index4.default)('v-icon', _defineProperty({}, "v-icon-" + value, value), 'v-class');
       var anonymousState__temp2 = (0, _index.internal_inline_style)({ fontSize: size + "px", color: color });
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
@@ -82,14 +80,17 @@ var Icon = (_temp2 = _class = function (_BaseComponent) {
       return this.__state;
     }
   }, {
-    key: "funPrivateJhkeQ",
-    value: function funPrivateJhkeQ() {
+    key: "funPrivateHThxy",
+    value: function funPrivateHThxy() {
       return this.props.onClick.apply(undefined, Array.prototype.slice.call(arguments, 1));
     }
   }]);
 
   return Icon;
-}(_index.Component), _class.$$events = ["funPrivateJhkeQ"], _class.$$componentPath = "_components/myicon/index", _temp2);
+}(_index.Component), _class.$$events = ["funPrivateHThxy"], _class.$$componentPath = "_components/myicon/index", _temp2);
+
+
+Icon.externalClasses = ['v-class'];
 exports.default = Icon;
 
 Component(require('../../npm/@tarojs/taro-weapp/index.js').default.createComponent(Icon));

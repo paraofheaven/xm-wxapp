@@ -11,7 +11,7 @@
                 <view class="v-bottomup-content">
                     <block wx:if="{{title}}">
                         <view class="v-class-title v-bottomup-header"><text class="v-bottomup-title">{{title}}</text>
-                            <my-icon compid="{{$compid__156}}"></my-icon>
+                            <my-icon v-class="v-icon-bottom-close" compid="{{$compid__37}}"></my-icon>
                         </view>
                     </block>
                     <slot></slot>

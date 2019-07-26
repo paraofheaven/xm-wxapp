@@ -40,7 +40,7 @@ var BottomUp = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BottomUp.__proto__ || Object.getPrototypeOf(BottomUp)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__156", "visible", "bottomClassName", "hideMask", "title", "_isOpened", "className", "closeOnClickOverlay", "isOpen", "children"], _this.closeByDocument = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BottomUp.__proto__ || Object.getPrototypeOf(BottomUp)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__37", "visible", "bottomClassName", "hideMask", "title", "_isOpened", "className", "closeOnClickOverlay", "isOpen", "children"], _this.closeByDocument = function () {
       if (_this.props.closeOnClickOverlay) {
         _this.handleClose();
       }
@@ -107,7 +107,7 @@ var BottomUp = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__156 = (0, _index.genCompid)(__prefix + "$compid__156");
+      var $compid__37 = (0, _index.genCompid)(__prefix + "$compid__37");
 
       var _state = this.__state,
           _isOpened = _state._isOpened,
@@ -121,16 +121,15 @@ var BottomUp = (_temp2 = _class = function (_BaseComponent) {
       if (!visible) {
         return null;
       }
-      var $props__156 = {
+      var $props__37 = {
         "value": "close",
         "size": 22,
         "color": "#999",
-        "className": "v-bottomup-close",
         "onClick": this.handleClose
       };
-      title && _index.propsManager.set($props__156, $compid__156);
+      title && _index.propsManager.set($props__37, $compid__37);
       Object.assign(this.__state, {
-        $compid__156: $compid__156,
+        $compid__37: $compid__37,
         bottomClassName: bottomClassName,
         hideMask: hideMask,
         title: title
