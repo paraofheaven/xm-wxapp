@@ -1,1 +1,19 @@
-<block wx:if="{{$taroCompReady}}"><view class="demo"><at-button compid="{{$compid__2}}">底部弹窗</at-button><at-form><at-input compid="{{$compid__3}}"></at-input></at-form><view><bottom-up compid="{{$compid__4}}"><view class="bottom-block"></view><view class="bottom-block"></view><view class="bottom-block"></view></bottom-up></view><view><key-board v-class="demo-keyboard" compid="{{$compid__5}}"></key-board></view><at-message></at-message></view></block>
+<block wx:if="{{$taroCompReady}}">
+    <view class="demo">
+        <at-button compid="{{$compid__2}}">底部弹窗</at-button>
+        <at-form>
+            <at-input compid="{{$compid__3}}"></at-input>
+        </at-form>
+        <view>
+            <bottom-up compid="{{$compid__4}}">
+                <view class="bottom-block"></view>
+                <view class="bottom-block"></view>
+                <view class="bottom-block"></view>
+            </bottom-up>
+        </view>
+        <view>
+            <key-board v-class="demo-keyboard" compid="{{$compid__5}}"></key-board>
+        </view>
+        <at-message></at-message>
+    </view>
+</block>

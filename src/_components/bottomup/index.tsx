@@ -68,7 +68,6 @@ export default class BottomUp extends Component<IBottomUp, {}> {
             this.props.onClose();
           }
         }, 400);
-
       }
     )
   }

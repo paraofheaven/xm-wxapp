@@ -99,7 +99,7 @@ export default class Index extends Component {
           </View>
         </View>
         <View className="empty-padding ep-small"></View>
-        <AtNoticebar icon="volume-minus" className="index-notice" marquee={false} speed={40} single>认真提供技术服务，提供各领域专业的解决方案，打通线上线下营销场景</AtNoticebar>
+        <AtNoticebar icon="volume-minus" className="index-notice" marquee speed={40} single>认真提供技术服务，提供各领域专业的解决方案，打通线上线下营销场景</AtNoticebar>
         <View className="empty-padding"></View>
         <View className="block" id="introduction">
           <View className="block-head">
