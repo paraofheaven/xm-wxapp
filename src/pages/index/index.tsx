@@ -75,7 +75,7 @@ export default class Index extends Component {
             </SwiperItem>
           </Swiper>
           <View className="swiper-dots">
-            {['', ''].map((item, index) => {
+            {['', ''].map((em, index) => {
               return <View className={classnames('swiper-dot', { 'swiper-active': index === current })} key={String(index)}></View>
             })}
           </View>
