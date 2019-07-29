@@ -30,9 +30,9 @@ export default class NoticeBar extends Component<INoticeBar, {}>{
   public componentDidMount() {
     const { loop } = this.props;
     if (loop) {
-      Taro.createSelectorQuery().in(this).select('.v-noticebar-wrap').boundingClientRect().exec((rectWrap: any) => {
+      Taro.createSelectorQuery().in(this.$scope).select('.v-noticebar-wrap').boundingClientRect().exec((rectWrap: any) => {
         const wrapWidth = rectWrap[0].width;
-        Taro.createSelectorQuery().in(this).select('.v-noticebar-content').boundingClientRect().exec((rectContent: any) => {
+        Taro.createSelectorQuery().in(this.$scope).select('.v-noticebar-content').boundingClientRect().exec((rectContent: any) => {
           const contentWidth = rectContent[0].width;
           this.resetDuration = this.state.duration * wrapWidth / contentWidth;
           setTimeout(() => {

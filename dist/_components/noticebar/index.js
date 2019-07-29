@@ -42,7 +42,7 @@ var NoticeBar = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = NoticeBar.__proto__ || Object.getPrototypeOf(NoticeBar)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "$compid__77", "$compid__78", "visible", "closable", "animation", "duration", "delay", "loop", "children"], _this.initAnimation = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = NoticeBar.__proto__ || Object.getPrototypeOf(NoticeBar)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "$compid__85", "$compid__86", "visible", "closable", "animation", "duration", "delay", "loop", "children"], _this.initAnimation = function () {
       var animation = _index2.default.createAnimation({
         duration: _this.resetDuration,
         timingFunction: 'linear'
@@ -75,9 +75,9 @@ var NoticeBar = (_temp2 = _class = function (_BaseComponent) {
       var loop = this.props.loop;
 
       if (loop) {
-        _index2.default.createSelectorQuery().in(this).select('.v-noticebar-wrap').boundingClientRect().exec(function (rectWrap) {
+        _index2.default.createSelectorQuery().in(this.$scope).select('.v-noticebar-wrap').boundingClientRect().exec(function (rectWrap) {
           var wrapWidth = rectWrap[0].width;
-          _index2.default.createSelectorQuery().in(_this2).select('.v-noticebar-content').boundingClientRect().exec(function (rectContent) {
+          _index2.default.createSelectorQuery().in(_this2.$scope).select('.v-noticebar-content').boundingClientRect().exec(function (rectContent) {
             var contentWidth = rectContent[0].width;
             _this2.resetDuration = _this2.state.duration * wrapWidth / contentWidth;
             setTimeout(function () {
@@ -95,8 +95,8 @@ var NoticeBar = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__77 = (0, _index.genCompid)(__prefix + "$compid__77");
-      var $compid__78 = (0, _index.genCompid)(__prefix + "$compid__78");
+      var $compid__85 = (0, _index.genCompid)(__prefix + "$compid__85");
+      var $compid__86 = (0, _index.genCompid)(__prefix + "$compid__86");
 
       var visible = this.__state.visible;
       var _props = this.__props,
@@ -107,18 +107,18 @@ var NoticeBar = (_temp2 = _class = function (_BaseComponent) {
         return null;
       }
       var anonymousState__temp = (0, _index4.default)('v-noticebar-content', _defineProperty({}, 'v-noticebar-loop', loop));
-      var $props__77 = {
+      var $props__85 = {
         "value": "horn"
       };
-      var $props__78 = {
+      var $props__86 = {
         "value": "close"
       };
-      _index.propsManager.set($props__77, $compid__77);
-      closable && _index.propsManager.set($props__78, $compid__78);
+      _index.propsManager.set($props__85, $compid__85);
+      closable && _index.propsManager.set($props__86, $compid__86);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
-        $compid__77: $compid__77,
-        $compid__78: $compid__78,
+        $compid__85: $compid__85,
+        $compid__86: $compid__86,
         closable: closable
       });
       return this.__state;
