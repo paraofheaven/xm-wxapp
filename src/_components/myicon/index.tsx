@@ -11,7 +11,7 @@ interface IICON {
   onClick?: any;
 }
 
-export default class Icon extends Component<IICON, {}>{
+export default class MyIcon extends Component<IICON, {}>{
 
   constructor() {
     super(...arguments)
@@ -21,12 +21,12 @@ export default class Icon extends Component<IICON, {}>{
 
   public defaultProps = {
     value: '',
-    size: 20,
+    size: 16,
     color: '',
     onClick: () => { },
   }
   render() {
-    const { value, size, color } = this.props;
+    const { value, size = 16, color } = this.props;
     return <View
       className={classnames('v-icon', { [`v-icon-${value}`]: value }, 'v-class')}
       style={{ fontSize: `${size}px`, color: color }}

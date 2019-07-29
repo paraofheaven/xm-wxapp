@@ -3,28 +3,32 @@
   display: flex;
   height: 72px;
   line-height: 72px;
-  font-size: 28px;
+  font-size: 26px;
   color: #f76a24;
   background-color: #fefcec;
   overflow: hidden;
+
   &-wrap {
     overflow: hidden;
     box-sizing: border-box;
     -webkit-flex-grow: 1;
     flex-grow: 1;
   }
+
   &-content {
     white-space: nowrap;
     display: inline-block !important;
   }
-  &-notice,
+
   &-close,
-  &-gap {
+  &-gap,
+  &-notice {
     width: 72px;
     text-align: center;
     -webkit-flex-shrink: 0;
     flex-shrink: 0;
   }
+
   &-gap {
     width: 20px;
   }

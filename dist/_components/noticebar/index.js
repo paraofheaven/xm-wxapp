@@ -20,72 +20,72 @@ var _index4 = _interopRequireDefault(_index3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Index = (_temp2 = _class = function (_BaseComponent) {
-  _inherits(Index, _BaseComponent);
+var NoticeBar = (_temp2 = _class = function (_BaseComponent) {
+  _inherits(NoticeBar, _BaseComponent);
 
-  function Index() {
+  function NoticeBar() {
     var _ref;
 
     var _temp, _this, _ret;
 
-    _classCallCheck(this, Index);
+    _classCallCheck(this, NoticeBar);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "loopArray16", "$compid__48", "scrollIntoView", "current"], _this.config = {
-      navigationBarTitleText: '首页'
-    }, _this.changeSwiperIndex = function (e) {
-      _this.setState({
-        current: e.detail.current
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = NoticeBar.__proto__ || Object.getPrototypeOf(NoticeBar)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "$compid__77", "$compid__78", "visible", "closable", "animation", "duration", "delay", "loop", "children"], _this.initAnimation = function () {
+      var animation = _index2.default.createAnimation({
+        duration: _this.resetDuration,
+        timingFunction: 'linear'
       });
-    }, _this.callingPhone = function () {
-      _index2.default.makePhoneCall({
-        phoneNumber: '17301631743'
-      });
-    }, _this.scrollToElement = function (ele) {
-      _this.setState({
-        scrollIntoView: ele
-      });
-    }, _this.customComponents = ["NoticeBar"], _temp), _possibleConstructorReturn(_this, _ret);
+      animation.translateX('-100%').step();
+    }, _this.customComponents = ["MyIcon"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  _createClass(Index, [{
+  _createClass(NoticeBar, [{
     key: "_constructor",
     value: function _constructor() {
-      _get(Index.prototype.__proto__ || Object.getPrototypeOf(Index.prototype), "_constructor", this).apply(this, arguments);
-      /**
-       * 指定config的类型声明为: Taro.Config
-       *
-       * 由于 typescript 对于 object 类型推导只能推出 Key 的基本类型
-       * 对于像 navigationBarTextStyle: 'black' 这样的推导出的类型是 string
-       * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
-       */
-
+      _get(NoticeBar.prototype.__proto__ || Object.getPrototypeOf(NoticeBar.prototype), "_constructor", this).apply(this, arguments);
+      this.defaultProps = {
+        closable: true,
+        loop: true
+      };
       this.state = {
-        current: 0,
-        scrollIntoView: ''
+        visible: true,
+        animation: null,
+        duration: 6000,
+        delay: 1000
       };
       this.$$refs = [];
     }
   }, {
-    key: "componentWillMount",
-    value: function componentWillMount() {
-      _index2.default.showLoading({
-        title: '正在加载...'
-      });
-    }
-  }, {
     key: "componentDidMount",
     value: function componentDidMount() {
-      _index2.default.hideLoading();
+      var _this2 = this;
+
+      var loop = this.props.loop;
+
+      if (loop) {
+        _index2.default.createSelectorQuery().in(this).select('.v-noticebar-wrap').boundingClientRect().exec(function (rectWrap) {
+          var wrapWidth = rectWrap[0].width;
+          _index2.default.createSelectorQuery().in(_this2).select('.v-noticebar-content').boundingClientRect().exec(function (rectContent) {
+            var contentWidth = rectContent[0].width;
+            _this2.resetDuration = _this2.state.duration * wrapWidth / contentWidth;
+            setTimeout(function () {
+              _this2.initAnimation();
+            }, _this2.state.delay);
+          });
+        });
+      }
     }
   }, {
     key: "_createData",
@@ -95,41 +95,41 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__48 = (0, _index.genCompid)(__prefix + "$compid__48");
+      var $compid__77 = (0, _index.genCompid)(__prefix + "$compid__77");
+      var $compid__78 = (0, _index.genCompid)(__prefix + "$compid__78");
 
-      var _state = this.__state,
-          current = _state.current,
-          scrollIntoView = _state.scrollIntoView;
+      var visible = this.__state.visible;
+      var _props = this.__props,
+          loop = _props.loop,
+          closable = _props.closable;
 
-      var scrollStyle = { height: '600px' };
-      var anonymousState__temp = (0, _index.internal_inline_style)(scrollStyle);
-      var $props__48 = {
-        "loop": true
+      if (!visible) {
+        return null;
+      }
+      var anonymousState__temp = (0, _index4.default)('v-noticebar-content', _defineProperty({}, 'v-noticebar-loop', loop));
+      var $props__77 = {
+        "value": "horn"
       };
-      var loopArray16 = ['', ''].map(function (em, index) {
-        em = {
-          $original: (0, _index.internal_get_original)(em)
-        };
-        var $loopState__temp3 = (0, _index4.default)('swiper-dot', { 'swiper-active': index === current });
-        var $loopState__temp5 = String(index);
-        return {
-          $loopState__temp3: $loopState__temp3,
-          $loopState__temp5: $loopState__temp5,
-          $original: em.$original
-        };
-      });
-      _index.propsManager.set($props__48, $compid__48);
+      var $props__78 = {
+        "value": "close"
+      };
+      _index.propsManager.set($props__77, $compid__77);
+      closable && _index.propsManager.set($props__78, $compid__78);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
-        loopArray16: loopArray16,
-        $compid__48: $compid__48
+        $compid__77: $compid__77,
+        $compid__78: $compid__78,
+        closable: closable
       });
       return this.__state;
     }
   }]);
 
-  return Index;
-}(_index.Component), _class.$$events = ["changeSwiperIndex", "scrollToElement", "callingPhone"], _class.$$componentPath = "pages/index/index", _temp2);
-exports.default = Index;
+  return NoticeBar;
+}(_index.Component), _class.$$events = [], _class.$$componentPath = "_components/noticebar/index", _temp2);
 
-Component(require('../../npm/@tarojs/taro-weapp/index.js').default.createComponent(Index, true));
+
+NoticeBar.externalClasses = ['v-class'];
+exports.default = NoticeBar;
+
+Component(require('../../npm/@tarojs/taro-weapp/index.js').default.createComponent(NoticeBar));

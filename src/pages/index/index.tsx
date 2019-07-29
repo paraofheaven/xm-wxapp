@@ -2,7 +2,7 @@ import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Swiper, SwiperItem, Image, Text, ScrollView } from '@tarojs/components'
 import classnames from 'classnames';
 import { AtNoticebar } from 'taro-ui';
-import BottomUp from '../../_components/bottomup';
+import NoticeBar from '../../_components/noticebar';
 import './index.less';
 
 export default class Index extends Component {
@@ -99,7 +99,7 @@ export default class Index extends Component {
           </View>
         </View>
         <View className="empty-padding ep-small"></View>
-        <AtNoticebar icon="volume-minus" className="index-notice" marquee speed={40} single>认真提供技术服务，提供各领域专业的解决方案，打通线上线下营销场景</AtNoticebar>
+        <NoticeBar v-class="index-notice" loop>认真提供技术服务，提供各领域专业的解决方案，打通线上线下营销场景</NoticeBar>
         <View className="empty-padding"></View>
         <View className="block" id="introduction">
           <View className="block-head">
