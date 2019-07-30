@@ -3,6 +3,7 @@ import { View } from '@tarojs/components';
 import { AtButton, AtInput, AtForm, AtMessage } from 'taro-ui';
 import BottomUp from '../../_components/bottomup';
 import KeyBoard from '../../_components/keyboard';
+import Otp from '../../_components/otp';
 import './index.less';
 
 export default class Demo extends Component {
@@ -52,6 +53,18 @@ export default class Demo extends Component {
     });
   }
 
+  public sendRequest = () => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve();
+      }, 2000);
+    });
+  }
+
+  public handleOtpClick = (e) => {
+
+  }
+
   render() {
     const { bottomupOpen, value1 } = this.state;
     return (
@@ -68,6 +81,9 @@ export default class Demo extends Component {
           />
         </AtForm>
         <View>
+          <Otp totalTicks={100} format={"{t}s后重发"} sendTxt={'获取动态码'} processingTxt={'短信发送中'} onSendRequest={this.sendRequest}></Otp>
+        </View>
+        <View>
           <BottomUp title="标题" isOpen={bottomupOpen} closeOnClickOverlay onClose={this.closeBottomUp}>
             <View className="bottom-block"></View>
             <View className="bottom-block"></View>
@@ -82,6 +98,7 @@ export default class Demo extends Component {
             onKeyboradNumber={this.handleInput}
           ></KeyBoard>
         </View>
+
         <AtMessage />
       </View>
     )

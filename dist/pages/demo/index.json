@@ -3,6 +3,7 @@
     "at-button": "../../npm/taro-ui/dist/weapp/components/button/index",
     "at-form": "../../npm/taro-ui/dist/weapp/components/form/index",
     "at-input": "../../npm/taro-ui/dist/weapp/components/input/index",
+    "otp": "../../_components/otp/index",
     "bottom-up": "../../_components/bottomup/index",
     "key-board": "../../_components/keyboard/index",
     "at-message": "../../npm/taro-ui/dist/weapp/components/message/index"

@@ -19,7 +19,7 @@ export default class NoticeBar extends Component<INoticeBar, {}>{
   public resetDuration;
   public wrapWidth;
 
-  static externalClasses = ['v-class'];
+  static externalClasses = ['v-class', 'v-noticebar-notice'];
 
   public state = {
     visible: true,

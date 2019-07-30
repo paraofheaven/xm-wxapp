@@ -1,1 +1,108 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var _class,_temp2,_createClass=function(){function o(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(e,t,n){return t&&o(e.prototype,t),n&&o(e,n),e}}(),_get=function e(t,n,o){null===t&&(t=Function.prototype);var r=Object.getOwnPropertyDescriptor(t,n);if(void 0===r){var i=Object.getPrototypeOf(t);return null===i?void 0:e(i,n,o)}if("value"in r)return r.value;var a=r.get;return void 0!==a?a.call(o):void 0},_index=require("../../../../../@tarojs/taro-weapp/index.js"),_index2=_interopRequireDefault(_index),_index3=require("../../../../../prop-types/index.js"),_index4=_interopRequireDefault(_index3),_component=require("../../common/component.js"),_component2=_interopRequireDefault(_component);function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function _inherits(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}var AtLoading=(_temp2=_class=function(){function a(){var e,t,n;_classCallCheck(this,a);for(var o=arguments.length,r=Array(o),i=0;i<o;i++)r[i]=arguments[i];return(t=n=_possibleConstructorReturn(this,(e=a.__proto__||Object.getPrototypeOf(a)).call.apply(e,[this].concat(r)))).$usedState=["anonymousState__temp","anonymousState__temp2","anonymousState__temp3","anonymousState__temp4","color","size"],n.customComponents=[],_possibleConstructorReturn(n,t)}return _inherits(a,_component2.default),_createClass(a,[{key:"_constructor",value:function(){_get(a.prototype.__proto__||Object.getPrototypeOf(a.prototype),"_constructor",this).apply(this,arguments),this.$$refs=[]}},{key:"_createData",value:function(e,t,n){this.__state=e||this.state||{},this.__props=t||this.props||{};this.$prefix;var o=this.__props,r=o.color,i=o.size,a={width:i?""+_index2.default.pxTransform(parseInt(i)):"",height:i?""+_index2.default.pxTransform(parseInt(i)):""},s={border:r?"1px solid "+r:"","border-color":r?r+" transparent transparent transparent":""},_=Object.assign({},s,a),p=(0,_index.internal_inline_style)(a),u=(0,_index.internal_inline_style)(_),l=(0,_index.internal_inline_style)(_),c=(0,_index.internal_inline_style)(_);return Object.assign(this.__state,{anonymousState__temp:p,anonymousState__temp2:u,anonymousState__temp3:l,anonymousState__temp4:c}),this.__state}}]),a}(),_class.$$events=[],_class.$$componentPath="Users/ly/Documents/GT_workspace/xmWeb/node_modules/taro-ui/dist/weapp/components/loading/index",_temp2);AtLoading.defaultProps={size:0,color:""},AtLoading.propTypes={size:_index4.default.oneOfType([_index4.default.string,_index4.default.number]),color:_index4.default.oneOfType([_index4.default.string,_index4.default.number])},exports.default=AtLoading,Component(require("../../../../../@tarojs/taro-weapp/index.js").default.createComponent(AtLoading));
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+var _class, _temp2;
+
+var _index = require("../../../../../@tarojs/taro-weapp/index.js");
+
+var _index2 = _interopRequireDefault(_index);
+
+var _index3 = require("../../../../../prop-types/index.js");
+
+var _index4 = _interopRequireDefault(_index3);
+
+var _component = require("../../common/component.js");
+
+var _component2 = _interopRequireDefault(_component);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var AtLoading = (_temp2 = _class = function (_AtComponent) {
+  _inherits(AtLoading, _AtComponent);
+
+  function AtLoading() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, AtLoading);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = AtLoading.__proto__ || Object.getPrototypeOf(AtLoading)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "anonymousState__temp4", "color", "size"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(AtLoading, [{
+    key: "_constructor",
+    value: function _constructor() {
+      _get(AtLoading.prototype.__proto__ || Object.getPrototypeOf(AtLoading.prototype), "_constructor", this).apply(this, arguments);
+      this.$$refs = [];
+    }
+  }, {
+    key: "_createData",
+    value: function _createData() {
+      this.__state = arguments[0] || this.state || {};
+      this.__props = arguments[1] || this.props || {};
+      var __isRunloopRef = arguments[2];
+      var __prefix = this.$prefix;
+      ;
+
+      var _props = this.__props,
+          color = _props.color,
+          size = _props.size;
+
+      var sizeStyle = {
+        width: size ? "" + _index2.default.pxTransform(parseInt(size)) : '',
+        height: size ? "" + _index2.default.pxTransform(parseInt(size)) : ''
+      };
+      var colorStyle = {
+        'border': color ? "1px solid " + color : '',
+        'border-color': color ? color + " transparent transparent transparent" : ''
+      };
+      var ringStyle = Object.assign({}, colorStyle, sizeStyle);
+
+      var anonymousState__temp = (0, _index.internal_inline_style)(sizeStyle);
+      var anonymousState__temp2 = (0, _index.internal_inline_style)(ringStyle);
+      var anonymousState__temp3 = (0, _index.internal_inline_style)(ringStyle);
+      var anonymousState__temp4 = (0, _index.internal_inline_style)(ringStyle);
+      Object.assign(this.__state, {
+        anonymousState__temp: anonymousState__temp,
+        anonymousState__temp2: anonymousState__temp2,
+        anonymousState__temp3: anonymousState__temp3,
+        anonymousState__temp4: anonymousState__temp4
+      });
+      return this.__state;
+    }
+  }]);
+
+  return AtLoading;
+}(_component2.default), _class.$$events = [], _class.$$componentPath = "Users/ly/Documents/GT_workspace/xmWeb/node_modules/taro-ui/dist/weapp/components/loading/index", _temp2);
+
+
+AtLoading.defaultProps = {
+  size: 0,
+  color: ''
+};
+
+AtLoading.propTypes = {
+  size: _index4.default.oneOfType([_index4.default.string, _index4.default.number]),
+  color: _index4.default.oneOfType([_index4.default.string, _index4.default.number])
+};
+exports.default = AtLoading;
+
+Component(require('../../../../../@tarojs/taro-weapp/index.js').default.createComponent(AtLoading));

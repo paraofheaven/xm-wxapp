@@ -98,7 +98,7 @@ export default class Index extends Component {
           </View>
         </View>
         <View className="empty-padding ep-small"></View>
-        <NoticeBar v-class="index-notice" loop>认真提供技术服务，提供各领域专业的解决方案，打通线上线下营销场景</NoticeBar>
+        <NoticeBar v-class="index-notice" loop v-noticebar-notice="index-noticebar-notice">认真提供技术服务，提供各领域专业的解决方案，打通线上线下营销场景</NoticeBar>
         <View className="empty-padding"></View>
         <View className="block" id="introduction">
           <View className="block-head">
