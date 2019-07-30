@@ -1,5 +1,1 @@
-<block wx:if="{{$taroCompReady}}">
-    <view class="{{rootClass}}" bindtap="handleClick">
-        <slot></slot>
-    </view>
-</block>
+<block wx:if="{{$taroCompReady}}"><view class="{{rootClass}}" bindtap="handleClick"><slot></slot></view></block>

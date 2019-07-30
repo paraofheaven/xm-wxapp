@@ -17,12 +17,13 @@ export default class NoticeBar extends Component<INoticeBar, {}>{
   }
 
   public resetDuration;
+  public wrapWidth;
 
   static externalClasses = ['v-class'];
 
   public state = {
     visible: true,
-    animation: null,
+    animationData: undefined,
     duration: 6000,
     delay: 1000,
   }
@@ -31,10 +32,10 @@ export default class NoticeBar extends Component<INoticeBar, {}>{
     const { loop } = this.props;
     if (loop) {
       Taro.createSelectorQuery().in(this.$scope).select('.v-noticebar-wrap').boundingClientRect().exec((rectWrap: any) => {
-        const wrapWidth = rectWrap[0].width;
+        this.wrapWidth = rectWrap[0].width;
         Taro.createSelectorQuery().in(this.$scope).select('.v-noticebar-content').boundingClientRect().exec((rectContent: any) => {
           const contentWidth = rectContent[0].width;
-          this.resetDuration = this.state.duration * wrapWidth / contentWidth;
+          this.resetDuration = this.state.duration * this.wrapWidth / contentWidth;
           setTimeout(() => {
             this.initAnimation();
           }, this.state.delay);
@@ -44,16 +45,42 @@ export default class NoticeBar extends Component<INoticeBar, {}>{
   }
 
   public initAnimation = () => {
+    const { duration } = this.state;
     const animation = Taro.createAnimation({
-      duration: this.resetDuration,
+      duration: duration,
       timingFunction: 'linear',
     });
     animation.translateX('-100%').step();
+    this.setState({
+      animationData: animation.export()
+    });
+    setTimeout(() => {
+      const animation = Taro.createAnimation({
+        duration: 0
+      });
+      animation.translateX(this.wrapWidth).step();
+      this.setState({
+        animationData: animation.export()
+      });
+
+      setTimeout(() => {
+        const animation = Taro.createAnimation({
+          duration: this.resetDuration,
+        });
+        animation.translateX(0).step();
+        this.setState({
+          animationData: animation.export()
+        });
+        setTimeout(() => {
+          this.initAnimation();
+        }, this.resetDuration);
+      }, 100)
+    }, duration);
   }
 
 
   render() {
-    const { visible } = this.state;
+    const { visible, animationData } = this.state;
     const { loop, closable } = this.props;
     if (!visible) {
       return;
@@ -62,7 +89,7 @@ export default class NoticeBar extends Component<INoticeBar, {}>{
       <View className="v-class v-noticebar">
         <MyIcon value="horn" v-class="v-noticebar-notice" />
         <View className="v-noticebar-wrap">
-          <View className={classnames('v-noticebar-content', { ['v-noticebar-loop']: loop })}>
+          <View className={classnames('v-noticebar-content', { ['v-noticebar-loop']: loop })} animation={animationData}>
             {this.props.children}
           </View>
         </View>
