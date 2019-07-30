@@ -40,7 +40,7 @@ var Otp = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Otp.__proto__ || Object.getPrototypeOf(Otp)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "ticksNumber", "running", "sendTxt", "beforeSendRequest", "processingTxt", "totalTicks", "duration", "sentTxt", "format"], _this.handleStart = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Otp.__proto__ || Object.getPrototypeOf(Otp)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "ticksNumber", "running", "sendTxt", "autoStart", "beforeSendRequest", "processingTxt", "totalTicks", "duration", "sentTxt", "format"], _this.handleStart = function () {
       var _this$props = _this.props,
           beforeSendRequest = _this$props.beforeSendRequest,
           processingTxt = _this$props.processingTxt,
@@ -109,14 +109,20 @@ var Otp = (_temp2 = _class = function (_BaseComponent) {
   }, {
     key: "componentDidMount",
     value: function componentDidMount() {
-      var sendTxt = this.props.sendTxt;
+      var _props = this.props,
+          sendTxt = _props.sendTxt,
+          autoStart = _props.autoStart;
 
       if (this.ticksTimer) {
         clearTimeout(this.ticksTimer);
       }
-      this.setState({
-        ticksNumber: sendTxt
-      });
+      if (autoStart) {
+        this.handleStart();
+      } else {
+        this.setState({
+          ticksNumber: sendTxt
+        });
+      }
     }
   }, {
     key: "componentWillUnmount",

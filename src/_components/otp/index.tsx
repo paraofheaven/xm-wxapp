@@ -39,14 +39,18 @@ export default class Otp extends Component<IOtp, any>{
   }
 
   public componentDidMount() {
-    const { sendTxt } = this.props;
+    const { sendTxt, autoStart } = this.props;
     if (this.ticksTimer) {
       clearTimeout(this.ticksTimer);
     }
 
-    this.setState({
-      ticksNumber: sendTxt,
-    });
+    if (autoStart) {
+      this.handleStart();
+    } else {
+      this.setState({
+        ticksNumber: sendTxt,
+      });
+    }
   }
 
   public componentWillUnmount() {

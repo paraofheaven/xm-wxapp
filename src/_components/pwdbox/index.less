@@ -1,0 +1,87 @@
+@color-red: #ff6464;
+.v-pwdbox {
+  padding: 30px 0 0;
+  text-align: center;
+  &-wrap {
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  &-header {
+    color: #000;
+    text-align: left;
+    font-weight: bold;
+    font-size: 36px;
+  }
+  &-sub-header {
+    color: #999;
+    text-align: left;
+    font-size: 24px;
+  }
+  &-content {
+    position: relative;
+    position: relative;
+    min-height: 90px;
+    overflow: hidden;
+  }
+  &-footer {
+    padding-top: 10px;
+    height: 60px;
+    text-align: right;
+    font-size: 24px;
+    line-height: 60px;
+    .v-pwdbox-forgetPwd {
+      float: right;
+    }
+    .v-pwdbox-message {
+      float: left;
+      color: @color-red;
+    }
+  }
+  &-num {
+    display: -webkit-flex;
+    display: flex;
+    margin: auto;
+    padding: 30px 0 0;
+    text-align: center;
+  }
+  &-num view {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    margin: 0 10px;
+    height: 100%;
+    color: #666;
+    font-size: 36px;
+    font-family: 'DINAlternate-Bold';
+    line-height: 78px;
+    &:last-child {
+      -webkit-flex-grow: 0;
+      flex-grow: 0;
+      margin-right: 0;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  &-num view text {
+    display: block;
+    width: 78px;
+    height: 78px;
+    border: 1px solid #ccc;
+  }
+  &-input {
+    position: absolute;
+    top: 0;
+    left: -500%;
+    width: 1000%;
+    height: 100%;
+    text-align: left;
+    font-size: 0px;
+  }
+  .center {
+    text-align: center;
+  }
+  .right {
+    text-align: right;
+  }
+}

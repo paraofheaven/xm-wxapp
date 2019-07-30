@@ -4,6 +4,7 @@ import { AtButton, AtInput, AtForm, AtMessage } from 'taro-ui';
 import BottomUp from '../../_components/bottomup';
 import KeyBoard from '../../_components/keyboard';
 import Otp from '../../_components/otp';
+import PwdBox from '../../_components/pwdbox';
 import './index.less';
 
 export default class Demo extends Component {
@@ -61,8 +62,10 @@ export default class Demo extends Component {
     });
   }
 
-  public handleOtpClick = (e) => {
-
+  public onPwdInputFinish = (value) => {
+    Taro.atMessage({
+      message: `输入的密码为：${value}`
+    });
   }
 
   render() {
@@ -80,8 +83,11 @@ export default class Demo extends Component {
             onChange={this.handleChange.bind(this)}
           />
         </AtForm>
-        <View>
-          <Otp totalTicks={100} format={"{t}s后重发"} sendTxt={'获取动态码'} processingTxt={'短信发送中'} onSendRequest={this.sendRequest}></Otp>
+        <View className="demo-otp">
+          <Otp autoStart totalTicks={100} format={"{t}s后重发"} sendTxt={'获取动态码'} processingTxt={'短信发送中'} onSendRequest={this.sendRequest}></Otp>
+        </View>
+        <View className="demo-pwd">
+          <PwdBox onInputFinish={this.onPwdInputFinish}></PwdBox>
         </View>
         <View>
           <BottomUp title="标题" isOpen={bottomupOpen} closeOnClickOverlay onClose={this.closeBottomUp}>
