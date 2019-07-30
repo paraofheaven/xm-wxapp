@@ -49,7 +49,6 @@ export default class Index extends Component {
     this.setState({
       scrollIntoView: ele
     });
-
   }
 
   render() {

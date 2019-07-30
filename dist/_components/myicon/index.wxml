@@ -1,1 +1,1 @@
-<block wx:if="{{$taroCompReady}}"><view class="{{anonymousState__temp}}" style="{{anonymousState__temp2}}" bindtap="funPrivatePHTGa"></view></block>
+<block wx:if="{{$taroCompReady}}"><view class="{{anonymousState__temp}}" style="{{anonymousState__temp2}}" bindtap="funPrivatechGRu"></view></block>

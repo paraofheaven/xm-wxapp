@@ -78,6 +78,11 @@ export default class NoticeBar extends Component<INoticeBar, {}>{
     }, duration);
   }
 
+  public closeNoticeBar = () => {
+    this.setState({
+      visible: false,
+    });
+  }
 
   render() {
     const { visible, animationData } = this.state;
@@ -93,7 +98,7 @@ export default class NoticeBar extends Component<INoticeBar, {}>{
             {this.props.children}
           </View>
         </View>
-        {closable ? <MyIcon value="close" v-class="v-noticebar-close"></MyIcon> : <View className="v-noticebar-gap"></View>}
+        {closable ? <MyIcon value="close" v-class="v-noticebar-close" onClick={this.closeNoticeBar}></MyIcon> : <View className="v-noticebar-gap"></View>}
       </View>
     )
   }
