@@ -24,8 +24,8 @@
                 <block wx:if="{{message}}">
                     <view class="v-pwdbox-message">{{message}}</view>
                 </block>
-                <block wx:if="{{showfooter}}">
-                    <view class="v-pwdbox-forgetPwd">{{footer}}</view>
+                <block wx:if="{{showForgetPwd}}">
+                    <view class="v-pwdbox-forgetPwd" bindtap="forgetPwd">{{forgetPwdText}}</view>
                 </block>
             </view>
         </view>

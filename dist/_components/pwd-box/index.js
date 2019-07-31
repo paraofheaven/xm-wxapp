@@ -38,7 +38,7 @@ var PwdBox = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PwdBox.__proto__ || Object.getPrototypeOf(PwdBox)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["title", "subTitle", "pwdNumbers", "pwdValue", "message", "showfooter", "footer", "__fn_call"], _this.onPwdInput = function (e) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PwdBox.__proto__ || Object.getPrototypeOf(PwdBox)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["title", "subTitle", "pwdNumbers", "pwdValue", "message", "showForgetPwd", "forgetPwdText", "__fn_call", "forgetPwdLink"], _this.onPwdInput = function (e) {
       var value = e.detail.value;
       var pwdNumbers = Object.assign({ length: 6 }, defaultNumbers, value.split(''));
       pwdNumbers = Array.prototype.slice.call(pwdNumbers);
@@ -54,6 +54,19 @@ var PwdBox = (_temp2 = _class = function (_BaseComponent) {
         return;
       }
       _this.props.onInputFinish(value);
+    }, _this.forgetPwd = function () {
+      var _this$props = _this.props,
+          showForgetPwd = _this$props.showForgetPwd,
+          forgetPwdLink = _this$props.forgetPwdLink;
+
+      if (showForgetPwd && !forgetPwdLink) {
+        throw new Error('forgetPwdLink is undefined!');
+      }
+      _index2.default.showLoading();
+      _index2.default.navigateTo({
+        url: _this.props.forgetPwdLink || ''
+      });
+      _index2.default.hideLoading();
     }, _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -80,8 +93,8 @@ var PwdBox = (_temp2 = _class = function (_BaseComponent) {
           title = _props.title,
           subTitle = _props.subTitle,
           message = _props.message,
-          showfooter = _props.showfooter,
-          footer = _props.footer;
+          showForgetPwd = _props.showForgetPwd,
+          forgetPwdText = _props.forgetPwdText;
       var _state = this.__state,
           pwdNumbers = _state.pwdNumbers,
           pwdValue = _state.pwdValue;
@@ -90,23 +103,24 @@ var PwdBox = (_temp2 = _class = function (_BaseComponent) {
         title: title,
         subTitle: subTitle,
         message: message,
-        showfooter: showfooter,
-        footer: footer
+        showForgetPwd: showForgetPwd,
+        forgetPwdText: forgetPwdText
       });
       return this.__state;
     }
   }]);
 
   return PwdBox;
-}(_index.Component), _class.$$events = ["onPwdInput"], _class.$$componentPath = "_components/pwd-box/index", _temp2);
+}(_index.Component), _class.$$events = ["onPwdInput", "forgetPwd"], _class.$$componentPath = "_components/pwd-box/index", _temp2);
 
 
 PwdBox.defaultProps = {
   title: '请输入支付密码',
   subTitle: '',
   message: '',
-  showfooter: true,
-  footer: '忘记密码?',
+  showForgetPwd: false,
+  forgetPwdLink: '',
+  forgetPwdText: '忘记密码?',
   onInputFinish: function onInputFinish() {}
 };
 PwdBox.externalClass = ['v-class'];

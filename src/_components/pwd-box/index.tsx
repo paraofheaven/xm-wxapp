@@ -6,8 +6,9 @@ interface IPwdBox {
   title?: string;
   subTitle?: string;
   message?: string;
-  showfooter?: boolean;
-  footer?: string;
+  showForgetPwd?: boolean;
+  forgetPwdLink?: string;
+  forgetPwdText?: string;
   onInputFinish: any;
 }
 
@@ -19,8 +20,9 @@ export default class PwdBox extends Component<IPwdBox, any>{
     title: '请输入支付密码',
     subTitle: '',
     message: '',
-    showfooter: true,
-    footer: '忘记密码?',
+    showForgetPwd: false,
+    forgetPwdLink: '',
+    forgetPwdText: '忘记密码?',
     onInputFinish: () => { },
   }
 
@@ -51,8 +53,20 @@ export default class PwdBox extends Component<IPwdBox, any>{
     this.props.onInputFinish(value);
   }
 
+  public forgetPwd = () => {
+    const { showForgetPwd, forgetPwdLink } = this.props;
+    if (showForgetPwd && !forgetPwdLink) {
+      throw new Error('forgetPwdLink is undefined!')
+    }
+    Taro.showLoading();
+    Taro.navigateTo({
+      url: this.props.forgetPwdLink || '',
+    });
+    Taro.hideLoading();
+  }
+
   render() {
-    const { title, subTitle, message, showfooter, footer } = this.props;
+    const { title, subTitle, message, showForgetPwd, forgetPwdText } = this.props;
     const { pwdNumbers, pwdValue } = this.state;
     return (
       <View className="v-pwdbox v-class">
@@ -78,7 +92,7 @@ export default class PwdBox extends Component<IPwdBox, any>{
           </View>
           <View className="v-pwdbox-footer">
             {message ? <View className="v-pwdbox-message">{message}</View> : null}
-            {showfooter ? <View className="v-pwdbox-forgetPwd">{footer}</View> : null}
+            {showForgetPwd ? <View className="v-pwdbox-forgetPwd" onClick={this.forgetPwd}>{forgetPwdText}</View> : null}
           </View>
         </View>
       </View>
