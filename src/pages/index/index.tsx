@@ -107,7 +107,7 @@ export default class Index extends Component {
             <View className="iff-icon right"></View>
           </View>
           <View>
-            <Image className="block-image" mode="scaleToFill" src="https://www.elizhuo.com/static/media/img.5ef4bb57.png"></Image>
+            <Image className="block-image" mode="center" src="https://file.40017.cn/css40017cnproduct/jinrong/files/i/baoxian/hybrid/home/sd-1.png"></Image>
           </View>
         </View>
         <View className="empty-padding"></View>
@@ -120,16 +120,16 @@ export default class Index extends Component {
           <View className="empty-padding ep-small"></View>
           <View className="band-block">
             <Image className="bb bb-1" mode="widthFix" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5ca30ed3589d5.png">
-              <Text className="bb-title">商城系统</Text>
-              <Text className="bb-subtitle">海量框架、免费培训</Text>
+              <Text className="bb-title">网站建设</Text>
+              <Text className="bb-subtitle">行业门户、电商、物联网等响应式网站</Text>
             </Image>
             <Image className="bb bb-2" mode="widthFix" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5ca30f149cc3d.png">
               <Text className="bb-title">H5活动</Text>
               <Text className="bb-subtitle">活动营销、产品推荐</Text>
             </Image>
             <Image className="bb bb-3" mode="widthFix" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5ca30f0cbaf66.png">
-              <Text className="bb-title">微信公众号</Text>
-              <Text className="bb-subtitle">对接微信、抢占流量</Text>
+              <Text className="bb-title">移动开发</Text>
+              <Text className="bb-subtitle">电商类、医疗类、旅游类、社交类等</Text>
             </Image>
             <Image className="bb bb-4" mode="widthFix" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5ca30f324f13e.png">
               <Text className="bb-title">小程序</Text>
@@ -146,11 +146,11 @@ export default class Index extends Component {
           </View>
           <View className="empty-padding ep-small"></View>
           <View className="success-block">
-            <Image className="sb" mode="scaleToFill" src="http://file.elizhuo.com/cases/20190620/20190620152026282.jpg">
-              <Text className="sb-title">成都仁品医疗美业</Text>
+            <Image className="sb" mode="scaleToFill" src="http://fame.xiangxinjs.com/static/images/banner2.jpg">
+              <Text className="sb-title">乾承周易文化</Text>
             </Image>
             <Image className="sb" mode="scaleToFill" src="http://file.elizhuo.com/cases/20190620/20190620153120134.jpg">
-              <Text className="sb-title">夜飞鲜餐饮</Text>
+              <Text className="sb-title">宇云商城</Text>
             </Image>
           </View>
         </View>

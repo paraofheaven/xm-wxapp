@@ -46,13 +46,10 @@ export default class Source extends Component {
             circular={true}
             onChange={this.changeSwiperIndex}>
             <SwiperItem>
-              <Image className="swiper-image" mode={'scaleToFill'} src={'https://img.zhichiwangluo.com/zcimgdir/album/file_5b6bf1aa298fc.png'}></Image>
+              <Image className="swiper-image" mode={'scaleToFill'} src={'https://file.40017.cn/css40017cnproduct/jinrong/files/i/baoxian/hybrid/detail/ss.png'}></Image>
             </SwiperItem>
             <SwiperItem>
-              <Image className="swiper-image" mode={'scaleToFill'} src={'https://img.zhichiwangluo.com/zcimgdir/album/file_5b6d654d93e73.png'}></Image>
-            </SwiperItem>
-            <SwiperItem>
-              <Image className="swiper-image" mode={'scaleToFill'} src={'https://img.zhichiwangluo.com/zcimgdir/album/file_5b695409bab59.jpg'}></Image>
+              <Image className="swiper-image" mode={'scaleToFill'} src={'https://file.40017.cn/css40017cnproduct/jinrong/files/i/baoxian/hybrid/detail/cc-1.png'}></Image>
             </SwiperItem>
           </Swiper>
           <View className="swiper-dots">
@@ -64,7 +61,7 @@ export default class Source extends Component {
         {/* <Image className="souce-image" mode="widthFix" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b6bf1aa298fc.png"></Image> */}
         <View className="source-pan">
           <View className="sp-title">公司服务</View>
-          <View className="sp-content">开辟属于自己的稳定的营销渠道，能扩大市场份额，建立连锁、分销的统一电商运营管理系统。</View>
+          <View className="sp-content">网站建设、APP开发、移动开发等，我们提供PC+手机+微信+APP全方位的技术服务网站改版、SEO优化、系统运维、应用功能优化等，我们提供一对一私人定制化的技术开发官网建设、网上商城、互动营销、内外信息网、物联网云端建设等，我们提供各领域专业的解决方案</View>
         </View>
         <View className="content-title">
           <View className="ct-word1">精选案例</View>
@@ -72,7 +69,7 @@ export default class Source extends Component {
         </View>
         <View className="source-list">
           <View className="sl-item">
-            <Image mode="scaleToFill" className="sli-ave" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b87bca3a6fb2.png"></Image>
+            <Image mode="scaleToFill" className="sli-ave" src="https://file.40017.cn/css40017cnproduct/jinrong/files/i/baoxian/hybrid/detail/tos-1.png"></Image>
             <View className="sli-title">网上商城</View>
             <View className="sli-tips">
               <Text className="slit-word">在线销售</Text>
