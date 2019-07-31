@@ -4,7 +4,7 @@ import './index.less';
 
 interface IKeyboard {
   hideFinishBtn?: boolean;
-  onKeyboradClear?: any;
+  onKeyboradClear: any;
   onKeyboradFinish?: any;
   onKeyboradNumber: any;
 }
@@ -61,6 +61,9 @@ export default class KeyBoard extends Component<IKeyboard, {}>{
   public handleKeyboradFinish = () => {
     if (this.props.hideFinishBtn) {
       return;
+    }
+    if(!this.props.onKeyboradFinish){
+      throw new Error('onKeyboradFinish is undefined!');
     }
     this.props.onKeyboradFinish();
   }

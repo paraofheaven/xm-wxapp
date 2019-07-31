@@ -88,10 +88,10 @@ export default class BottomUp extends Component<IBottomUp, {}> {
         {hideMask ? null : <View className="v-bottomup-mask" onClick={this.closeByDocument}></View>}
         <View className="v-bottomup-wrap">
           <View className="v-bottomup-content">
-            {title ? <View className="v-class-title v-bottomup-header">
-              <Text className="v-bottomup-title">{title}</Text>
+            <View className="v-class-title v-bottomup-header">
+              {title ? <Text className="v-bottomup-title">{title}</Text> : null}
               <MyIcon value="close" size={22} color="#999" v-class="v-icon-class" onClick={this.handleClose}></MyIcon>
-            </View> : null}
+            </View>
             {this.props.children}
           </View>
         </View>

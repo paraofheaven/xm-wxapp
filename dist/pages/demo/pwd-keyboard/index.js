@@ -36,14 +36,33 @@ var PwdKeyBoardDemo = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PwdKeyBoardDemo.__proto__ || Object.getPrototypeOf(PwdKeyBoardDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = [], _this.customComponents = ["PwdKeyBoard"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PwdKeyBoardDemo.__proto__ || Object.getPrototypeOf(PwdKeyBoardDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__309", "$compid__310", "$compid__311", "isPwdOpen", "test"], _this.openPwdKeyBoard = function () {
+      _this.setState({
+        isPwdOpen: true
+      });
+    }, _this.test = function () {
+      _this.setState({
+        test: 'haohaoah'
+      }, function () {
+        _index2.default.atMessage({
+          message: _this.state.test
+        });
+      });
+    }, _this.onClose = function () {
+      _this.setState({
+        isPwdOpen: false
+      });
+    }, _this.customComponents = ["AtButton", "PwdKeyBoard", "AtMessage"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(PwdKeyBoardDemo, [{
     key: "_constructor",
-    value: function _constructor(props) {
-      _get(PwdKeyBoardDemo.prototype.__proto__ || Object.getPrototypeOf(PwdKeyBoardDemo.prototype), "_constructor", this).call(this, props);
-
+    value: function _constructor() {
+      _get(PwdKeyBoardDemo.prototype.__proto__ || Object.getPrototypeOf(PwdKeyBoardDemo.prototype), "_constructor", this).apply(this, arguments);
+      this.state = {
+        isPwdOpen: false,
+        test: ''
+      };
       this.$$refs = [];
     }
   }, {
@@ -54,7 +73,31 @@ var PwdKeyBoardDemo = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      Object.assign(this.__state, {});
+      var $compid__309 = (0, _index.genCompid)(__prefix + "$compid__309");
+      var $compid__310 = (0, _index.genCompid)(__prefix + "$compid__310");
+      var $compid__311 = (0, _index.genCompid)(__prefix + "$compid__311");
+
+      var isPwdOpen = this.__state.isPwdOpen;
+
+      var $props__309 = {
+        "onClick": this.openPwdKeyBoard
+      };
+      var $props__310 = {
+        "onClick": this.test
+      };
+      var $props__311 = {
+        "isOpen": isPwdOpen,
+        "withConfirm": true,
+        "onClose": this.onClose
+      };
+      _index.propsManager.set($props__309, $compid__309);
+      _index.propsManager.set($props__310, $compid__310);
+      _index.propsManager.set($props__311, $compid__311);
+      Object.assign(this.__state, {
+        $compid__309: $compid__309,
+        $compid__310: $compid__310,
+        $compid__311: $compid__311
+      });
       return this.__state;
     }
   }]);

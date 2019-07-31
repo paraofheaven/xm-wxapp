@@ -40,6 +40,8 @@ var PwdBox = (_temp2 = _class = function (_BaseComponent) {
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PwdBox.__proto__ || Object.getPrototypeOf(PwdBox)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["title", "subTitle", "pwdNumbers", "pwdValue", "message", "showForgetPwd", "forgetPwdText", "__fn_call", "forgetPwdLink"], _this.onPwdInput = function (e) {
       var value = e.detail.value;
+      _this.setInputState(value);
+    }, _this.setInputState = function (value) {
       var pwdNumbers = Object.assign({ length: 6 }, defaultNumbers, value.split(''));
       pwdNumbers = Array.prototype.slice.call(pwdNumbers);
       _this.setState({
@@ -49,6 +51,11 @@ var PwdBox = (_temp2 = _class = function (_BaseComponent) {
       if (value.length >= 6) {
         _this._onInputFinish(value);
       }
+    }, _this.clearInputState = function () {
+      _this.setState({
+        pwdNumbers: defaultNumbers,
+        pwdValue: ''
+      });
     }, _this._onInputFinish = function (value) {
       if (value.length !== 6) {
         return;
@@ -63,6 +70,7 @@ var PwdBox = (_temp2 = _class = function (_BaseComponent) {
         throw new Error('forgetPwdLink is undefined!');
       }
       _index2.default.showLoading();
+      _this.clearInputState();
       _index2.default.navigateTo({
         url: _this.props.forgetPwdLink || ''
       });

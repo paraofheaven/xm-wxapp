@@ -36,7 +36,7 @@ var BottomUpDemo = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BottomUpDemo.__proto__ || Object.getPrototypeOf(BottomUpDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__227", "$compid__228", "bottomupOpen"], _this.openBottomUp = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BottomUpDemo.__proto__ || Object.getPrototypeOf(BottomUpDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__7", "$compid__8", "bottomupOpen"], _this.openBottomUp = function () {
       _this.setState({
         bottomupOpen: true
       });
@@ -64,25 +64,25 @@ var BottomUpDemo = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__227 = (0, _index.genCompid)(__prefix + "$compid__227");
-      var $compid__228 = (0, _index.genCompid)(__prefix + "$compid__228");
+      var $compid__7 = (0, _index.genCompid)(__prefix + "$compid__7");
+      var $compid__8 = (0, _index.genCompid)(__prefix + "$compid__8");
 
       var bottomupOpen = this.__state.bottomupOpen;
 
-      var $props__227 = {
+      var $props__7 = {
         "onClick": this.openBottomUp
       };
-      var $props__228 = {
+      var $props__8 = {
         "title": "\u6807\u9898",
         "isOpen": bottomupOpen,
         "closeOnClickOverlay": true,
         "onClose": this.closeBottomUp
       };
-      _index.propsManager.set($props__227, $compid__227);
-      _index.propsManager.set($props__228, $compid__228);
+      _index.propsManager.set($props__7, $compid__7);
+      _index.propsManager.set($props__8, $compid__8);
       Object.assign(this.__state, {
-        $compid__227: $compid__227,
-        $compid__228: $compid__228
+        $compid__7: $compid__7,
+        $compid__8: $compid__8
       });
       return this.__state;
     }

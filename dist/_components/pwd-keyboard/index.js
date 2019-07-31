@@ -36,18 +36,104 @@ var PwdKeyBoard = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PwdKeyBoard.__proto__ || Object.getPrototypeOf(PwdKeyBoard)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__16", "$compid__17", "disableClose", "animation1", "withConfirm", "animation2"], _this.onKeyboradNumber = function (text) {}, _this.customComponents = ["BottomUp", "PwdBox", "KeyBoard"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PwdKeyBoard.__proto__ || Object.getPrototypeOf(PwdKeyBoard)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__330", "$compid__331", "$compid__332", "animation1", "withConfirm", "animation2", "pwdboxValue", "confirm", "isOpen", "onClose", "closeOnClickOverlay"], _this.onKeyboradNumber = function (value) {
+      var _this$state = _this.state,
+          pwdboxValue = _this$state.pwdboxValue,
+          confirm = _this$state.confirm;
+
+      if (pwdboxValue.length < 6) {
+        pwdboxValue += value;
+        _this.setState({
+          pwdboxValue: pwdboxValue
+        });
+        if (!confirm) {
+          _this.pwdboxRef1.setInputState(pwdboxValue);
+        } else {
+          _this.pwdboxRef2.setInputState(pwdboxValue);
+        }
+      }
+    }, _this.onKeyboradClear = function () {
+      var _this$state2 = _this.state,
+          pwdboxValue = _this$state2.pwdboxValue,
+          confirm = _this$state2.confirm;
+
+      if (pwdboxValue.length > 0) {
+        pwdboxValue = pwdboxValue.substring(0, pwdboxValue.length - 1);
+        _this.setState({
+          pwdboxValue: pwdboxValue
+        });
+        if (!confirm) {
+          _this.pwdboxRef1.clearInputState();
+        } else {
+          _this.pwdboxRef2.clearInputState();
+        }
+      }
+    }, _this.onBottomUpClose = function () {
+      _this.setState({
+        isOpen: false
+      });
+    }, _this.onInputFinish = function (code) {
+      var withConfirm = _this.props.withConfirm;
+
+      if (!withConfirm) {
+        _this.props.onInputFinish(code);
+      }
+      _this.setState({
+        confirm: true
+      }, function () {
+        _this.createAnimation();
+      });
+    }, _this.createAnimation = function (reset) {
+      var screenWidth = 375;
+      var translate = -375;
+      var baseAnimateConfig = {
+        duration: 500,
+        timingFunction: 'ease',
+        delay: 0
+      };
+      var animation1 = _index2.default.createAnimation(baseAnimateConfig);
+      var animation2 = _index2.default.createAnimation(baseAnimateConfig);
+      animation1.translate(reset ? 0 : translate).step();
+      animation2.translate(reset ? 0 : translate).step();
+      _this.setState({
+        animation1: animation1.export(),
+        animation2: animation2.export()
+      });
+      _this.pwdboxRef1.clearInputState();
+      _this.pwdboxRef2.clearInputState();
+      _this.setState({
+        pwdboxValue: ''
+      });
+    }, _this.customComponents = ["BottomUp", "PwdBox", "KeyBoard"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(PwdKeyBoard, [{
     key: "_constructor",
     value: function _constructor() {
+      var _this2 = this;
+
       _get(PwdKeyBoard.prototype.__proto__ || Object.getPrototypeOf(PwdKeyBoard.prototype), "_constructor", this).apply(this, arguments);
       this.state = {
         animation1: undefined,
-        animation2: undefined
+        animation2: undefined,
+        pwdboxValue: '',
+        confirm: false
       };
-      this.$$refs = [];
+      this.$$refs = [{
+        type: "component",
+        id: "GmHkH",
+        refName: "",
+        fn: function fn(ref) {
+          _this2.pwdboxRef1 = ref;
+        }
+      }, {
+        type: "component",
+        id: "QzyYg",
+        refName: "",
+        fn: function fn(ref) {
+          _this2.pwdboxRef2 = ref;
+        }
+      }];
     }
   }, {
     key: "_createData",
@@ -57,28 +143,39 @@ var PwdKeyBoard = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__16 = (0, _index.genCompid)(__prefix + "$compid__16");
-      var $compid__17 = (0, _index.genCompid)(__prefix + "$compid__17");
+      var $compid__330 = (0, _index.genCompid)(__prefix + "$compid__330");
+      var $compid__331 = (0, _index.genCompid)(__prefix + "$compid__331");
+      var $compid__332 = (0, _index.genCompid)(__prefix + "$compid__332");
 
       var _props = this.__props,
-          disableClose = _props.disableClose,
-          withConfirm = _props.withConfirm;
+          isOpen = _props.isOpen,
+          withConfirm = _props.withConfirm,
+          onClose = _props.onClose,
+          closeOnClickOverlay = _props.closeOnClickOverlay;
       var _state = this.__state,
           animation1 = _state.animation1,
           animation2 = _state.animation2;
 
-      var $props__16 = {
-        "isOpen": true
+      var $props__330 = {
+        "isOpen": isOpen,
+        "closeOnClickOverlay": closeOnClickOverlay,
+        "onClose": this.__props.onClose
       };
-      var $props__17 = {
-        "onKeyboradNumber": this.onKeyboradNumber
+      var $props__331 = {
+        "onInputFinish": this.onInputFinish
       };
-      _index.propsManager.set($props__16, $compid__16);
-      _index.propsManager.set($props__17, $compid__17);
+      var $props__332 = {
+        "hideFinishBtn": true,
+        "onKeyboradNumber": this.onKeyboradNumber,
+        "onKeyboradClear": this.onKeyboradClear
+      };
+      _index.propsManager.set($props__330, $compid__330);
+      _index.propsManager.set($props__331, $compid__331);
+      _index.propsManager.set($props__332, $compid__332);
       Object.assign(this.__state, {
-        $compid__16: $compid__16,
-        $compid__17: $compid__17,
-        disableClose: disableClose,
+        $compid__330: $compid__330,
+        $compid__331: $compid__331,
+        $compid__332: $compid__332,
         withConfirm: withConfirm
       });
       return this.__state;
@@ -90,8 +187,12 @@ var PwdKeyBoard = (_temp2 = _class = function (_BaseComponent) {
 
 
 PwdKeyBoard.defaultProps = {
+  isOpen: false,
+  closeOnClickOverlay: false,
   disableClose: false,
-  withConfirm: false
+  withConfirm: false,
+  onClose: function onClose() {},
+  onInputFinish: function onInputFinish() {}
 };
 PwdKeyBoard.externalClass = ['v-class'];
 exports.default = PwdKeyBoard;

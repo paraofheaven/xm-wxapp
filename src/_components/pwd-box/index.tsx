@@ -33,8 +33,15 @@ export default class PwdBox extends Component<IPwdBox, any>{
     pwdValue: '',
   }
 
-  public onPwdInput = (e) => {
+  private onPwdInput = (e) => {
     const value = e.detail.value;
+    this.setInputState(value);
+  }
+
+  /**
+   * pwd-keyboard ref有引用
+   */
+  public setInputState = (value) => {
     let pwdNumbers = Object.assign({ length: 6 }, defaultNumbers, value.split(''));
     pwdNumbers = Array.prototype.slice.call(pwdNumbers);
     this.setState({
@@ -46,7 +53,14 @@ export default class PwdBox extends Component<IPwdBox, any>{
     }
   }
 
-  public _onInputFinish = (value) => {
+  public clearInputState = () => {
+    this.setState({
+      pwdNumbers: defaultNumbers,
+      pwdValue: '',
+    });
+  }
+
+  private _onInputFinish = (value) => {
     if (value.length !== 6) {
       return;
     }
@@ -59,6 +73,7 @@ export default class PwdBox extends Component<IPwdBox, any>{
       throw new Error('forgetPwdLink is undefined!')
     }
     Taro.showLoading();
+    this.clearInputState();
     Taro.navigateTo({
       url: this.props.forgetPwdLink || '',
     });

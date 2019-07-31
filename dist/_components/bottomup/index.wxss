@@ -84,8 +84,9 @@
   animation-fill-mode: forwards;
 }
 .v-icon-class {
-  float: right;
-  padding-left: 30rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
   font-weight: normal;
 }
 @-webkit-keyframes fadeIn {

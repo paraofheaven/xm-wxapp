@@ -41,7 +41,7 @@ var KeyBoard = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = KeyBoard.__proto__ || Object.getPrototypeOf(KeyBoard)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray2", "finalKeys", "hideFinishBtn"], _this.concatFinalKeys = function (numberkeys) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = KeyBoard.__proto__ || Object.getPrototypeOf(KeyBoard)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["loopArray23", "finalKeys", "hideFinishBtn"], _this.concatFinalKeys = function (numberkeys) {
       var hideFinishBtn = _this.props.hideFinishBtn;
 
       numberkeys = numberkeys || NUMBER_KEYS;
@@ -58,6 +58,9 @@ var KeyBoard = (_temp2 = _class = function (_BaseComponent) {
     }, _this.handleKeyboradFinish = function () {
       if (_this.props.hideFinishBtn) {
         return;
+      }
+      if (!_this.props.onKeyboradFinish) {
+        throw new Error('onKeyboradFinish is undefined!');
       }
       _this.props.onKeyboradFinish();
     }, _this.handleKeyboradNumber = function (e) {
@@ -97,7 +100,7 @@ var KeyBoard = (_temp2 = _class = function (_BaseComponent) {
       var finalKeys = this.__state.finalKeys;
       var hideFinishBtn = this.__props.hideFinishBtn;
 
-      var loopArray2 = finalKeys.map(function (key, _anonIdx) {
+      var loopArray23 = finalKeys.map(function (key, _anonIdx) {
         key = {
           $original: (0, _index.internal_get_original)(key)
         };
@@ -108,7 +111,7 @@ var KeyBoard = (_temp2 = _class = function (_BaseComponent) {
         };
       });
       Object.assign(this.__state, {
-        loopArray2: loopArray2,
+        loopArray23: loopArray23,
         hideFinishBtn: hideFinishBtn
       });
       return this.__state;

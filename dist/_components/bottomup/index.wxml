@@ -9,11 +9,11 @@
             </block>
             <view class="v-bottomup-wrap">
                 <view class="v-bottomup-content">
-                    <block wx:if="{{title}}">
-                        <view class="v-class-title v-bottomup-header"><text class="v-bottomup-title">{{title}}</text>
-                            <my-icon v-class="v-icon-class" compid="{{$compid__15}}"></my-icon>
-                        </view>
-                    </block>
+                    <view class="v-class-title v-bottomup-header">
+                        <block wx:if="{{title}}"><text class="v-bottomup-title">{{title}}</text>
+                        </block>
+                        <my-icon v-class="v-icon-class" compid="{{$compid__263}}"></my-icon>
+                    </view>
                     <slot></slot>
                 </view>
             </view>

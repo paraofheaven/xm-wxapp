@@ -60,7 +60,7 @@ var AtButton = (_temp2 = _class = function (_AtComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = AtButton.__proto__ || Object.getPrototypeOf(AtButton)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "$compid__14", "loading", "formType", "openType", "lang", "sessionFrom", "sendMessageTitle", "sendMessagePath", "sendMessageImg", "showMessageCard", "appParameter", "isWEAPP", "disabled", "isALIPAY", "isWEB", "size", "type", "circle", "full", "customStyle", "className", "children"], _this.customComponents = ["AtLoading"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = AtButton.__proto__ || Object.getPrototypeOf(AtButton)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "anonymousState__temp2", "$compid__16", "loading", "formType", "openType", "lang", "sessionFrom", "sendMessageTitle", "sendMessagePath", "sendMessageImg", "showMessageCard", "appParameter", "isWEAPP", "disabled", "isALIPAY", "isWEB", "size", "type", "circle", "full", "customStyle", "className", "children"], _this.customComponents = ["AtLoading"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(AtButton, [{
@@ -148,7 +148,7 @@ var AtButton = (_temp2 = _class = function (_AtComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__14 = (0, _index.genCompid)(__prefix + "$compid__14");
+      var $compid__16 = (0, _index.genCompid)(__prefix + "$compid__16");
 
       var _props7 = this.__props,
           _props7$size = _props7.size,
@@ -179,20 +179,20 @@ var AtButton = (_temp2 = _class = function (_AtComponent) {
       var loadingSize = size === 'small' ? '30' : 0;
       var component = void 0;
       if (loading) {
-        var $props__14 = {
+        var $props__16 = {
           "color": loadingColor,
           "size": loadingSize
         };
 
         rootClassName.push('at-button--icon');
-        _index.propsManager.set($props__14, $compid__14);
+        _index.propsManager.set($props__16, $compid__16);
       }
       var anonymousState__temp = (0, _index6.default)(rootClassName, classObject, this.__props.className);
       var anonymousState__temp2 = (0, _index.internal_inline_style)(customStyle);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
         anonymousState__temp2: anonymousState__temp2,
-        $compid__14: $compid__14,
+        $compid__16: $compid__16,
         loading: loading,
         formType: formType,
         openType: openType,

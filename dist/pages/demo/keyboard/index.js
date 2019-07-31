@@ -36,7 +36,7 @@ var KeyboardDemo = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = KeyboardDemo.__proto__ || Object.getPrototypeOf(KeyboardDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__229", "$compid__230", "value1"], _this.handleChange = function (value) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = KeyboardDemo.__proto__ || Object.getPrototypeOf(KeyboardDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__9", "$compid__10", "value1"], _this.handleChange = function (value) {
       _this.setState({
         value1: value
       });
@@ -72,12 +72,12 @@ var KeyboardDemo = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__229 = (0, _index.genCompid)(__prefix + "$compid__229");
-      var $compid__230 = (0, _index.genCompid)(__prefix + "$compid__230");
+      var $compid__9 = (0, _index.genCompid)(__prefix + "$compid__9");
+      var $compid__10 = (0, _index.genCompid)(__prefix + "$compid__10");
 
       var value1 = this.__state.value1;
 
-      var $props__229 = {
+      var $props__9 = {
         "name": "value1",
         "type": "text",
         "disabled": true,
@@ -85,16 +85,16 @@ var KeyboardDemo = (_temp2 = _class = function (_BaseComponent) {
         "value": value1,
         "onChange": this.handleChange.bind(this)
       };
-      var $props__230 = {
+      var $props__10 = {
         "onKeyboradClear": this.handleInputDelete,
         "onKeyboradFinish": this.handleInputConfirm,
         "onKeyboradNumber": this.handleInput
       };
-      _index.propsManager.set($props__229, $compid__229);
-      _index.propsManager.set($props__230, $compid__230);
+      _index.propsManager.set($props__9, $compid__9);
+      _index.propsManager.set($props__10, $compid__10);
       Object.assign(this.__state, {
-        $compid__229: $compid__229,
-        $compid__230: $compid__230
+        $compid__9: $compid__9,
+        $compid__10: $compid__10
       });
       return this.__state;
     }

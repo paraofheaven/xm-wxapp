@@ -36,7 +36,7 @@ var Demo = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Demo.__proto__ || Object.getPrototypeOf(Demo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__222", "$compid__223", "$compid__224", "$compid__225", "$compid__226", "bottomupOpen", "value1"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Demo.__proto__ || Object.getPrototypeOf(Demo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__2", "$compid__3", "$compid__4", "$compid__5", "$compid__6", "bottomupOpen", "value1"], _this.config = {
       navigationBarTitleText: 'demo'
     }, _this.customComponents = ["MyIcon"], _temp), _possibleConstructorReturn(_this, _ret);
   }
@@ -60,37 +60,37 @@ var Demo = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__222 = (0, _index.genCompid)(__prefix + "$compid__222");
-      var $compid__223 = (0, _index.genCompid)(__prefix + "$compid__223");
-      var $compid__224 = (0, _index.genCompid)(__prefix + "$compid__224");
-      var $compid__225 = (0, _index.genCompid)(__prefix + "$compid__225");
-      var $compid__226 = (0, _index.genCompid)(__prefix + "$compid__226");
-      var $props__222 = {
+      var $compid__2 = (0, _index.genCompid)(__prefix + "$compid__2");
+      var $compid__3 = (0, _index.genCompid)(__prefix + "$compid__3");
+      var $compid__4 = (0, _index.genCompid)(__prefix + "$compid__4");
+      var $compid__5 = (0, _index.genCompid)(__prefix + "$compid__5");
+      var $compid__6 = (0, _index.genCompid)(__prefix + "$compid__6");
+      var $props__2 = {
         "value": "right"
       };
-      var $props__223 = {
+      var $props__3 = {
         "value": "right"
       };
-      var $props__224 = {
+      var $props__4 = {
         "value": "right"
       };
-      var $props__225 = {
+      var $props__5 = {
         "value": "right"
       };
-      var $props__226 = {
+      var $props__6 = {
         "value": "right"
       };
-      _index.propsManager.set($props__222, $compid__222);
-      _index.propsManager.set($props__223, $compid__223);
-      _index.propsManager.set($props__224, $compid__224);
-      _index.propsManager.set($props__225, $compid__225);
-      _index.propsManager.set($props__226, $compid__226);
+      _index.propsManager.set($props__2, $compid__2);
+      _index.propsManager.set($props__3, $compid__3);
+      _index.propsManager.set($props__4, $compid__4);
+      _index.propsManager.set($props__5, $compid__5);
+      _index.propsManager.set($props__6, $compid__6);
       Object.assign(this.__state, {
-        $compid__222: $compid__222,
-        $compid__223: $compid__223,
-        $compid__224: $compid__224,
-        $compid__225: $compid__225,
-        $compid__226: $compid__226
+        $compid__2: $compid__2,
+        $compid__3: $compid__3,
+        $compid__4: $compid__4,
+        $compid__5: $compid__5,
+        $compid__6: $compid__6
       });
       return this.__state;
     }

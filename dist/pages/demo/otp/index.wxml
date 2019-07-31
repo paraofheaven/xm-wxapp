@@ -1,7 +1,7 @@
 <block wx:if="{{$taroCompReady}}">
     <view>
         <view class="demo-otp">
-            <otp compid="{{$compid__232}}"></otp>
+            <otp compid="{{$compid__12}}"></otp>
         </view>
     </view>
 </block>
