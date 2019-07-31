@@ -1,0 +1,22 @@
+<block wx:if="{{$taroCompReady}}">
+    <bottom-up compid="{{$compid__16}}">
+        <view class="v-pwdKeyboard v-class">
+            <block wx:if="{{!disableClose}}">
+                <view class="v-pwdKeyboard-close"></view>
+            </block>
+            <view class="v-pwdKeyboard-boxLyt">
+                <view class="v-pwdKeyboard-boxItem" animation="{{animation1}}">
+                    <pwd-box></pwd-box>
+                </view>
+                <block wx:if="{{withConfirm}}">
+                    <view class="v-pwdKeyboard-boxItem" animation="{{animation2}}">
+                        <pwd-box></pwd-box>
+                    </view>
+                </block>
+            </view>
+            <view class="v-pwdKeyboard-lyt">
+                <key-board compid="{{$compid__17}}"></key-board>
+            </view>
+        </view>
+    </bottom-up>
+</block>

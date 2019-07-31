@@ -1,1 +1,22 @@
-<block wx:if="{{$taroCompReady}}"><block wx:if="{{!visible}}"><view></view></block><block wx:else="{{true}}"><view class="{{bottomClassName}}" catchtouchmove="handleTouchMove"><block wx:if="{{!hideMask}}"><view class="v-bottomup-mask" bindtap="closeByDocument"></view></block><view class="v-bottomup-wrap"><view class="v-bottomup-content"><block wx:if="{{title}}"><view class="v-class-title v-bottomup-header"><text class="v-bottomup-title">{{title}}</text><my-icon v-class="v-icon-class" compid="{{$compid__12}}"></my-icon></view></block><slot></slot></view></view></view></block></block>
+<block wx:if="{{$taroCompReady}}">
+    <block wx:if="{{!visible}}">
+        <view></view>
+    </block>
+    <block wx:else="{{true}}">
+        <view class="{{bottomClassName}}" catchtouchmove="handleTouchMove">
+            <block wx:if="{{!hideMask}}">
+                <view class="v-bottomup-mask" bindtap="closeByDocument"></view>
+            </block>
+            <view class="v-bottomup-wrap">
+                <view class="v-bottomup-content">
+                    <block wx:if="{{title}}">
+                        <view class="v-class-title v-bottomup-header"><text class="v-bottomup-title">{{title}}</text>
+                            <my-icon v-class="v-icon-class" compid="{{$compid__15}}"></my-icon>
+                        </view>
+                    </block>
+                    <slot></slot>
+                </view>
+            </view>
+        </view>
+    </block>
+</block>

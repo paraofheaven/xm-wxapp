@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "pwd-box": "../../../_components/pwd-box/index",
+    "at-message": "../../../npm/taro-ui/dist/weapp/components/message/index"
+  }
+}

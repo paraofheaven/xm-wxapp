@@ -13,18 +13,15 @@ interface IICON {
 
 export default class MyIcon extends Component<IICON, {}>{
 
-  constructor() {
-    super(...arguments)
-  }
-
   static externalClasses = ['v-class'];
 
-  public defaultProps = {
+  public static defaultProps = {
     value: '',
     size: 16,
     color: '',
     onClick: () => { },
   }
+
   render() {
     const { value, size = 16, color } = this.props;
     return <View

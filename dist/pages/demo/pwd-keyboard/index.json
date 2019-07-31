@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "pwd-key-board": "../../../_components/pwd-keyboard/index"
+  }
+}

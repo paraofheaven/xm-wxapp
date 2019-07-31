@@ -1,0 +1,8 @@
+<block wx:if="{{$taroCompReady}}">
+    <view>
+        <view class="demo-pwd">
+            <pwd-box compid="{{$compid__231}}"></pwd-box>
+        </view>
+        <at-message></at-message>
+    </view>
+</block>

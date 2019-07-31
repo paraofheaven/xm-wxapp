@@ -1,0 +1,5 @@
+<block wx:if="{{$taroCompReady}}">
+    <view class="pwd-keyboard-demo">
+        <pwd-key-board></pwd-key-board>
+    </view>
+</block>

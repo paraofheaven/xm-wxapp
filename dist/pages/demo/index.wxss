@@ -1,1 +1,0 @@
-.demo .bottom-block{margin:20rpx auto;width:400rpx;height:200rpx;border:1rpx dashed #666}.demo .demo-keyboard{position:absolute;bottom:0;left:0;width:100%}.demo .demo-otp{width:100%;height:100rpx;line-height:100rpx;text-align:center;border:1rpx solid #999}

@@ -4,7 +4,12 @@
     "pages/source/index",
     "pages/contact/index",
     "pages/joinus/index",
-    "pages/demo/index"
+    "pages/demo/portal/index",
+    "pages/demo/bottomup/index",
+    "pages/demo/keyboard/index",
+    "pages/demo/pwd-box/index",
+    "pages/demo/otp/index",
+    "pages/demo/pwd-keyboard/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

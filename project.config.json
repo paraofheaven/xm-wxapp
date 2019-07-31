@@ -32,9 +32,10 @@
 			"current": 0,
 			"list": [
 				{
-					"id": -1,
-					"name": "pages/demo/index",
-					"pathName": "pages/demo/index",
+					"id": 0,
+					"name": "pages/demo/portal/index",
+					"pathName": "pages/demo/portal/index",
+					"query": "",
 					"scene": null
 				}
 			]
