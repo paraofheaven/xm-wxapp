@@ -70,7 +70,7 @@ export default class Index extends Component {
               <Image className="swiper-image" mode={'scaleToFill'} src={'https://file.40017.cn/css40017cnproduct/jinrong/files/i/ttb/open/bg-1.png'}></Image>
             </SwiperItem>
             <SwiperItem>
-              <Image className="swiper-image" mode={'scaleToFill'} src={'https://file.40017.cn/css40017cnproduct/jinrong/files/i/ttb/open/bg-2.png'}></Image>
+              <Image className="swiper-image" mode={'scaleToFill'} src={'https://file.40017.cn/css40017cnproduct/jinrong/files/i/baoxian/hybrid/home/dd-1.png'}></Image>
             </SwiperItem>
           </Swiper>
           <View className="swiper-dots">
@@ -107,7 +107,7 @@ export default class Index extends Component {
             <View className="iff-icon right"></View>
           </View>
           <View>
-            <Image className="block-image" mode="scaleToFill" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b7d08801e46b.png"></Image>
+            <Image className="block-image" mode="scaleToFill" src="https://www.elizhuo.com/static/media/img.5ef4bb57.png"></Image>
           </View>
         </View>
         <View className="empty-padding"></View>
@@ -120,20 +120,20 @@ export default class Index extends Component {
           <View className="empty-padding ep-small"></View>
           <View className="band-block">
             <Image className="bb bb-1" mode="widthFix" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5ca30ed3589d5.png">
-              <Text className="bb-title">品牌战略</Text>
-              <Text className="bb-subtitle">树立品牌形象和风格</Text>
+              <Text className="bb-title">商城系统</Text>
+              <Text className="bb-subtitle">海量框架、免费培训</Text>
             </Image>
             <Image className="bb bb-2" mode="widthFix" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5ca30f149cc3d.png">
-              <Text className="bb-title">VI标志</Text>
-              <Text className="bb-subtitle">用品牌驱动持续发展。</Text>
+              <Text className="bb-title">H5活动</Text>
+              <Text className="bb-subtitle">活动营销、产品推荐</Text>
             </Image>
             <Image className="bb bb-3" mode="widthFix" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5ca30f0cbaf66.png">
-              <Text className="bb-title">空间设计</Text>
-              <Text className="bb-subtitle">会场的地面布置和搭配</Text>
+              <Text className="bb-title">微信公众号</Text>
+              <Text className="bb-subtitle">对接微信、抢占流量</Text>
             </Image>
             <Image className="bb bb-4" mode="widthFix" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5ca30f324f13e.png">
-              <Text className="bb-title">策划案</Text>
-              <Text className="bb-subtitle">用策划创造成功，创造未来</Text>
+              <Text className="bb-title">小程序</Text>
+              <Text className="bb-subtitle">微信、支付宝、百度小程序</Text>
             </Image>
           </View>
         </View>
@@ -146,11 +146,11 @@ export default class Index extends Component {
           </View>
           <View className="empty-padding ep-small"></View>
           <View className="success-block">
-            <Image className="sb" mode="scaleToFill" src="https://img.zhichiwangluo.com/zcimgdir/thumb/t_15337859895b6bb785c4303.jpg">
-              <Text className="sb-title">小创优品</Text>
+            <Image className="sb" mode="scaleToFill" src="http://file.elizhuo.com/cases/20190620/20190620152026282.jpg">
+              <Text className="sb-title">成都仁品医疗美业</Text>
             </Image>
-            <Image className="sb" mode="scaleToFill" src="https://img.zhichiwangluo.com/zcimgdir/thumb/t_15337230795b6ac1c709fba.png">
-              <Text className="sb-title">小创优品</Text>
+            <Image className="sb" mode="scaleToFill" src="http://file.elizhuo.com/cases/20190620/20190620153120134.jpg">
+              <Text className="sb-title">夜飞鲜餐饮</Text>
             </Image>
           </View>
         </View>

@@ -96,7 +96,7 @@
 }
 .index .block-image {
   width: 100%;
-  height: 350rpx;
+  height: 450rpx;
 }
 .index .block .block-head {
   position: relative;
@@ -149,6 +149,7 @@
   position: absolute;
   top: 30rpx;
   left: 50%;
+  font-size: 28rpx;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -156,8 +157,10 @@
 .index .block .band-block .bb .bb-subtitle {
   position: absolute;
   top: 70rpx;
-  width: 180rpx;
+  width: 200rpx;
   left: 50%;
+  text-align: center;
+  font-size: 26rpx;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);

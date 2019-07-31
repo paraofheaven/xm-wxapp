@@ -83,25 +83,69 @@ export default class Source extends Component {
           </View>
           <View className="empty-padding"></View>
           <View className="sl-item">
-            <Image mode="scaleToFill" className="sli-ave" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b87bca3a6fb2.png"></Image>
-            <View className="sli-title">OSS平台</View>
+            <Image mode="scaleToFill" className="sli-ave" src="https://www.elizhuo.com/static/media/cy@2x.23a3c1b0.png"></Image>
+            <View className="sli-title">微餐饮</View>
             <View className="sli-tips">
-              <Text className="slit-word">OA系统</Text>
-              <Text className="slit-word">OSS后台</Text>
-              <Text className="slit-word">流量监控</Text>
+              <Text className="slit-word">智慧餐厅</Text>
+              <Text className="slit-word">外卖商城</Text>
+              <Text className="slit-word">会员支付</Text>
             </View>
-            <View className="sli-desc">覆盖个行业解决方案，提供数据录入、数据可视化、数据分析</View>
+            <View className="sli-desc">为餐饮商户提供国内领先餐厅O2O解决方案</View>
           </View>
           <View className="empty-padding"></View>
           <View className="sl-item">
-            <Image mode="scaleToFill" className="sli-ave" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b87bca3a6fb2.png"></Image>
-            <View className="sli-title">美业类小程序</View>
+            <Image mode="scaleToFill" className="sli-ave" src="https://www.elizhuo.com/static/media/my@2x.c503d6b6.png"></Image>
+            <View className="sli-title">微美业</View>
             <View className="sli-tips">
-              <Text className="slit-word">美容服务</Text>
+              <Text className="slit-word">美容SPA</Text>
               <Text className="slit-word">一键预定</Text>
               <Text className="slit-word">广告营销</Text>
             </View>
-            <View className="sli-desc">覆盖微信端强大的社交生态，高效实现拉新和导流</View>
+            <View className="sli-desc">深度对接商家微信公众号和小程序，支持线上下单购买，线下到店消费</View>
+          </View>
+          <View className="empty-padding"></View>
+          <View className="sl-item">
+            <Image mode="scaleToFill" className="sli-ave" src="https://www.elizhuo.com/static/media/ls@2x.fc789854.png"></Image>
+            <View className="sli-title">微零售</View>
+            <View className="sli-tips">
+              <Text className="slit-word">在线商城</Text>
+              <Text className="slit-word">多渠道销存</Text>
+              <Text className="slit-word">数据分析</Text>
+            </View>
+            <View className="sli-desc">助推企业快速实现营销、服务、效率转型升级</View>
+          </View>
+          <View className="empty-padding"></View>
+          <View className="sl-item">
+            <Image mode="scaleToFill" className="sli-ave" src="https://www.elizhuo.com/static/media/jr@2x.c9ec059b.png"></Image>
+            <View className="sli-title">微金融</View>
+            <View className="sli-tips">
+              <Text className="slit-word">智慧金融</Text>
+              <Text className="slit-word">合规安全</Text>
+              <Text className="slit-word">低成本 高性能</Text>
+            </View>
+            <View className="sli-desc">运用领先技术助力客户科技升级，打造云上金融，智创未来</View>
+          </View>
+          <View className="empty-padding"></View>
+          <View className="sl-item">
+            <Image mode="scaleToFill" className="sli-ave" src="https://www.elizhuo.com/static/media/ly@2x.c5b7de66.png"></Image>
+            <View className="sli-title">微旅游</View>
+            <View className="sli-tips">
+              <Text className="slit-word">在线OTA</Text>
+              <Text className="slit-word">线上预订</Text>
+              <Text className="slit-word">会员营销</Text>
+            </View>
+            <View className="sli-desc">帮助旅游企业将传统线下门店销售方式转移到线上旅游电商平台</View>
+          </View>
+          <View className="empty-padding"></View>
+          <View className="sl-item">
+            <Image mode="scaleToFill" className="sli-ave" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5c062f7f02f71.jpg"></Image>
+            <View className="sli-title">其他</View>
+            <View className="sli-tips">
+              <Text className="slit-word">专业定制</Text>
+              <Text className="slit-word">敏捷开发</Text>
+              <Text className="slit-word">快速响应</Text>
+            </View>
+            <View className="sli-desc">湘昕科技为各行各业量身定制各类微信公众号和小程序解决方案。</View>
           </View>
         </View>
         <View className="wantOccu">期待与您的合作</View>

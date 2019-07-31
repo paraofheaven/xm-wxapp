@@ -13,7 +13,7 @@
                 </swiper-item>
             </swiper>
             <view class="swiper-dots">
-                <view class="{{item.$loopState__temp2}}" wx:key="$original" wx:for="{{loopArray1}}" wx:for-item="item" wx:for-index="index"></view>
+                <view class="{{item.$loopState__temp2}}" wx:key="$original" wx:for="{{loopArray97}}" wx:for-item="item" wx:for-index="index"></view>
             </view>
         </view>
         <view class="source-pan">
@@ -34,19 +34,51 @@
             </view>
             <view class="empty-padding"></view>
             <view class="sl-item">
-                <image mode="scaleToFill" class="sli-ave" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b87bca3a6fb2.png"></image>
-                <view class="sli-title">OSS平台</view>
-                <view class="sli-tips"><text class="slit-word">OA系统</text><text class="slit-word">OSS后台</text><text class="slit-word">流量监控</text>
+                <image mode="scaleToFill" class="sli-ave" src="https://www.elizhuo.com/static/media/cy@2x.23a3c1b0.png"></image>
+                <view class="sli-title">微餐饮</view>
+                <view class="sli-tips"><text class="slit-word">智慧餐厅</text><text class="slit-word">外卖商城</text><text class="slit-word">会员支付</text>
                 </view>
-                <view class="sli-desc">覆盖个行业解决方案，提供数据录入、数据可视化、数据分析</view>
+                <view class="sli-desc">为餐饮商户提供国内领先餐厅O2O解决方案</view>
             </view>
             <view class="empty-padding"></view>
             <view class="sl-item">
-                <image mode="scaleToFill" class="sli-ave" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b87bca3a6fb2.png"></image>
-                <view class="sli-title">美业类小程序</view>
-                <view class="sli-tips"><text class="slit-word">美容服务</text><text class="slit-word">一键预定</text><text class="slit-word">广告营销</text>
+                <image mode="scaleToFill" class="sli-ave" src="https://www.elizhuo.com/static/media/my@2x.c503d6b6.png"></image>
+                <view class="sli-title">微美业</view>
+                <view class="sli-tips"><text class="slit-word">美容SPA</text><text class="slit-word">一键预定</text><text class="slit-word">广告营销</text>
                 </view>
-                <view class="sli-desc">覆盖微信端强大的社交生态，高效实现拉新和导流</view>
+                <view class="sli-desc">深度对接商家微信公众号和小程序，支持线上下单购买，线下到店消费</view>
+            </view>
+            <view class="empty-padding"></view>
+            <view class="sl-item">
+                <image mode="scaleToFill" class="sli-ave" src="https://www.elizhuo.com/static/media/ls@2x.fc789854.png"></image>
+                <view class="sli-title">微零售</view>
+                <view class="sli-tips"><text class="slit-word">在线商城</text><text class="slit-word">多渠道销存</text><text class="slit-word">数据分析</text>
+                </view>
+                <view class="sli-desc">助推企业快速实现营销、服务、效率转型升级</view>
+            </view>
+            <view class="empty-padding"></view>
+            <view class="sl-item">
+                <image mode="scaleToFill" class="sli-ave" src="https://www.elizhuo.com/static/media/jr@2x.c9ec059b.png"></image>
+                <view class="sli-title">微金融</view>
+                <view class="sli-tips"><text class="slit-word">智慧金融</text><text class="slit-word">合规安全</text><text class="slit-word">低成本 高性能</text>
+                </view>
+                <view class="sli-desc">运用领先技术助力客户科技升级，打造云上金融，智创未来</view>
+            </view>
+            <view class="empty-padding"></view>
+            <view class="sl-item">
+                <image mode="scaleToFill" class="sli-ave" src="https://www.elizhuo.com/static/media/ly@2x.c5b7de66.png"></image>
+                <view class="sli-title">微旅游</view>
+                <view class="sli-tips"><text class="slit-word">在线OTA</text><text class="slit-word">线上预订</text><text class="slit-word">会员营销</text>
+                </view>
+                <view class="sli-desc">帮助旅游企业将传统线下门店销售方式转移到线上旅游电商平台</view>
+            </view>
+            <view class="empty-padding"></view>
+            <view class="sl-item">
+                <image mode="scaleToFill" class="sli-ave" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5c062f7f02f71.jpg"></image>
+                <view class="sli-title">其他</view>
+                <view class="sli-tips"><text class="slit-word">专业定制</text><text class="slit-word">敏捷开发</text><text class="slit-word">快速响应</text>
+                </view>
+                <view class="sli-desc">湘昕科技为各行各业量身定制各类微信公众号和小程序解决方案。</view>
             </view>
         </view>
         <view class="wantOccu">期待与您的合作</view>

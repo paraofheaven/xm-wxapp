@@ -6,11 +6,11 @@
                     <image class="swiper-image" mode="scaleToFill" src="https://file.40017.cn/css40017cnproduct/jinrong/files/i/ttb/open/bg-1.png"></image>
                 </swiper-item>
                 <swiper-item>
-                    <image class="swiper-image" mode="scaleToFill" src="https://file.40017.cn/css40017cnproduct/jinrong/files/i/ttb/open/bg-2.png"></image>
+                    <image class="swiper-image" mode="scaleToFill" src="https://file.40017.cn/css40017cnproduct/jinrong/files/i/baoxian/hybrid/home/dd-1.png"></image>
                 </swiper-item>
             </swiper>
             <view class="swiper-dots">
-                <view class="{{em.$loopState__temp3}}" wx:key="$loopState__temp5" wx:for="{{loopArray0}}" wx:for-item="em" wx:for-index="index"></view>
+                <view class="{{em.$loopState__temp3}}" wx:key="$loopState__temp5" wx:for="{{loopArray140}}" wx:for-item="em" wx:for-index="index"></view>
             </view>
         </view>
         <view class="portal-list">
@@ -28,7 +28,7 @@
             </view>
         </view>
         <view class="empty-padding ep-small"></view>
-        <notice-bar v-class="index-notice" v-noticebar-notice="index-noticebar-notice" compid="{{$compid__0}}">认真提供技术服务，提供各领域专业的解决方案，打通线上线下营销场景</notice-bar>
+        <notice-bar v-class="index-notice" v-noticebar-notice="index-noticebar-notice" compid="{{$compid__378}}">认真提供技术服务，提供各领域专业的解决方案，打通线上线下营销场景</notice-bar>
         <view class="empty-padding"></view>
         <view class="block" id="introduction">
             <view class="block-head">
@@ -36,7 +36,7 @@
                 <view class="iff-icon right"></view>
             </view>
             <view>
-                <image class="block-image" mode="scaleToFill" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b7d08801e46b.png"></image>
+                <image class="block-image" mode="scaleToFill" src="https://www.elizhuo.com/static/media/img.5ef4bb57.png"></image>
             </view>
         </view>
         <view class="empty-padding"></view>
@@ -47,13 +47,13 @@
             </view>
             <view class="empty-padding ep-small"></view>
             <view class="band-block">
-                <image class="bb bb-1" mode="widthFix" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5ca30ed3589d5.png"><text class="bb-title">品牌战略</text><text class="bb-subtitle">树立品牌形象和风格</text>
+                <image class="bb bb-1" mode="widthFix" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5ca30ed3589d5.png"><text class="bb-title">商城系统</text><text class="bb-subtitle">海量框架、免费培训</text>
                 </image>
-                <image class="bb bb-2" mode="widthFix" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5ca30f149cc3d.png"><text class="bb-title">VI标志</text><text class="bb-subtitle">用品牌驱动持续发展。</text>
+                <image class="bb bb-2" mode="widthFix" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5ca30f149cc3d.png"><text class="bb-title">H5活动</text><text class="bb-subtitle">活动营销、产品推荐</text>
                 </image>
-                <image class="bb bb-3" mode="widthFix" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5ca30f0cbaf66.png"><text class="bb-title">空间设计</text><text class="bb-subtitle">会场的地面布置和搭配</text>
+                <image class="bb bb-3" mode="widthFix" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5ca30f0cbaf66.png"><text class="bb-title">微信公众号</text><text class="bb-subtitle">对接微信、抢占流量</text>
                 </image>
-                <image class="bb bb-4" mode="widthFix" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5ca30f324f13e.png"><text class="bb-title">策划案</text><text class="bb-subtitle">用策划创造成功，创造未来</text>
+                <image class="bb bb-4" mode="widthFix" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5ca30f324f13e.png"><text class="bb-title">小程序</text><text class="bb-subtitle">微信、支付宝、百度小程序</text>
                 </image>
             </view>
         </view>
@@ -65,9 +65,9 @@
             </view>
             <view class="empty-padding ep-small"></view>
             <view class="success-block">
-                <image class="sb" mode="scaleToFill" src="https://img.zhichiwangluo.com/zcimgdir/thumb/t_15337859895b6bb785c4303.jpg"><text class="sb-title">小创优品</text>
+                <image class="sb" mode="scaleToFill" src="http://file.elizhuo.com/cases/20190620/20190620152026282.jpg"><text class="sb-title">成都仁品医疗美业</text>
                 </image>
-                <image class="sb" mode="scaleToFill" src="https://img.zhichiwangluo.com/zcimgdir/thumb/t_15337230795b6ac1c709fba.png"><text class="sb-title">小创优品</text>
+                <image class="sb" mode="scaleToFill" src="http://file.elizhuo.com/cases/20190620/20190620153120134.jpg"><text class="sb-title">夜飞鲜餐饮</text>
                 </image>
             </view>
         </view>

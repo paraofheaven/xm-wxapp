@@ -97,19 +97,19 @@
 }
 .source .sl-item .sli-ave {
   float: left;
-  width: 180rpx;
+  width: 220rpx;
   height: 180rpx;
 }
 .source .sl-item .sli-title {
   font-size: 30rpx;
   font-weight: bold;
   color: #333;
-  margin-left: 200rpx;
+  margin-left: 240rpx;
 }
 .source .sl-item .sli-tips {
   font-size: 24rpx;
   color: #999;
-  margin: 12rpx 0 0 200rpx;
+  margin: 12rpx 0 0 240rpx;
 }
 .source .sl-item .sli-tips .slit-word {
   padding: 2rpx 12rpx;
@@ -120,7 +120,7 @@
 }
 .source .sl-item .sli-desc {
   position: absolute;
-  left: 240rpx;
+  left: 280rpx;
   bottom: 0;
   font-size: 24rpx;
   color: #666;

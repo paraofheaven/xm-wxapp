@@ -40,7 +40,7 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "loopArray0", "$compid__0", "scrollIntoView", "current"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Index.__proto__ || Object.getPrototypeOf(Index)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "loopArray140", "$compid__378", "scrollIntoView", "current"], _this.config = {
       navigationBarTitleText: '首页'
     }, _this.changeSwiperIndex = function (e) {
       _this.setState({
@@ -95,7 +95,7 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__0 = (0, _index.genCompid)(__prefix + "$compid__0");
+      var $compid__378 = (0, _index.genCompid)(__prefix + "$compid__378");
 
       var _state = this.__state,
           current = _state.current,
@@ -103,10 +103,10 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
 
       var scrollStyle = { height: '600px' };
       var anonymousState__temp = (0, _index.internal_inline_style)(scrollStyle);
-      var $props__0 = {
+      var $props__378 = {
         "loop": true
       };
-      var loopArray0 = ['', ''].map(function (em, index) {
+      var loopArray140 = ['', ''].map(function (em, index) {
         em = {
           $original: (0, _index.internal_get_original)(em)
         };
@@ -118,11 +118,11 @@ var Index = (_temp2 = _class = function (_BaseComponent) {
           $original: em.$original
         };
       });
-      _index.propsManager.set($props__0, $compid__0);
+      _index.propsManager.set($props__378, $compid__378);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
-        loopArray0: loopArray0,
-        $compid__0: $compid__0
+        loopArray140: loopArray140,
+        $compid__378: $compid__378
       });
       return this.__state;
     }
