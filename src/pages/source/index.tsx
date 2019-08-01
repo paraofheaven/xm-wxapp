@@ -61,7 +61,7 @@ export default class Source extends Component {
         {/* <Image className="souce-image" mode="widthFix" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b6bf1aa298fc.png"></Image> */}
         <View className="source-pan">
           <View className="sp-title">公司服务</View>
-          <View className="sp-content">网站建设、APP开发、移动开发等，我们提供PC+手机+微信+APP全方位的技术服务网站改版、SEO优化、系统运维、应用功能优化等，我们提供一对一私人定制化的技术开发官网建设、网上商城、互动营销、内外信息网、物联网云端建设等，我们提供各领域专业的解决方案</View>
+          <View className="sp-content"><View>网站建设、APP开发、移动开发等，我们提供PC+手机+微信+APP全方位的技术服务;</View><View>网站改版、SEO优化、系统运维、应用功能优化等，我们提供一对一私人定制化的技术开发;</View>官网建设、网上商城、互动营销、内外信息网、物联网云端建设等，我们提供各领域专业的解决方案</View>
         </View>
         <View className="content-title">
           <View className="ct-word1">精选案例</View>

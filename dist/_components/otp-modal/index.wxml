@@ -1,1 +1,1 @@
-<block wx:if="{{$taroCompReady}}"><at-modal compid="{{$compid__22}}"></at-modal></block>
+<block wx:if="{{$taroCompReady}}"><at-modal compid="{{$compid__22}}"><view><pwd-box compid="{{$compid__23}}"></pwd-box></view></at-modal></block>

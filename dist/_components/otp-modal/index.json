@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "at-modal": "../../npm/taro-ui/dist/weapp/components/modal/index"
+    "at-modal": "../../npm/taro-ui/dist/weapp/components/modal/index",
+    "pwd-box": "../pwd-box/index"
   }
 }
