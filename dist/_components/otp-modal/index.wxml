@@ -1,0 +1,1 @@
+<block wx:if="{{$taroCompReady}}"><at-modal compid="{{$compid__22}}"></at-modal></block>

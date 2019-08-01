@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "otp": "../../../_components/otp/index"
+    "otp-modal": "../../../_components/otp-modal/index"
   }
 }

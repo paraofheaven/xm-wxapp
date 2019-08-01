@@ -1,6 +1,6 @@
 import Taro, { Component } from '@tarojs/taro';
 import { View } from '@tarojs/components';
-import Otp from '../../../_components/otp';
+import OtpModal from '../../../_components/otp-modal';
 import './index.less';
 
 export default class OtpDemo extends Component<any, any>{
@@ -19,14 +19,8 @@ export default class OtpDemo extends Component<any, any>{
 
   public render() {
     return <View>
-      <View className="demo-otp">
-        <Otp
-          autoStart
-          totalTicks={100}
-          format={"{t}s后重发"}
-          sendTxt={'获取动态码'}
-          processingTxt={'短信发送中'}
-          onSendRequest={this.sendRequest}></Otp>
+      <View className="demo-otp-modal">
+        <OtpModal></OtpModal>
       </View>
     </View>
   }

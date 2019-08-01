@@ -31,7 +31,7 @@ export default class Demo extends Component {
           <MyIcon v-class="demo-right" value="right"></MyIcon>
         </View>
         <View className="demo-item">
-          <Navigator url={"/pages/demo/otpmodal/index"}># 短信验证码弹窗</Navigator>
+          <Navigator url={"/pages/demo/otp-modal/index"}># 短信验证码弹窗</Navigator>
           <MyIcon v-class="demo-right" value="right"></MyIcon>
         </View>
         <View className="demo-item">
