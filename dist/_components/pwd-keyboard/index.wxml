@@ -1,13 +1,13 @@
 <block wx:if="{{$taroCompReady}}">
-    <bottom-up id="xCFVn" compid="{{$compid__167}}">
+    <bottom-up id="AHYUF" compid="{{$compid__226}}">
         <view class="v-pwdKeyboard v-class">
             <view class="v-pwdKeyboard-boxLyt">
                 <view class="v-pwdKeyboard-boxItem" animation="{{animation1}}">
-                    <pwd-box id="jpQHA" compid="{{$compid__168}}"></pwd-box>
+                    <pwd-box id="bubXm" compid="{{$compid__227}}"></pwd-box>
                 </view>
                 <block wx:if="{{withConfirm}}">
                     <view class="v-pwdKeyboard-boxItem" animation="{{animation2}}">
-                        <pwd-box id="Zdgqw" compid="{{$compid__169}}"></pwd-box>
+                        <pwd-box id="vktUA" compid="{{$compid__228}}"></pwd-box>
                     </view>
                 </block>
                 <block wx:if="{{message}}">
@@ -15,7 +15,7 @@
                 </block>
             </view>
             <view class="v-pwdKeyboard-lyt">
-                <key-board compid="{{$compid__170}}"></key-board>
+                <key-board compid="{{$compid__229}}"></key-board>
             </view>
         </view>
     </bottom-up>

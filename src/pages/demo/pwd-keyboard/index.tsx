@@ -44,7 +44,7 @@ export default class PwdKeyBoardDemo extends Component<any, any>{
     return <View className="pwd-keyboard-demo">
       <AtButton onClick={this.openPwdKeyBoard}>支付密码带键盘</AtButton>
       <AtButton onClick={this.test}>test</AtButton>
-      <PwdKeyBoard isOpen={isPwdOpen} onClose={this.onClose} onInputFinish={this.onInputFinish} />
+      <PwdKeyBoard isOpen={isPwdOpen} withConfirm onClose={this.onClose} onInputFinish={this.onInputFinish} />
       <AtMessage />
     </View>
   }

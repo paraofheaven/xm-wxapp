@@ -40,7 +40,7 @@ var BottomUp = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BottomUp.__proto__ || Object.getPrototypeOf(BottomUp)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__159", "visible", "bottomClassName", "hideMask", "title", "_isOpened", "closeOnClickOverlay", "isOpen", "children"], _this.closeByDocument = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BottomUp.__proto__ || Object.getPrototypeOf(BottomUp)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__191", "visible", "bottomClassName", "hideMask", "title", "_isOpened", "closeOnClickOverlay", "isOpen", "children"], _this.closeByDocument = function () {
       if (_this.props.closeOnClickOverlay) {
         _this.handleClose();
       }
@@ -112,7 +112,7 @@ var BottomUp = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__159 = (0, _index.genCompid)(__prefix + "$compid__159");
+      var $compid__191 = (0, _index.genCompid)(__prefix + "$compid__191");
 
       var _state = this.__state,
           _isOpened = _state._isOpened,
@@ -125,15 +125,15 @@ var BottomUp = (_temp2 = _class = function (_BaseComponent) {
       if (!visible) {
         return null;
       }
-      var $props__159 = {
+      var $props__191 = {
         "value": "close",
         "size": 22,
         "color": "#999",
         "onClick": this.handleClose
       };
-      _index.propsManager.set($props__159, $compid__159);
+      _index.propsManager.set($props__191, $compid__191);
       Object.assign(this.__state, {
-        $compid__159: $compid__159,
+        $compid__191: $compid__191,
         bottomClassName: bottomClassName,
         hideMask: hideMask,
         title: title

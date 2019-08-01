@@ -9,7 +9,7 @@ interface IPwdKeyBoard {
   isOpen: boolean;
   withConfirm?: boolean;
   confirmErrorMsg?: string;
-  onClose?: any;
+  onClose: any;
   closeOnClickOverlay?: boolean;
   onInputFinish: any;
   pwdbox1Config?: any;
@@ -137,6 +137,7 @@ export default class PwdKeyBoard extends Component<IPwdKeyBoard, any>{
       }, 1500);
       return;
     }
+    this.onBottomUpClose();
     this.props.onInputFinish(this.code1);
   }
 

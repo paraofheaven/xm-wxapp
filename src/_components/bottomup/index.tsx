@@ -9,7 +9,7 @@ interface IBottomUp {
   hideMask?: boolean;
   title?: string;
   closeOnClickOverlay?: boolean;
-  onClose?: any;
+  onClose: any;
 }
 
 export default class BottomUp extends Component<IBottomUp, {}> {
