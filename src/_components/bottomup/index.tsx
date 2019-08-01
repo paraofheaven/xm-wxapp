@@ -24,10 +24,11 @@ export default class BottomUp extends Component<IBottomUp, {}> {
   }
 
   public defaultProps = {
-    closeOnClickOverlay: true,
     isOpen: false,
     hideMask: true,
-    title: ''
+    title: '',
+    closeOnClickOverlay: true,
+    onClose: () => { },
   }
 
   public state = {
@@ -43,8 +44,11 @@ export default class BottomUp extends Component<IBottomUp, {}> {
     if (isOpen !== this.state._isOpened) {
       this.setState({
         _isOpened: isOpen,
-        visible: isOpen,
-      })
+      }, () => {
+        setTimeout(() => {
+          this.setState({ visible: isOpen });
+        }, 400);
+      });
     }
   }
 

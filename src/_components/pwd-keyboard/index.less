@@ -1,19 +1,38 @@
+@color-red: #ff6464;
+
 .v-pwdKeyboard {
   &-boxLyt {
     box-sizing: border-box;
     white-space: nowrap;
+    position: relative;
+
+    .v-pwdKeyboard-message {
+      position: absolute;
+      color: @color-red;
+      bottom: 0;
+      font-size: 24px;
+      line-height: 60px;
+      height: 60px;
+      width: 290px*2;
+      text-align: left;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
+
   &-lyt {
     box-sizing: border-box;
   }
+
   &-boxItem {
     display: inline-block;
     width: 100%;
   }
+
   &-close {
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     z-index: 1;
     margin-top: 14px;
     width: 92px;

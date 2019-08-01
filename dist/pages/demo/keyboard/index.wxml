@@ -1,1 +1,11 @@
-<block wx:if="{{$taroCompReady}}"><view class="keyboard-demo-wap"><at-form><at-input compid="{{$compid__9}}"></at-input></at-form><view><key-board v-class="demo-keyboard" compid="{{$compid__10}}"></key-board></view><at-message></at-message></view></block>
+<block wx:if="{{$taroCompReady}}">
+    <view class="keyboard-demo-wap">
+        <at-form>
+            <at-input compid="{{$compid__9}}"></at-input>
+        </at-form>
+        <view>
+            <key-board v-class="demo-keyboard" compid="{{$compid__10}}"></key-board>
+        </view>
+        <at-message></at-message>
+    </view>
+</block>

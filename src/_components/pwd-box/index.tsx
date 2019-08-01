@@ -5,7 +5,6 @@ import './index.less';
 interface IPwdBox {
   title?: string;
   subTitle?: string;
-  message?: string;
   showForgetPwd?: boolean;
   forgetPwdLink?: string;
   forgetPwdText?: string;
@@ -19,7 +18,6 @@ export default class PwdBox extends Component<IPwdBox, any>{
   public static defaultProps = {
     title: '请输入支付密码',
     subTitle: '',
-    message: '',
     showForgetPwd: false,
     forgetPwdLink: '',
     forgetPwdText: '忘记密码?',
@@ -81,7 +79,7 @@ export default class PwdBox extends Component<IPwdBox, any>{
   }
 
   render() {
-    const { title, subTitle, message, showForgetPwd, forgetPwdText } = this.props;
+    const { title, subTitle, showForgetPwd, forgetPwdText } = this.props;
     const { pwdNumbers, pwdValue } = this.state;
     return (
       <View className="v-pwdbox v-class">
@@ -106,7 +104,6 @@ export default class PwdBox extends Component<IPwdBox, any>{
               type="number" />
           </View>
           <View className="v-pwdbox-footer">
-            {message ? <View className="v-pwdbox-message">{message}</View> : null}
             {showForgetPwd ? <View className="v-pwdbox-forgetPwd" onClick={this.forgetPwd}>{forgetPwdText}</View> : null}
           </View>
         </View>

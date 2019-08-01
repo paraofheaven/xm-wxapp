@@ -4,7 +4,7 @@ import './index.less';
 
 interface IKeyboard {
   hideFinishBtn?: boolean;
-  onKeyboradClear: any;
+  onKeyboradDelete: any;
   onKeyboradFinish?: any;
   onKeyboradNumber: any;
 }
@@ -25,7 +25,7 @@ export default class KeyBoard extends Component<IKeyboard, {}>{
 
   public defaultProps = {
     hideFinishBtn: false,
-    onKeyboradClear: () => { },
+    onKeyboradDelete: () => { },
     onKeyboradFinish: () => { },
     onKeyboradNumber: () => { }
   }
@@ -54,15 +54,15 @@ export default class KeyBoard extends Component<IKeyboard, {}>{
     });
   }
 
-  public handleKeyboradClear = () => {
-    this.props.onKeyboradClear();
+  public handleKeyboradDelete = () => {
+    this.props.onKeyboradDelete();
   }
 
   public handleKeyboradFinish = () => {
     if (this.props.hideFinishBtn) {
       return;
     }
-    if(!this.props.onKeyboradFinish){
+    if (!this.props.onKeyboradFinish) {
       throw new Error('onKeyboradFinish is undefined!');
     }
     this.props.onKeyboradFinish();
@@ -82,7 +82,7 @@ export default class KeyBoard extends Component<IKeyboard, {}>{
           <View className="v-keyboard-grid">
             {finalKeys.map((key) => {
               if (key === 'C') {
-                return <Text className="v-keyboard-item v-keyboard-item-c" key={key} onClick={this.handleKeyboradClear}> 清除</Text>
+                return <Text className="v-keyboard-item v-keyboard-item-c" key={key} onClick={this.handleKeyboradDelete}> 清除</Text>
               } else if (key === 'F' && hideFinishBtn) {
                 return <Text className="v-keyboard-item v-keyboard-item-f v-keyboard-disabled" key={key}>&nbsp;</Text>
               } else if (key === 'F') {

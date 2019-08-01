@@ -27,11 +27,11 @@ export default class Demo extends Component {
           <MyIcon v-class="demo-right" value="right"></MyIcon>
         </View>
         <View className="demo-item">
-          <Navigator url={"/pages/demo/pwd-box/index"}># 密码输入框</Navigator>
+          <Navigator url={"/pages/demo/otp/index"}># 短信验证码</Navigator>
           <MyIcon v-class="demo-right" value="right"></MyIcon>
         </View>
         <View className="demo-item">
-          <Navigator url={"/pages/demo/otp/index"}># 短信验证码</Navigator>
+          <Navigator url={"/pages/demo/pwd-box/index"}># 密码输入框</Navigator>
           <MyIcon v-class="demo-right" value="right"></MyIcon>
         </View>
         <View className="demo-item">

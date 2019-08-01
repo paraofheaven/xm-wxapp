@@ -1,1 +1,22 @@
-<block wx:if="{{$taroCompReady}}"><bottom-up compid="{{$compid__21}}"><view class="v-pwdKeyboard v-class"><view class="v-pwdKeyboard-boxLyt"><view class="v-pwdKeyboard-boxItem" animation="{{animation1}}"><pwd-box id="XQKcH" compid="{{$compid__22}}"></pwd-box></view><block wx:if="{{withConfirm}}"><view class="v-pwdKeyboard-boxItem" animation="{{animation2}}"><pwd-box id="yPXnP"></pwd-box></view></block></view><view class="v-pwdKeyboard-lyt"><key-board compid="{{$compid__23}}"></key-board></view></view></bottom-up></block>
+<block wx:if="{{$taroCompReady}}">
+    <bottom-up id="xCFVn" compid="{{$compid__167}}">
+        <view class="v-pwdKeyboard v-class">
+            <view class="v-pwdKeyboard-boxLyt">
+                <view class="v-pwdKeyboard-boxItem" animation="{{animation1}}">
+                    <pwd-box id="jpQHA" compid="{{$compid__168}}"></pwd-box>
+                </view>
+                <block wx:if="{{withConfirm}}">
+                    <view class="v-pwdKeyboard-boxItem" animation="{{animation2}}">
+                        <pwd-box id="Zdgqw" compid="{{$compid__169}}"></pwd-box>
+                    </view>
+                </block>
+                <block wx:if="{{message}}">
+                    <view class="v-pwdKeyboard-message">{{message}}</view>
+                </block>
+            </view>
+            <view class="v-pwdKeyboard-lyt">
+                <key-board compid="{{$compid__170}}"></key-board>
+            </view>
+        </view>
+    </bottom-up>
+</block>

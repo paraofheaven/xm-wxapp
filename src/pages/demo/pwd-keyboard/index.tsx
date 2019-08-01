@@ -33,12 +33,18 @@ export default class PwdKeyBoardDemo extends Component<any, any>{
     });
   }
 
+  public onInputFinish = (value) => {
+    Taro.atMessage({
+      message: `设置密码为:${value}`
+    });
+  }
+
   render() {
     const { isPwdOpen } = this.state;
     return <View className="pwd-keyboard-demo">
       <AtButton onClick={this.openPwdKeyBoard}>支付密码带键盘</AtButton>
       <AtButton onClick={this.test}>test</AtButton>
-      <PwdKeyBoard isOpen={isPwdOpen} withConfirm onClose={this.onClose} />
+      <PwdKeyBoard isOpen={isPwdOpen} onClose={this.onClose} onInputFinish={this.onInputFinish} />
       <AtMessage />
     </View>
   }

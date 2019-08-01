@@ -1,1 +1,78 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var _class,_temp2,_createClass=function(){function r(e,t){for(var o=0;o<t.length;o++){var r=t[o];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(e,t,o){return t&&r(e.prototype,t),o&&r(e,o),e}}(),_get=function e(t,o,r){null===t&&(t=Function.prototype);var n=Object.getOwnPropertyDescriptor(t,o);if(void 0===n){var s=Object.getPrototypeOf(t);return null===s?void 0:e(s,o,r)}if("value"in n)return n.value;var i=n.get;return void 0!==i?i.call(r):void 0},_index=require("../../../../../../@tarojs/taro-weapp/index.js"),_index2=_interopRequireDefault(_index),_index3=require("../../../../../../classnames/index.js"),_index4=_interopRequireDefault(_index3),_component=require("../../../common/component.js"),_component2=_interopRequireDefault(_component);function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function _inherits(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}var AtActionSheetBody=(_temp2=_class=function(){function i(){var e,t,o;_classCallCheck(this,i);for(var r=arguments.length,n=Array(r),s=0;s<r;s++)n[s]=arguments[s];return(t=o=_possibleConstructorReturn(this,(e=i.__proto__||Object.getPrototypeOf(i)).call.apply(e,[this].concat(n)))).$usedState=["rootClass","className","children"],o.customComponents=[],_possibleConstructorReturn(o,t)}return _inherits(i,_component2.default),_createClass(i,[{key:"_constructor",value:function(e){_get(i.prototype.__proto__||Object.getPrototypeOf(i.prototype),"_constructor",this).call(this,e),this.$$refs=[]}},{key:"_createData",value:function(e,t,o){this.__state=e||this.state||{},this.__props=t||this.props||{};this.$prefix;var r=(0,_index4.default)("at-action-sheet__body",this.__props.className);return Object.assign(this.__state,{rootClass:r}),this.__state}}]),i}(),_class.$$events=[],_class.$$componentPath="Users/ly/Documents/GT_workspace/xmWeb/node_modules/taro-ui/dist/weapp/components/action-sheet/body/index",_temp2);exports.default=AtActionSheetBody,Component(require("../../../../../../@tarojs/taro-weapp/index.js").default.createComponent(AtActionSheetBody));
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+var _class, _temp2;
+
+var _index = require("../../../../../../@tarojs/taro-weapp/index.js");
+
+var _index2 = _interopRequireDefault(_index);
+
+var _index3 = require("../../../../../../classnames/index.js");
+
+var _index4 = _interopRequireDefault(_index3);
+
+var _component = require("../../../common/component.js");
+
+var _component2 = _interopRequireDefault(_component);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var AtActionSheetBody = (_temp2 = _class = function (_AtComponent) {
+  _inherits(AtActionSheetBody, _AtComponent);
+
+  function AtActionSheetBody() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, AtActionSheetBody);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = AtActionSheetBody.__proto__ || Object.getPrototypeOf(AtActionSheetBody)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["rootClass", "className", "children"], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(AtActionSheetBody, [{
+    key: "_constructor",
+    value: function _constructor(props) {
+      _get(AtActionSheetBody.prototype.__proto__ || Object.getPrototypeOf(AtActionSheetBody.prototype), "_constructor", this).call(this, props);
+
+      this.$$refs = [];
+    }
+  }, {
+    key: "_createData",
+    value: function _createData() {
+      this.__state = arguments[0] || this.state || {};
+      this.__props = arguments[1] || this.props || {};
+      var __isRunloopRef = arguments[2];
+      var __prefix = this.$prefix;
+      ;
+
+      var rootClass = (0, _index4.default)('at-action-sheet__body', this.__props.className);
+      Object.assign(this.__state, {
+        rootClass: rootClass
+      });
+      return this.__state;
+    }
+  }]);
+
+  return AtActionSheetBody;
+}(_component2.default), _class.$$events = [], _class.$$componentPath = "Users/ly/Documents/GT_workspace/xmWeb/node_modules/taro-ui/dist/weapp/components/action-sheet/body/index", _temp2);
+exports.default = AtActionSheetBody;
+
+Component(require('../../../../../../@tarojs/taro-weapp/index.js').default.createComponent(AtActionSheetBody));
