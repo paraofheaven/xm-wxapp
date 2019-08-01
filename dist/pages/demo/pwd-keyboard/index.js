@@ -36,7 +36,7 @@ var PwdKeyBoardDemo = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PwdKeyBoardDemo.__proto__ || Object.getPrototypeOf(PwdKeyBoardDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__203", "$compid__204", "$compid__205", "isPwdOpen", "test"], _this.openPwdKeyBoard = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PwdKeyBoardDemo.__proto__ || Object.getPrototypeOf(PwdKeyBoardDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__369", "$compid__370", "$compid__371", "isPwdOpen", "test"], _this.openPwdKeyBoard = function () {
       _this.setState({
         isPwdOpen: true
       });
@@ -77,31 +77,31 @@ var PwdKeyBoardDemo = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__203 = (0, _index.genCompid)(__prefix + "$compid__203");
-      var $compid__204 = (0, _index.genCompid)(__prefix + "$compid__204");
-      var $compid__205 = (0, _index.genCompid)(__prefix + "$compid__205");
+      var $compid__369 = (0, _index.genCompid)(__prefix + "$compid__369");
+      var $compid__370 = (0, _index.genCompid)(__prefix + "$compid__370");
+      var $compid__371 = (0, _index.genCompid)(__prefix + "$compid__371");
 
       var isPwdOpen = this.__state.isPwdOpen;
 
-      var $props__203 = {
+      var $props__369 = {
         "onClick": this.openPwdKeyBoard
       };
-      var $props__204 = {
+      var $props__370 = {
         "onClick": this.test
       };
-      var $props__205 = {
+      var $props__371 = {
         "isOpen": isPwdOpen,
         "withConfirm": true,
         "onClose": this.onClose,
         "onInputFinish": this.onInputFinish
       };
-      _index.propsManager.set($props__203, $compid__203);
-      _index.propsManager.set($props__204, $compid__204);
-      _index.propsManager.set($props__205, $compid__205);
+      _index.propsManager.set($props__369, $compid__369);
+      _index.propsManager.set($props__370, $compid__370);
+      _index.propsManager.set($props__371, $compid__371);
       Object.assign(this.__state, {
-        $compid__203: $compid__203,
-        $compid__204: $compid__204,
-        $compid__205: $compid__205
+        $compid__369: $compid__369,
+        $compid__370: $compid__370,
+        $compid__371: $compid__371
       });
       return this.__state;
     }

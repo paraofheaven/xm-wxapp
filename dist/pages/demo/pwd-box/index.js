@@ -36,7 +36,7 @@ var PwdBoxDemo = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PwdBoxDemo.__proto__ || Object.getPrototypeOf(PwdBoxDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__11"], _this.onPwdInputFinish = function (value) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PwdBoxDemo.__proto__ || Object.getPrototypeOf(PwdBoxDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__368"], _this.onPwdInputFinish = function (value) {
       _index2.default.atMessage({
         message: "\u8F93\u5165\u7684\u5BC6\u7801\u4E3A\uFF1A" + value
       });
@@ -58,13 +58,13 @@ var PwdBoxDemo = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__11 = (0, _index.genCompid)(__prefix + "$compid__11");
-      var $props__11 = {
+      var $compid__368 = (0, _index.genCompid)(__prefix + "$compid__368");
+      var $props__368 = {
         "onInputFinish": this.onPwdInputFinish
       };
-      _index.propsManager.set($props__11, $compid__11);
+      _index.propsManager.set($props__368, $compid__368);
       Object.assign(this.__state, {
-        $compid__11: $compid__11
+        $compid__368: $compid__368
       });
       return this.__state;
     }

@@ -2,23 +2,27 @@
     <view class="demo">
         <view class="demo-item">
             <navigator url="/pages/demo/bottomup/index"># 底部弹窗</navigator>
-            <my-icon v-class="demo-right" compid="{{$compid__2}}"></my-icon>
+            <my-icon v-class="demo-right" compid="{{$compid__357}}"></my-icon>
         </view>
         <view class="demo-item">
             <navigator url="/pages/demo/keyboard/index"># 自定义键盘</navigator>
-            <my-icon v-class="demo-right" compid="{{$compid__3}}"></my-icon>
+            <my-icon v-class="demo-right" compid="{{$compid__358}}"></my-icon>
         </view>
         <view class="demo-item">
             <navigator url="/pages/demo/otp/index"># 短信验证码</navigator>
-            <my-icon v-class="demo-right" compid="{{$compid__4}}"></my-icon>
+            <my-icon v-class="demo-right" compid="{{$compid__359}}"></my-icon>
+        </view>
+        <view class="demo-item">
+            <navigator url="/pages/demo/otpmodal/index"># 短信验证码弹窗</navigator>
+            <my-icon v-class="demo-right" compid="{{$compid__360}}"></my-icon>
         </view>
         <view class="demo-item">
             <navigator url="/pages/demo/pwd-box/index"># 密码输入框</navigator>
-            <my-icon v-class="demo-right" compid="{{$compid__5}}"></my-icon>
+            <my-icon v-class="demo-right" compid="{{$compid__361}}"></my-icon>
         </view>
         <view class="demo-item">
             <navigator url="/pages/demo/pwd-keyboard/index"># 密码输入带键盘</navigator>
-            <my-icon v-class="demo-right" compid="{{$compid__6}}"></my-icon>
+            <my-icon v-class="demo-right" compid="{{$compid__362}}"></my-icon>
         </view>
     </view>
 </block>

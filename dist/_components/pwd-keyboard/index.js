@@ -38,7 +38,7 @@ var PwdKeyBoard = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PwdKeyBoard.__proto__ || Object.getPrototypeOf(PwdKeyBoard)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__226", "$compid__227", "$compid__228", "$compid__229", "animation1", "withConfirm", "animation2", "message", "pwdboxValue", "confirm", "isOpen", "closeOnClickOverlay", "pwdbox1Config", "pwdbox2Config", "confirmErrorMsg"], _this.onKeyboradNumber = function (value) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PwdKeyBoard.__proto__ || Object.getPrototypeOf(PwdKeyBoard)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__230", "$compid__231", "$compid__232", "$compid__233", "animation1", "withConfirm", "animation2", "message", "pwdboxValue", "confirm", "isOpen", "closeOnClickOverlay", "pwdbox1Config", "pwdbox2Config", "confirmErrorMsg"], _this.onKeyboradNumber = function (value) {
       var _this$state = _this.state,
           pwdboxValue = _this$state.pwdboxValue,
           confirm = _this$state.confirm;
@@ -153,21 +153,21 @@ var PwdKeyBoard = (_temp2 = _class = function (_BaseComponent) {
       };
       this.$$refs = [{
         type: "component",
-        id: "AHYUF",
+        id: "zlOoO",
         refName: "",
         fn: function fn(ref) {
           _this2.bottomupRef = ref;
         }
       }, {
         type: "component",
-        id: "bubXm",
+        id: "vuykm",
         refName: "",
         fn: function fn(ref) {
           _this2.pwdboxRef1 = ref;
         }
       }, {
         type: "component",
-        id: "vktUA",
+        id: "ZtRpC",
         refName: "",
         fn: function fn(ref) {
           _this2.pwdboxRef2 = ref;
@@ -195,10 +195,10 @@ var PwdKeyBoard = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__226 = (0, _index.genCompid)(__prefix + "$compid__226");
-      var $compid__227 = (0, _index.genCompid)(__prefix + "$compid__227");
-      var $compid__228 = (0, _index.genCompid)(__prefix + "$compid__228");
-      var $compid__229 = (0, _index.genCompid)(__prefix + "$compid__229");
+      var $compid__230 = (0, _index.genCompid)(__prefix + "$compid__230");
+      var $compid__231 = (0, _index.genCompid)(__prefix + "$compid__231");
+      var $compid__232 = (0, _index.genCompid)(__prefix + "$compid__232");
+      var $compid__233 = (0, _index.genCompid)(__prefix + "$compid__233");
 
       var _props = this.__props,
           isOpen = _props.isOpen,
@@ -212,31 +212,31 @@ var PwdKeyBoard = (_temp2 = _class = function (_BaseComponent) {
           animation2 = _state.animation2,
           message = _state.message;
 
-      var $props__226 = {
+      var $props__230 = {
         "isOpen": isOpen,
         "closeOnClickOverlay": closeOnClickOverlay,
         "onClose": this.__props.onClose
       };
-      var $props__227 = _extends({}, pwdbox1Config, {
+      var $props__231 = _extends({}, pwdbox1Config, {
         "onInputFinish": this.onInputFinish
       });
-      var $props__228 = _extends({}, pwdbox2Config, {
+      var $props__232 = _extends({}, pwdbox2Config, {
         "onInputFinish": this.onInputFinishConfirm
       });
-      var $props__229 = {
+      var $props__233 = {
         "hideFinishBtn": true,
         "onKeyboradNumber": this.onKeyboradNumber,
         "onKeyboradDelete": this.onKeyboradDelete
       };
-      _index.propsManager.set($props__226, $compid__226);
-      _index.propsManager.set($props__227, $compid__227);
-      withConfirm && _index.propsManager.set($props__228, $compid__228);
-      _index.propsManager.set($props__229, $compid__229);
+      _index.propsManager.set($props__230, $compid__230);
+      _index.propsManager.set($props__231, $compid__231);
+      withConfirm && _index.propsManager.set($props__232, $compid__232);
+      _index.propsManager.set($props__233, $compid__233);
       Object.assign(this.__state, {
-        $compid__226: $compid__226,
-        $compid__227: $compid__227,
-        $compid__228: $compid__228,
-        $compid__229: $compid__229,
+        $compid__230: $compid__230,
+        $compid__231: $compid__231,
+        $compid__232: $compid__232,
+        $compid__233: $compid__233,
         withConfirm: withConfirm
       });
       return this.__state;

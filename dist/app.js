@@ -39,7 +39,7 @@ var _App = function (_BaseComponent) {
     var _this = _possibleConstructorReturn(this, (_App.__proto__ || Object.getPrototypeOf(_App)).apply(this, arguments));
 
     _this.config = {
-      pages: ['pages/index/index', 'pages/source/index', 'pages/contact/index', 'pages/joinus/index', 'pages/demo/portal/index', 'pages/demo/bottomup/index', 'pages/demo/keyboard/index', 'pages/demo/pwd-box/index', 'pages/demo/otp/index', 'pages/demo/pwd-keyboard/index'],
+      pages: ['pages/index/index', 'pages/source/index', 'pages/contact/index', 'pages/joinus/index', 'pages/demo/portal/index', 'pages/demo/bottomup/index', 'pages/demo/keyboard/index', 'pages/demo/otp/index', 'pages/demo/otp-modal/index', 'pages/demo/pwd-box/index', 'pages/demo/pwd-keyboard/index'],
       window: {
         backgroundTextStyle: 'light',
         navigationBarBackgroundColor: '#fff',

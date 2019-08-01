@@ -36,7 +36,7 @@ var Source = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Source.__proto__ || Object.getPrototypeOf(Source)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__1", "isActionOpened"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Source.__proto__ || Object.getPrototypeOf(Source)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__356", "isActionOpened"], _this.config = {
       navigationBarTitleText: '联系我们'
     }, _this.callingPhone = function () {
       _index2.default.makePhoneCall({
@@ -90,17 +90,17 @@ var Source = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__1 = (0, _index.genCompid)(__prefix + "$compid__1");
+      var $compid__356 = (0, _index.genCompid)(__prefix + "$compid__356");
 
       var isActionOpened = this.__state.isActionOpened;
 
-      var $props__1 = {
+      var $props__356 = {
         "className": "contact-action-sheet",
         "isOpened": isActionOpened
       };
-      _index.propsManager.set($props__1, $compid__1);
+      _index.propsManager.set($props__356, $compid__356);
       Object.assign(this.__state, {
-        $compid__1: $compid__1
+        $compid__356: $compid__356
       });
       return this.__state;
     }

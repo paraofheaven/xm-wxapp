@@ -27,8 +27,9 @@ class App extends Component {
       'pages/demo/portal/index',
       'pages/demo/bottomup/index',
       'pages/demo/keyboard/index',
-      'pages/demo/pwd-box/index',
       'pages/demo/otp/index',
+      'pages/demo/otp-modal/index',
+      'pages/demo/pwd-box/index',
       'pages/demo/pwd-keyboard/index',
     ],
     window: {

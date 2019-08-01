@@ -229,7 +229,7 @@
   text-align: center;
   color: #666;
   font-size: 26rpx;
-  margin: 50rpx auto 20rpx;
+  margin: 50rpx auto;
 }
 .index .company-ties .ct-name {
   color: #22A6FF;

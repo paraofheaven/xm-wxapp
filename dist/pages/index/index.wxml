@@ -10,7 +10,7 @@
                 </swiper-item>
             </swiper>
             <view class="swiper-dots">
-                <view class="{{em.$loopState__temp3}}" wx:key="$loopState__temp5" wx:for="{{loopArray0}}" wx:for-item="em" wx:for-index="index"></view>
+                <view class="{{em.$loopState__temp3}}" wx:key="$loopState__temp5" wx:for="{{loopArray50}}" wx:for-item="em" wx:for-index="index"></view>
             </view>
         </view>
         <view class="portal-list">
@@ -28,7 +28,7 @@
             </view>
         </view>
         <view class="empty-padding ep-small"></view>
-        <notice-bar v-class="index-notice" v-noticebar-notice="index-noticebar-notice" compid="{{$compid__0}}">认真提供技术服务，提供各领域专业的解决方案，打通线上线下营销场景</notice-bar>
+        <notice-bar v-class="index-notice" v-noticebar-notice="index-noticebar-notice" compid="{{$compid__385}}">认真提供技术服务，提供各领域专业的解决方案，打通线上线下营销场景</notice-bar>
         <view class="empty-padding"></view>
         <view class="block" id="introduction">
             <view class="block-head">
@@ -65,9 +65,9 @@
             </view>
             <view class="empty-padding ep-small"></view>
             <view class="success-block">
-                <image class="sb" mode="scaleToFill" src="http://fame.xiangxinjs.com/static/images/banner2.jpg"><text class="sb-title">乾承周易文化</text>
+                <image bindtap="skipToExcise" class="sb" mode="scaleToFill" src="http://fame.xiangxinjs.com/static/images/banner2.jpg"><text class="sb-title">乾承周易文化</text>
                 </image>
-                <image class="sb" mode="scaleToFill" src="http://file.elizhuo.com/cases/20190620/20190620153120134.jpg"><text class="sb-title">宇云商城</text>
+                <image bindtap="skipToEmall" class="sb" mode="scaleToFill" src="http://yanxuan.nosdn.127.net/65091eebc48899298171c2eb6696fe27.jpg"><text class="sb-title">宇云商城</text>
                 </image>
             </view>
         </view>
@@ -88,6 +88,6 @@
             </view>
         </view>
         <view class="float-phone" bindtap="callingPhone"></view>
-        <view class="company-ties">由<text class="ct-name">湘昕科技</text>提供技术服务支持</view>
+        <view class="company-ties" bindtap="skipToPcHome">由<text class="ct-name">湘昕科技</text>提供技术服务支持</view>
     </scroll-view>
 </block>

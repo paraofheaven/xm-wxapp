@@ -36,7 +36,7 @@ var OtpDemo = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = OtpDemo.__proto__ || Object.getPrototypeOf(OtpDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__367"], _this.sendRequest = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = OtpDemo.__proto__ || Object.getPrototypeOf(OtpDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__374"], _this.sendRequest = function () {
       return new Promise(function (resolve) {
         setTimeout(function () {
           resolve();
@@ -60,8 +60,8 @@ var OtpDemo = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__367 = (0, _index.genCompid)(__prefix + "$compid__367");
-      var $props__367 = {
+      var $compid__374 = (0, _index.genCompid)(__prefix + "$compid__374");
+      var $props__374 = {
         "autoStart": true,
         "totalTicks": 100,
         "format": "{t}s后重发",
@@ -69,16 +69,16 @@ var OtpDemo = (_temp2 = _class = function (_BaseComponent) {
         "processingTxt": '短信发送中',
         "onSendRequest": this.sendRequest
       };
-      _index.propsManager.set($props__367, $compid__367);
+      _index.propsManager.set($props__374, $compid__374);
       Object.assign(this.__state, {
-        $compid__367: $compid__367
+        $compid__374: $compid__374
       });
       return this.__state;
     }
   }]);
 
   return OtpDemo;
-}(_index.Component), _class.$$events = [], _class.$$componentPath = "pages/demo/otp/index", _temp2);
+}(_index.Component), _class.$$events = [], _class.$$componentPath = "pages/demo/otp-modal/index", _temp2);
 exports.default = OtpDemo;
 
 Component(require('../../../npm/@tarojs/taro-weapp/index.js').default.createComponent(OtpDemo, true));

@@ -51,6 +51,24 @@ export default class Index extends Component {
     });
   }
 
+  public skipToExcise = () => {
+    Taro.navigateTo({
+      url: 'http://fame.xiangxinjs.com',
+    });
+  }
+
+  public skipToEmall = () => {
+    Taro.navigateToMiniProgram({
+      appId: 'wx413ceac45708ea97',
+    });
+  }
+
+  public skipToPcHome = () => {
+    Taro.navigateTo({
+      url: 'https://xiangxinjs.com',
+    });
+  }
+
   render() {
     const { current, scrollIntoView } = this.state;
     const scrollStyle = { height: '600px' }
@@ -146,10 +164,10 @@ export default class Index extends Component {
           </View>
           <View className="empty-padding ep-small"></View>
           <View className="success-block">
-            <Image className="sb" mode="scaleToFill" src="http://fame.xiangxinjs.com/static/images/banner2.jpg">
+            <Image onClick={this.skipToExcise} className="sb" mode="scaleToFill" src="http://fame.xiangxinjs.com/static/images/banner2.jpg">
               <Text className="sb-title">乾承周易文化</Text>
             </Image>
-            <Image className="sb" mode="scaleToFill" src="http://file.elizhuo.com/cases/20190620/20190620153120134.jpg">
+            <Image onClick={this.skipToEmall} className="sb" mode="scaleToFill" src="http://yanxuan.nosdn.127.net/65091eebc48899298171c2eb6696fe27.jpg">
               <Text className="sb-title">宇云商城</Text>
             </Image>
           </View>
@@ -174,7 +192,7 @@ export default class Index extends Component {
           </View>
         </View>
         <View className="float-phone" onClick={this.callingPhone}></View>
-        <View className="company-ties">由<Text className="ct-name">湘昕科技</Text>提供技术服务支持</View>
+        <View className="company-ties" onClick={this.skipToPcHome}>由<Text className="ct-name">湘昕科技</Text>提供技术服务支持</View>
       </ScrollView>
     )
   }
