@@ -24,6 +24,7 @@ class App extends Component {
       'pages/source/index',
       'pages/contact/index',
       'pages/joinus/index',
+      'pages/demo/modal/index',
       'pages/demo/portal/index',
       'pages/demo/bottomup/index',
       'pages/demo/keyboard/index',

@@ -19,6 +19,10 @@ export default class Demo extends Component {
     return (
       <View className="demo">
         <View className="demo-item">
+          <Navigator url={"/pages/demo/modal/index"}># 弹窗</Navigator>
+          <MyIcon v-class="demo-right" value="right"></MyIcon>
+        </View>
+        <View className="demo-item">
           <Navigator url={"/pages/demo/bottomup/index"}># 底部弹窗</Navigator>
           <MyIcon v-class="demo-right" value="right"></MyIcon>
         </View>

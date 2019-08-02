@@ -18,7 +18,7 @@ export default class BottomUp extends Component<IBottomUp, {}> {
     super(...arguments)
     const { isOpen } = props
     this.state = {
-      _isOpened: isOpen,
+      _isOpen: isOpen,
       visible: isOpen
     }
   }
@@ -27,25 +27,27 @@ export default class BottomUp extends Component<IBottomUp, {}> {
     isOpen: false,
     hideMask: true,
     title: '',
-    closeOnClickOverlay: true,
+    closeOnClickOverlay: false,
     onClose: () => { },
   }
 
   public state = {
-    _isOpened: false,
+    _isOpen: false,
     visible: false,
   }
+
+  public bottomupTimer;
 
   public static externalClasses = ['v-class'];
 
   public componentWillReceiveProps(nextProps) {
     const { isOpen } = nextProps;
 
-    if (isOpen !== this.state._isOpened) {
+    if (isOpen !== this.state._isOpen) {
       this.setState({
-        _isOpened: isOpen,
+        _isOpen: isOpen,
       }, () => {
-        setTimeout(() => {
+        this.bottomupTimer = setTimeout(() => {
           this.setState({ visible: isOpen });
         }, 400);
       });
@@ -59,14 +61,14 @@ export default class BottomUp extends Component<IBottomUp, {}> {
   }
 
   public handleClose = () => {
-    if (!this.state._isOpened) {
+    if (!this.state._isOpen) {
       return;
     }
     this.setState({
-      _isOpened: false,
+      _isOpen: false,
     },
       () => {
-        setTimeout(() => {
+        this.bottomupTimer = setTimeout(() => {
           this.setState({ visible: false });
           if (_isFunction(this.props.onClose)) {
             this.props.onClose();
@@ -80,10 +82,14 @@ export default class BottomUp extends Component<IBottomUp, {}> {
     e.stopPropagation();
   }
 
+  public componentWillUnmount() {
+    clearTimeout(this.bottomupTimer);
+  }
+
   render() {
-    const { _isOpened, visible } = this.state;
+    const { _isOpen, visible } = this.state;
     const { hideMask, title } = this.props;
-    const bottomClassName = `v-bottomup ${_isOpened ? 'v-bottomup-open' : 'v-bottomup-close'} v-bottomup-class`;
+    const bottomClassName = `v-bottomup ${_isOpen ? 'v-bottomup-open' : 'v-bottomup-close'} v-class`;
     if (!visible) {
       return;
     }

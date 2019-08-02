@@ -1,0 +1,17 @@
+<block wx:if="{{$taroCompReady}}">
+    <block wx:if="{{!visible}}">
+        <view></view>
+    </block>
+    <block wx:else="{{true}}">
+        <view class="{{actionClassName}}" style="{{anonymousState__temp}}">
+            <block wx:if="{{!hideMask}}">
+                <view class="v-modal-mask"></view>
+            </block>
+            <view class="{{anonymousState__temp2}}">
+                <view class="v-modal-content">
+                    <slot></slot>
+                </view>
+            </view>
+        </view>
+    </block>
+</block>

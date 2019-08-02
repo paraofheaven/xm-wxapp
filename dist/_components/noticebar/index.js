@@ -1,1 +1,168 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var _class,_temp2,_createClass=function(){function o(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(e,t,n){return t&&o(e.prototype,t),n&&o(e,n),e}}(),_get=function e(t,n,o){null===t&&(t=Function.prototype);var i=Object.getOwnPropertyDescriptor(t,n);if(void 0===i){var r=Object.getPrototypeOf(t);return null===r?void 0:e(r,n,o)}if("value"in i)return i.value;var a=i.get;return void 0!==a?a.call(o):void 0},_index=require("../../npm/@tarojs/taro-weapp/index.js"),_index2=_interopRequireDefault(_index),_index3=require("../../npm/classnames/index.js"),_index4=_interopRequireDefault(_index3);function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function _inherits(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}var NoticeBar=(_temp2=_class=function(){function a(){var e,t,n;_classCallCheck(this,a);for(var o=arguments.length,i=Array(o),r=0;r<o;r++)i[r]=arguments[r];return(t=n=_possibleConstructorReturn(this,(e=a.__proto__||Object.getPrototypeOf(a)).call.apply(e,[this].concat(i)))).$usedState=["anonymousState__temp","$compid__17","$compid__18","visible","animationData","closable","duration","delay","loop","children"],n.initAnimation=function(){var e=n.state.duration,t=_index2.default.createAnimation({duration:e,timingFunction:"linear"});t.translateX("-100%").step(),n.setState({animationData:t.export()}),setTimeout(function(){var e=_index2.default.createAnimation({duration:0});e.translateX(n.wrapWidth).step(),n.setState({animationData:e.export()}),setTimeout(function(){var e=_index2.default.createAnimation({duration:n.resetDuration});e.translateX(0).step(),n.setState({animationData:e.export()}),setTimeout(function(){n.initAnimation()},n.resetDuration)},100)},e)},n.closeNoticeBar=function(){n.setState({visible:!1})},n.customComponents=["MyIcon"],_possibleConstructorReturn(n,t)}return _inherits(a,_index.Component),_createClass(a,[{key:"_constructor",value:function(){_get(a.prototype.__proto__||Object.getPrototypeOf(a.prototype),"_constructor",this).apply(this,arguments),this.defaultProps={closable:!0,loop:!0},this.state={visible:!0,animationData:void 0,duration:6e3,delay:1e3},this.$$refs=[]}},{key:"componentDidMount",value:function(){var n=this;this.props.loop&&_index2.default.createSelectorQuery().in(this.$scope).select(".v-noticebar-wrap").boundingClientRect().exec(function(e){n.wrapWidth=e[0].width,_index2.default.createSelectorQuery().in(n.$scope).select(".v-noticebar-content").boundingClientRect().exec(function(e){var t=e[0].width;n.resetDuration=n.state.duration*n.wrapWidth/t,setTimeout(function(){n.initAnimation()},n.state.delay)})})}},{key:"_createData",value:function(e,t,n){this.__state=e||this.state||{},this.__props=t||this.props||{};var o=this.$prefix,i=(0,_index.genCompid)(o+"$compid__17"),r=(0,_index.genCompid)(o+"$compid__18"),a=this.__state,s=a.visible,c=(a.animationData,this.__props),u=c.loop,l=c.closable;if(!s)return null;var p=(0,_index4.default)("v-noticebar-content",_defineProperty({},"v-noticebar-loop",u)),_={value:"close",onClick:this.closeNoticeBar};return _index.propsManager.set({value:"horn"},i),l&&_index.propsManager.set(_,r),Object.assign(this.__state,{anonymousState__temp:p,$compid__17:i,$compid__18:r,closable:l}),this.__state}}]),a}(),_class.$$events=[],_class.$$componentPath="_components/noticebar/index",_temp2);NoticeBar.externalClasses=["v-class","v-noticebar-notice"],exports.default=NoticeBar,Component(require("../../npm/@tarojs/taro-weapp/index.js").default.createComponent(NoticeBar));
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+var _class, _temp2;
+
+var _index = require("../../npm/@tarojs/taro-weapp/index.js");
+
+var _index2 = _interopRequireDefault(_index);
+
+var _index3 = require("../../npm/classnames/index.js");
+
+var _index4 = _interopRequireDefault(_index3);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var NoticeBar = (_temp2 = _class = function (_BaseComponent) {
+  _inherits(NoticeBar, _BaseComponent);
+
+  function NoticeBar() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, NoticeBar);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = NoticeBar.__proto__ || Object.getPrototypeOf(NoticeBar)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "$compid__21", "$compid__22", "visible", "animationData", "closable", "duration", "delay", "loop", "children"], _this.initAnimation = function () {
+      var duration = _this.state.duration;
+
+      var animation = _index2.default.createAnimation({
+        duration: duration,
+        timingFunction: 'linear'
+      });
+      animation.translateX('-100%').step();
+      _this.setState({
+        animationData: animation.export()
+      });
+      setTimeout(function () {
+        var animation = _index2.default.createAnimation({
+          duration: 0
+        });
+        animation.translateX(_this.wrapWidth).step();
+        _this.setState({
+          animationData: animation.export()
+        });
+        setTimeout(function () {
+          var animation = _index2.default.createAnimation({
+            duration: _this.resetDuration
+          });
+          animation.translateX(0).step();
+          _this.setState({
+            animationData: animation.export()
+          });
+          setTimeout(function () {
+            _this.initAnimation();
+          }, _this.resetDuration);
+        }, 100);
+      }, duration);
+    }, _this.closeNoticeBar = function () {
+      _this.setState({
+        visible: false
+      });
+    }, _this.customComponents = ["MyIcon"], _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(NoticeBar, [{
+    key: "_constructor",
+    value: function _constructor() {
+      _get(NoticeBar.prototype.__proto__ || Object.getPrototypeOf(NoticeBar.prototype), "_constructor", this).apply(this, arguments);
+      this.defaultProps = {
+        closable: true,
+        loop: true
+      };
+      this.state = {
+        visible: true,
+        animationData: undefined,
+        duration: 6000,
+        delay: 1000
+      };
+      this.$$refs = [];
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      var loop = this.props.loop;
+
+      if (loop) {
+        _index2.default.createSelectorQuery().in(this.$scope).select('.v-noticebar-wrap').boundingClientRect().exec(function (rectWrap) {
+          _this2.wrapWidth = rectWrap[0].width;
+          _index2.default.createSelectorQuery().in(_this2.$scope).select('.v-noticebar-content').boundingClientRect().exec(function (rectContent) {
+            var contentWidth = rectContent[0].width;
+            _this2.resetDuration = _this2.state.duration * _this2.wrapWidth / contentWidth;
+            setTimeout(function () {
+              _this2.initAnimation();
+            }, _this2.state.delay);
+          });
+        });
+      }
+    }
+  }, {
+    key: "_createData",
+    value: function _createData() {
+      this.__state = arguments[0] || this.state || {};
+      this.__props = arguments[1] || this.props || {};
+      var __isRunloopRef = arguments[2];
+      var __prefix = this.$prefix;
+      ;
+      var $compid__21 = (0, _index.genCompid)(__prefix + "$compid__21");
+      var $compid__22 = (0, _index.genCompid)(__prefix + "$compid__22");
+
+      var _state = this.__state,
+          visible = _state.visible,
+          animationData = _state.animationData;
+      var _props = this.__props,
+          loop = _props.loop,
+          closable = _props.closable;
+
+      if (!visible) {
+        return null;
+      }
+      var anonymousState__temp = (0, _index4.default)('v-noticebar-content', _defineProperty({}, 'v-noticebar-loop', loop));
+      var $props__21 = {
+        "value": "horn"
+      };
+      var $props__22 = {
+        "value": "close",
+        "onClick": this.closeNoticeBar
+      };
+      _index.propsManager.set($props__21, $compid__21);
+      closable && _index.propsManager.set($props__22, $compid__22);
+      Object.assign(this.__state, {
+        anonymousState__temp: anonymousState__temp,
+        $compid__21: $compid__21,
+        $compid__22: $compid__22,
+        closable: closable
+      });
+      return this.__state;
+    }
+  }]);
+
+  return NoticeBar;
+}(_index.Component), _class.$$events = [], _class.$$componentPath = "_components/noticebar/index", _temp2);
+
+
+NoticeBar.externalClasses = ['v-class', 'v-noticebar-notice'];
+exports.default = NoticeBar;
+
+Component(require('../../npm/@tarojs/taro-weapp/index.js').default.createComponent(NoticeBar));

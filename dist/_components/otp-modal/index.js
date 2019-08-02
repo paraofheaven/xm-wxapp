@@ -1,1 +1,109 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var _class,_temp2,_createClass=function(){function n(t,e){for(var o=0;o<e.length;o++){var n=e[o];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(t,n.key,n)}}return function(t,e,o){return e&&n(t.prototype,e),o&&n(t,o),t}}(),_get=function t(e,o,n){null===e&&(e=Function.prototype);var r=Object.getOwnPropertyDescriptor(e,o);if(void 0===r){var i=Object.getPrototypeOf(e);return null===i?void 0:t(i,o,n)}if("value"in r)return r.value;var s=r.get;return void 0!==s?s.call(n):void 0},_index=require("../../npm/@tarojs/taro-weapp/index.js"),_index2=_interopRequireDefault(_index);function _interopRequireDefault(t){return t&&t.__esModule?t:{default:t}}function _classCallCheck(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}function _inherits(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}var OtpModal=(_temp2=_class=function(){function s(){var t,e,o;_classCallCheck(this,s);for(var n=arguments.length,r=Array(n),i=0;i<n;i++)r[i]=arguments[i];return(e=o=_possibleConstructorReturn(this,(t=s.__proto__||Object.getPrototypeOf(s)).call.apply(t,[this].concat(r)))).$usedState=["$compid__22","$compid__23","title","onInputFinish"],o.customComponents=["AtModal","PwdBox"],_possibleConstructorReturn(o,e)}return _inherits(s,_index.Component),_createClass(s,[{key:"_constructor",value:function(){_get(s.prototype.__proto__||Object.getPrototypeOf(s.prototype),"_constructor",this).apply(this,arguments),this.state={},this.$$refs=[]}},{key:"_createData",value:function(t,e,o){this.__state=t||this.state||{},this.__props=e||this.props||{};var n=this.$prefix,r=(0,_index.genCompid)(n+"$compid__22"),i=(0,_index.genCompid)(n+"$compid__23"),s=this.__props,a=s.title,p=(s.onInputFinish,{isOpened:!0,title:a}),c={onInputFinish:this.__props.onInputFinish};return _index.propsManager.set(p,r),_index.propsManager.set(c,i),Object.assign(this.__state,{$compid__22:r,$compid__23:i}),this.__state}}]),s}(),_class.$$events=[],_class.$$componentPath="_components/otp-modal/index",_temp2);OtpModal.defaultProps={title:"输入短信验证码",closeOnClickOverlay:!1,onInputFinish:function(){}},OtpModal.externalClass=["v-class"],exports.default=OtpModal,Component(require("../../npm/@tarojs/taro-weapp/index.js").default.createComponent(OtpModal));
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+var _class, _temp2;
+
+var _index = require("../../npm/@tarojs/taro-weapp/index.js");
+
+var _index2 = _interopRequireDefault(_index);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var OtpModal = (_temp2 = _class = function (_BaseComponent) {
+  _inherits(OtpModal, _BaseComponent);
+
+  function OtpModal() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, OtpModal);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = OtpModal.__proto__ || Object.getPrototypeOf(OtpModal)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__26", "$compid__27", "$compid__28", "title", "pwdboxProps", "onInputFinish", "onSendRequest"], _this.customComponents = ["AtModal", "AtModalHeader", "AtModalContent", "PwdBox", "Otp", "AtModalAction", "AtButton"], _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(OtpModal, [{
+    key: "_constructor",
+    value: function _constructor() {
+      _get(OtpModal.prototype.__proto__ || Object.getPrototypeOf(OtpModal.prototype), "_constructor", this).apply(this, arguments);
+      this.state = {};
+      this.$$refs = [];
+    }
+  }, {
+    key: "_createData",
+    value: function _createData() {
+      this.__state = arguments[0] || this.state || {};
+      this.__props = arguments[1] || this.props || {};
+      var __isRunloopRef = arguments[2];
+      var __prefix = this.$prefix;
+      ;
+      var $compid__26 = (0, _index.genCompid)(__prefix + "$compid__26");
+      var $compid__27 = (0, _index.genCompid)(__prefix + "$compid__27");
+      var $compid__28 = (0, _index.genCompid)(__prefix + "$compid__28");
+
+      var _props = this.__props,
+          title = _props.title,
+          pwdboxProps = _props.pwdboxProps,
+          onInputFinish = _props.onInputFinish,
+          onSendRequest = _props.onSendRequest;
+
+      var $props__26 = {
+        "isOpened": true,
+        "className": "otp-modal"
+      };
+      var $props__27 = _extends({}, pwdboxProps, {
+        "onInputFinish": this.__props.onInputFinish
+      });
+      var $props__28 = {
+        "onSendRequest": this.__props.onSendRequest
+      };
+      _index.propsManager.set($props__26, $compid__26);
+      _index.propsManager.set($props__27, $compid__27);
+      _index.propsManager.set($props__28, $compid__28);
+      Object.assign(this.__state, {
+        $compid__26: $compid__26,
+        $compid__27: $compid__27,
+        $compid__28: $compid__28,
+        title: title
+      });
+      return this.__state;
+    }
+  }]);
+
+  return OtpModal;
+}(_index.Component), _class.$$events = [], _class.$$componentPath = "_components/otp-modal/index", _temp2);
+
+
+OtpModal.defaultProps = {
+  title: '请输入短信验证码',
+  closeOnClickOverlay: false,
+  pwdboxProps: {
+    title: '请输入短信验证码',
+    subTitle: '请输入发送到您手机的验证码'
+  },
+  onInputFinish: function onInputFinish() {},
+  onSendRequest: function onSendRequest() {}
+};
+OtpModal.externalClass = ['v-class'];
+exports.default = OtpModal;
+
+Component(require('../../npm/@tarojs/taro-weapp/index.js').default.createComponent(OtpModal));

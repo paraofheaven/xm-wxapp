@@ -2,6 +2,11 @@
   "component": true,
   "usingComponents": {
     "at-modal": "../../npm/taro-ui/dist/weapp/components/modal/index",
-    "pwd-box": "../pwd-box/index"
+    "at-modal-header": "../../npm/taro-ui/dist/weapp/components/modal/header/index",
+    "at-modal-content": "../../npm/taro-ui/dist/weapp/components/modal/content/index",
+    "pwd-box": "../pwd-box/index",
+    "otp": "../otp/index",
+    "at-modal-action": "../../npm/taro-ui/dist/weapp/components/modal/action/index",
+    "at-button": "../../npm/taro-ui/dist/weapp/components/button/index"
   }
 }

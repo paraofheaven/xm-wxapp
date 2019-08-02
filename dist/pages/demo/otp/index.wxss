@@ -1,1 +1,8 @@
-.demo-otp{width:100%;height:100rpx;line-height:100rpx;text-align:center;border:1rpx solid #eee}
+
+.demo-otp {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border: 1rpx solid #eee;
+}

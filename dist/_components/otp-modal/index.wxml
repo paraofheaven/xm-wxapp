@@ -1,1 +1,16 @@
-<block wx:if="{{$taroCompReady}}"><at-modal compid="{{$compid__22}}"><view><pwd-box compid="{{$compid__23}}"></pwd-box></view></at-modal></block>
+<block wx:if="{{$taroCompReady}}">
+    <at-modal compid="{{$compid__26}}">
+        <at-modal-header>{{title}}</at-modal-header>
+        <at-modal-content>
+            <view class="pwd-box-wap">
+                <pwd-box compid="{{$compid__27}}"></pwd-box>
+            </view>
+            <view class="otp-wap">
+                <otp compid="{{$compid__28}}"></otp>
+            </view>
+        </at-modal-content>
+        <at-modal-action>
+            <at-button>确定</at-button>
+        </at-modal-action>
+    </at-modal>
+</block>

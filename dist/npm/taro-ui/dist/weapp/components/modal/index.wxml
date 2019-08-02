@@ -1,1 +1,37 @@
-<block wx:if="{{$taroCompReady}}"><block wx:if="{{title || content}}"><view class="{{rootClass}}"><view bindtap="handleClickOverlay" class="at-modal__overlay"></view><view class="at-modal__container"><block wx:if="{{title}}"><at-modal-header><text>{{title}}</text></at-modal-header></block><block wx:if="{{content}}"><at-modal-content><view class="content-simple"><text>{{content}}</text></view></at-modal-content></block><block wx:if="{{_$isRenderAction}}"><at-modal-action compid="{{$compid__28}}"><block wx:if="{{cancelText}}"><button bindtap="handleCancel">{{cancelText}}</button></block><block wx:if="{{confirmText}}"><button bindtap="handleConfirm">{{confirmText}}</button></block></at-modal-action></block></view></view></block><block wx:else="{{true}}"><view catchtouchmove="handleTouchMove" class="{{rootClass}}"><view class="at-modal__overlay" bindtap="handleClickOverlay"></view><view class="at-modal__container"><slot></slot></view></view></block></block>
+<block wx:if="{{$taroCompReady}}">
+    <block wx:if="{{title || content}}">
+        <view class="{{rootClass}}">
+            <view bindtap="handleClickOverlay" class="at-modal__overlay"></view>
+            <view class="at-modal__container">
+                <block wx:if="{{title}}">
+                    <at-modal-header><text>{{title}}</text>
+                    </at-modal-header>
+                </block>
+                <block wx:if="{{content}}">
+                    <at-modal-content>
+                        <view class="content-simple"><text>{{content}}</text>
+                        </view>
+                    </at-modal-content>
+                </block>
+                <block wx:if="{{_$isRenderAction}}">
+                    <at-modal-action compid="{{$compid__33}}">
+                        <block wx:if="{{cancelText}}">
+                            <button bindtap="handleCancel">{{cancelText}}</button>
+                        </block>
+                        <block wx:if="{{confirmText}}">
+                            <button bindtap="handleConfirm">{{confirmText}}</button>
+                        </block>
+                    </at-modal-action>
+                </block>
+            </view>
+        </view>
+    </block>
+    <block wx:else="{{true}}">
+        <view catchtouchmove="handleTouchMove" class="{{rootClass}}">
+            <view class="at-modal__overlay" bindtap="handleClickOverlay"></view>
+            <view class="at-modal__container">
+                <slot></slot>
+            </view>
+        </view>
+    </block>
+</block>

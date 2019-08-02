@@ -1,6 +1,6 @@
 import Taro, { Component } from '@tarojs/taro';
 import { View } from '@tarojs/components';
-import { AtModal } from 'taro-ui';
+import { AtModal, AtModalHeader, AtModalContent, AtModalAction, AtButton } from 'taro-ui';
 import PwdBox from '../pwd-box';
 import Otp from '../otp';
 import './index.less';
@@ -8,14 +8,21 @@ import './index.less';
 interface IOtpModal {
   title?: string;
   closeOnClickOverlay?: boolean;
+  pwdboxProps?: any;
   onInputFinish: any;
+  onSendRequest: () => Promise<any>;
 }
 
 export default class OtpModal extends Component<IOtpModal, any>{
   public static defaultProps = {
-    title: '输入短信验证码',
+    title: '请输入短信验证码',
     closeOnClickOverlay: false,
-    onInputFinish: () => { }
+    pwdboxProps: {
+      title: '请输入短信验证码',
+      subTitle: '请输入发送到您手机的验证码'
+    },
+    onInputFinish: () => { },
+    onSendRequest: () => { },
   }
 
   public static externalClass = ['v-class'];
@@ -25,11 +32,18 @@ export default class OtpModal extends Component<IOtpModal, any>{
   }
 
   public render() {
-    const { title, onInputFinish } = this.props;
-    return (<AtModal isOpened={true} title={title}>
-      <View>
-        <PwdBox onInputFinish={onInputFinish}></PwdBox>
-      </View>
+    const { title, pwdboxProps, onInputFinish, onSendRequest } = this.props;
+    return (<AtModal isOpened={true} className="otp-modal">
+      <AtModalHeader>{title}</AtModalHeader>
+      <AtModalContent>
+        <View className="pwd-box-wap">
+          <PwdBox {...pwdboxProps} onInputFinish={onInputFinish}></PwdBox>
+        </View>
+        <View className="otp-wap">
+          <Otp onSendRequest={onSendRequest}></Otp>
+        </View>
+      </AtModalContent>
+      <AtModalAction><AtButton>确定</AtButton></AtModalAction>
     </AtModal>);
   }
 }
