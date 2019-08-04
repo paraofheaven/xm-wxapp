@@ -5,7 +5,7 @@
     <block wx:else="{{true}}">
         <view class="{{actionClassName}}" style="{{anonymousState__temp}}">
             <block wx:if="{{!hideMask}}">
-                <view class="v-modal-mask"></view>
+                <view class="v-modal-mask" bindtap="closeByDocument"></view>
             </block>
             <view class="{{anonymousState__temp2}}">
                 <view class="v-modal-content">

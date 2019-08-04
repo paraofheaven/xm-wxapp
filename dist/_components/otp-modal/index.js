@@ -38,7 +38,7 @@ var OtpModal = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = OtpModal.__proto__ || Object.getPrototypeOf(OtpModal)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__26", "$compid__27", "$compid__28", "title", "pwdboxProps", "onInputFinish", "onSendRequest"], _this.customComponents = ["AtModal", "AtModalHeader", "AtModalContent", "PwdBox", "Otp", "AtModalAction", "AtButton"], _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = OtpModal.__proto__ || Object.getPrototypeOf(OtpModal)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__84", "$compid__85", "$compid__86", "title", "pwdboxProps", "onInputFinish", "onSendRequest"], _this.customComponents = ["PwdBox", "Otp", "AtButton"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(OtpModal, [{
@@ -56,9 +56,9 @@ var OtpModal = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__26 = (0, _index.genCompid)(__prefix + "$compid__26");
-      var $compid__27 = (0, _index.genCompid)(__prefix + "$compid__27");
-      var $compid__28 = (0, _index.genCompid)(__prefix + "$compid__28");
+      var $compid__84 = (0, _index.genCompid)(__prefix + "$compid__84");
+      var $compid__85 = (0, _index.genCompid)(__prefix + "$compid__85");
+      var $compid__86 = (0, _index.genCompid)(__prefix + "$compid__86");
 
       var _props = this.__props,
           title = _props.title,
@@ -66,23 +66,23 @@ var OtpModal = (_temp2 = _class = function (_BaseComponent) {
           onInputFinish = _props.onInputFinish,
           onSendRequest = _props.onSendRequest;
 
-      var $props__26 = {
+      var $props__84 = {
         "isOpened": true,
         "className": "otp-modal"
       };
-      var $props__27 = _extends({}, pwdboxProps, {
+      var $props__85 = _extends({}, pwdboxProps, {
         "onInputFinish": this.__props.onInputFinish
       });
-      var $props__28 = {
+      var $props__86 = {
         "onSendRequest": this.__props.onSendRequest
       };
-      _index.propsManager.set($props__26, $compid__26);
-      _index.propsManager.set($props__27, $compid__27);
-      _index.propsManager.set($props__28, $compid__28);
+      _index.propsManager.set($props__84, $compid__84);
+      _index.propsManager.set($props__85, $compid__85);
+      _index.propsManager.set($props__86, $compid__86);
       Object.assign(this.__state, {
-        $compid__26: $compid__26,
-        $compid__27: $compid__27,
-        $compid__28: $compid__28,
+        $compid__84: $compid__84,
+        $compid__85: $compid__85,
+        $compid__86: $compid__86,
         title: title
       });
       return this.__state;

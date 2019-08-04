@@ -1,12 +1,12 @@
 <block wx:if="{{$taroCompReady}}">
-    <at-modal compid="{{$compid__26}}">
+    <at-modal compid="{{$compid__84}}">
         <at-modal-header>{{title}}</at-modal-header>
         <at-modal-content>
             <view class="pwd-box-wap">
-                <pwd-box compid="{{$compid__27}}"></pwd-box>
+                <pwd-box compid="{{$compid__85}}"></pwd-box>
             </view>
             <view class="otp-wap">
-                <otp compid="{{$compid__28}}"></otp>
+                <otp compid="{{$compid__86}}"></otp>
             </view>
         </at-modal-content>
         <at-modal-action>

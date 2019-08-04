@@ -17,7 +17,7 @@ export default class Modal extends Component<IModal, any>{
 
   public constructor(props) {
     super(...arguments);
-    const { isOpen } = props
+    const { isOpen } = props;
     this.state = {
       _isOpen: isOpen,
       visible: isOpen
@@ -34,6 +34,8 @@ export default class Modal extends Component<IModal, any>{
 
   public static externalClass = ['v-class'];
 
+  public modalTimer;
+
   public state = {
     visible: false,
     _isOpen: false,
@@ -46,11 +48,15 @@ export default class Modal extends Component<IModal, any>{
       this.setState({
         _isOpen: isOpen,
       }, () => {
-        setTimeout(() => {
+        this.modalTimer = setTimeout(() => {
           this.setState({ visible: isOpen });
         }, 400);
       });
     }
+  }
+
+  public componentWillUnmount() {
+    clearTimeout(this.modalTimer);
   }
 
   public closeByDocument = () => {
@@ -67,7 +73,7 @@ export default class Modal extends Component<IModal, any>{
       _isOpen: false,
     },
       () => {
-        setTimeout(() => {
+        this.modalTimer = setTimeout(() => {
           this.setState({ visible: false });
           if (_isFunction(this.props.onClose)) {
             this.props.onClose();
@@ -85,7 +91,7 @@ export default class Modal extends Component<IModal, any>{
     }
     const actionClassName = `v-modal ${_isOpen ? 'v-modal-open' : 'v-modal-close'} v-class`;
     return <View className={actionClassName} style={{ zIndex }}>
-      {hideMask ? null : <View className="v-modal-mask"></View>}
+      {hideMask ? null : <View className="v-modal-mask" onClick={this.closeByDocument}></View>}
       <View className={classnames('v-modal-wrap', { 'v-modal-fullScreen': fullScreen })}>
         <View className="v-modal-content">{this.props.children}</View>
       </View>

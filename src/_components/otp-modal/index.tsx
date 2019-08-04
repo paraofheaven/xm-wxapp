@@ -1,14 +1,17 @@
 import Taro, { Component } from '@tarojs/taro';
 import { View } from '@tarojs/components';
-import { AtModal, AtModalHeader, AtModalContent, AtModalAction, AtButton } from 'taro-ui';
+import { AtButton } from 'taro-ui';
+import Modal from '../modal';
 import PwdBox from '../pwd-box';
 import Otp from '../otp';
+import MyIcon from '../myicon';
 import './index.less';
 
 interface IOtpModal {
+  isOpen: boolean;
   title?: string;
+  desc?: string;
   closeOnClickOverlay?: boolean;
-  pwdboxProps?: any;
   onInputFinish: any;
   onSendRequest: () => Promise<any>;
 }
@@ -16,11 +19,8 @@ interface IOtpModal {
 export default class OtpModal extends Component<IOtpModal, any>{
   public static defaultProps = {
     title: '请输入短信验证码',
+    desc: '请输入发送到您手机的验证码',
     closeOnClickOverlay: false,
-    pwdboxProps: {
-      title: '请输入短信验证码',
-      subTitle: '请输入发送到您手机的验证码'
-    },
     onInputFinish: () => { },
     onSendRequest: () => { },
   }
@@ -28,22 +28,27 @@ export default class OtpModal extends Component<IOtpModal, any>{
   public static externalClass = ['v-class'];
 
   public state = {
+    btnDisabled: true,
+  }
 
+  public onInputFinish = (value) => {
+    this.props.onInputFinish(value);
   }
 
   public render() {
-    const { title, pwdboxProps, onInputFinish, onSendRequest } = this.props;
-    return (<AtModal isOpened={true} className="otp-modal">
-      <AtModalHeader>{title}</AtModalHeader>
-      <AtModalContent>
-        <View className="pwd-box-wap">
-          <PwdBox {...pwdboxProps} onInputFinish={onInputFinish}></PwdBox>
-        </View>
-        <View className="otp-wap">
-          <Otp onSendRequest={onSendRequest}></Otp>
-        </View>
-      </AtModalContent>
-      <AtModalAction><AtButton>确定</AtButton></AtModalAction>
-    </AtModal>);
+    const { isOpen, title, desc, pwdboxProps, onSendRequest } = this.props;
+    const { btnDisabled } = this.state;
+    return (<Modal isOpen={isOpen} v-class="v-otp-modal">
+      <MyIcon value="close" size={22} color="#999" v-class="v-otp-modal-close"></MyIcon>
+      <View className="v-otp-modal-title">{title}</View>
+      <View className="v-otp-modal-desc">{desc}</View>
+      <View className="v-otp-modal-content">
+        <PwdBox onInputFinish={this.onInputFinish}></PwdBox>
+      </View>
+      <View>
+        <Otp onSendRequest={onSendRequest}></Otp>
+      </View>
+      <AtButton disabled={btnDisabled}>确定</AtButton>
+    </Modal>);
   }
 }

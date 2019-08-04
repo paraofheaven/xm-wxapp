@@ -27,7 +27,7 @@ export default class BottomUpDemo extends Component<any, any>{
     return (<View className="bottomup-demo">
       <AtButton onClick={this.openBottomUp}>底部弹窗</AtButton>
       <View>
-        <BottomUp title="标题" isOpen={bottomupOpen} onClose={this.closeBottomUp} closeOnClickOverlay>
+        <BottomUp title="标题" isOpen={bottomupOpen} onClose={this.closeBottomUp}>
           <View className="bottom-block"></View>
           <View className="bottom-block"></View>
           <View className="bottom-block"></View>

@@ -10,6 +10,7 @@ interface IBottomUp {
   title?: string;
   closeOnClickOverlay?: boolean;
   onClose: any;
+
 }
 
 export default class BottomUp extends Component<IBottomUp, {}> {
@@ -23,11 +24,11 @@ export default class BottomUp extends Component<IBottomUp, {}> {
     }
   }
 
-  public defaultProps = {
+  public static defaultProps = {
     isOpen: false,
-    hideMask: true,
+    hideMask: false,
     title: '',
-    closeOnClickOverlay: false,
+    closeOnClickOverlay: true,
     onClose: () => { },
   }
 

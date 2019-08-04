@@ -1,7 +1,8 @@
 <block wx:if="{{$taroCompReady}}">
     <view>
+        <at-button compid="{{$compid__128}}">打开验证码弹窗</at-button>
         <view class="demo-otp-modal">
-            <otp-modal compid="{{$compid__16}}"></otp-modal>
+            <otp-modal compid="{{$compid__129}}"></otp-modal>
         </view>
         <at-message></at-message>
     </view>

@@ -36,7 +36,7 @@ var OtpDemo = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = OtpDemo.__proto__ || Object.getPrototypeOf(OtpDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__16"], _this.sendRequest = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = OtpDemo.__proto__ || Object.getPrototypeOf(OtpDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__128", "$compid__129", "isOpen"], _this.sendRequest = function () {
       return new Promise(function (resolve) {
         setTimeout(function () {
           resolve();
@@ -46,14 +46,20 @@ var OtpDemo = (_temp2 = _class = function (_BaseComponent) {
       _index2.default.atMessage({
         message: "\u8F93\u5165\u77ED\u4FE1\u9A8C\u8BC1\u7801\u4E3A" + code
       });
-    }, _this.customComponents = ["OtpModal", "AtMessage"], _temp), _possibleConstructorReturn(_this, _ret);
+    }, _this.openOtpModal = function () {
+      _this.setState({
+        isOpen: true
+      });
+    }, _this.customComponents = ["AtButton", "OtpModal", "AtMessage"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _createClass(OtpDemo, [{
     key: "_constructor",
     value: function _constructor() {
       _get(OtpDemo.prototype.__proto__ || Object.getPrototypeOf(OtpDemo.prototype), "_constructor", this).apply(this, arguments);
-      this.state = {};
+      this.state = {
+        isOpen: false
+      };
       this.$$refs = [];
     }
   }, {
@@ -64,13 +70,23 @@ var OtpDemo = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__16 = (0, _index.genCompid)(__prefix + "$compid__16");
-      var $props__16 = {
+      var $compid__128 = (0, _index.genCompid)(__prefix + "$compid__128");
+      var $compid__129 = (0, _index.genCompid)(__prefix + "$compid__129");
+
+      var isOpen = this.__state.isOpen;
+
+      var $props__128 = {
+        "onClick": this.openOtpModal
+      };
+      var $props__129 = {
+        "isOpen": isOpen,
         "onSendRequest": this.sendRequest
       };
-      _index.propsManager.set($props__16, $compid__16);
+      _index.propsManager.set($props__128, $compid__128);
+      _index.propsManager.set($props__129, $compid__129);
       Object.assign(this.__state, {
-        $compid__16: $compid__16
+        $compid__128: $compid__128,
+        $compid__129: $compid__129
       });
       return this.__state;
     }

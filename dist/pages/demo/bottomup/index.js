@@ -36,7 +36,7 @@ var BottomUpDemo = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BottomUpDemo.__proto__ || Object.getPrototypeOf(BottomUpDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__40", "$compid__41", "bottomupOpen"], _this.openBottomUp = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BottomUpDemo.__proto__ || Object.getPrototypeOf(BottomUpDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__70", "$compid__71", "bottomupOpen"], _this.openBottomUp = function () {
       _this.setState({
         bottomupOpen: true
       });
@@ -64,25 +64,24 @@ var BottomUpDemo = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__40 = (0, _index.genCompid)(__prefix + "$compid__40");
-      var $compid__41 = (0, _index.genCompid)(__prefix + "$compid__41");
+      var $compid__70 = (0, _index.genCompid)(__prefix + "$compid__70");
+      var $compid__71 = (0, _index.genCompid)(__prefix + "$compid__71");
 
       var bottomupOpen = this.__state.bottomupOpen;
 
-      var $props__40 = {
+      var $props__70 = {
         "onClick": this.openBottomUp
       };
-      var $props__41 = {
+      var $props__71 = {
         "title": "\u6807\u9898",
         "isOpen": bottomupOpen,
-        "onClose": this.closeBottomUp,
-        "closeOnClickOverlay": true
+        "onClose": this.closeBottomUp
       };
-      _index.propsManager.set($props__40, $compid__40);
-      _index.propsManager.set($props__41, $compid__41);
+      _index.propsManager.set($props__70, $compid__70);
+      _index.propsManager.set($props__71, $compid__71);
       Object.assign(this.__state, {
-        $compid__40: $compid__40,
-        $compid__41: $compid__41
+        $compid__70: $compid__70,
+        $compid__71: $compid__71
       });
       return this.__state;
     }

@@ -40,7 +40,7 @@ var BottomUp = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BottomUp.__proto__ || Object.getPrototypeOf(BottomUp)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__60", "visible", "bottomClassName", "hideMask", "title", "_isOpen", "closeOnClickOverlay", "isOpen", "children"], _this.closeByDocument = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = BottomUp.__proto__ || Object.getPrototypeOf(BottomUp)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__74", "visible", "bottomClassName", "hideMask", "title", "_isOpen", "closeOnClickOverlay", "isOpen", "children"], _this.closeByDocument = function () {
       if (_this.props.closeOnClickOverlay) {
         _this.handleClose();
       }
@@ -67,13 +67,6 @@ var BottomUp = (_temp2 = _class = function (_BaseComponent) {
     key: "_constructor",
     value: function _constructor(props) {
       _get(BottomUp.prototype.__proto__ || Object.getPrototypeOf(BottomUp.prototype), "_constructor", this).apply(this, arguments);
-      this.defaultProps = {
-        isOpen: false,
-        hideMask: true,
-        title: '',
-        closeOnClickOverlay: false,
-        onClose: function onClose() {}
-      };
       this.state = {
         _isOpen: false,
         visible: false
@@ -117,7 +110,7 @@ var BottomUp = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__60 = (0, _index.genCompid)(__prefix + "$compid__60");
+      var $compid__74 = (0, _index.genCompid)(__prefix + "$compid__74");
 
       var _state = this.__state,
           _isOpen = _state._isOpen,
@@ -130,15 +123,15 @@ var BottomUp = (_temp2 = _class = function (_BaseComponent) {
       if (!visible) {
         return null;
       }
-      var $props__60 = {
+      var $props__74 = {
         "value": "close",
         "size": 22,
         "color": "#999",
         "onClick": this.handleClose
       };
-      _index.propsManager.set($props__60, $compid__60);
+      _index.propsManager.set($props__74, $compid__74);
       Object.assign(this.__state, {
-        $compid__60: $compid__60,
+        $compid__74: $compid__74,
         bottomClassName: bottomClassName,
         hideMask: hideMask,
         title: title
@@ -151,6 +144,13 @@ var BottomUp = (_temp2 = _class = function (_BaseComponent) {
 }(_index.Component), _class.$$events = ["handleTouchMove", "closeByDocument"], _class.$$componentPath = "_components/bottomup/index", _temp2);
 
 
+BottomUp.defaultProps = {
+  isOpen: false,
+  hideMask: false,
+  title: '',
+  closeOnClickOverlay: true,
+  onClose: function onClose() {}
+};
 BottomUp.externalClasses = ['v-class'];
 exports.default = BottomUp;
 

@@ -55,7 +55,7 @@ var Modal = (_temp2 = _class = function (_BaseComponent) {
       _this.setState({
         _isOpen: false
       }, function () {
-        setTimeout(function () {
+        _this.modalTimer = setTimeout(function () {
           _this.setState({ visible: false });
           if ((0, _isFunction3.default)(_this.props.onClose)) {
             _this.props.onClose();
@@ -93,11 +93,16 @@ var Modal = (_temp2 = _class = function (_BaseComponent) {
         this.setState({
           _isOpen: isOpen
         }, function () {
-          setTimeout(function () {
+          _this2.modalTimer = setTimeout(function () {
             _this2.setState({ visible: isOpen });
           }, 400);
         });
       }
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      clearTimeout(this.modalTimer);
     }
   }, {
     key: "_createData",
@@ -133,7 +138,7 @@ var Modal = (_temp2 = _class = function (_BaseComponent) {
   }]);
 
   return Modal;
-}(_index.Component), _class.$$events = [], _class.$$componentPath = "_components/modal/index", _temp2);
+}(_index.Component), _class.$$events = ["closeByDocument"], _class.$$componentPath = "_components/modal/index", _temp2);
 
 
 Modal.defaultProps = {
