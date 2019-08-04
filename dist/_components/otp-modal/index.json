@@ -1,6 +1,8 @@
 {
   "component": true,
   "usingComponents": {
+    "modal": "../modal/index",
+    "my-icon": "../myicon/index",
     "pwd-box": "../pwd-box/index",
     "otp": "../otp/index",
     "at-button": "../../npm/taro-ui/dist/weapp/components/button/index"

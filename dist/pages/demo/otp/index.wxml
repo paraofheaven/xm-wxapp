@@ -1,7 +1,1 @@
-<block wx:if="{{$taroCompReady}}">
-    <view>
-        <view class="demo-otp">
-            <otp compid="{{$compid__15}}"></otp>
-        </view>
-    </view>
-</block>
+<block wx:if="{{$taroCompReady}}"><view><view class="demo-otp"><otp compid="{{$compid__15}}"></otp></view></view></block>
