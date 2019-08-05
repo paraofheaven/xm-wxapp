@@ -45,13 +45,23 @@ export default class Modal extends Component<IModal, any>{
     const { isOpen } = nextProps;
 
     if (isOpen !== this.state._isOpen) {
-      this.setState({
-        _isOpen: isOpen,
-      }, () => {
-        this.modalTimer = setTimeout(() => {
+
+      if (isOpen) {
+        this.setState({
+          _isOpen: isOpen,
+        }, () => {
           this.setState({ visible: isOpen });
-        }, 400);
-      });
+        });
+      } else {
+        this.setState({
+          _isOpen: isOpen,
+        }, () => {
+          this.modalTimer = setTimeout(() => {
+            this.setState({ visible: isOpen });
+          }, 400);
+        });
+      }
+
     }
   }
 

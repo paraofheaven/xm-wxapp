@@ -55,7 +55,7 @@ export default class Source extends Component {
         <Image mode="widthFix" className="contact-image" src="https://img.zhichiwangluo.com/zcimgdir/album/file_5b6be3707fcd1.png"></Image>
         <View className="contact-block">
           <Text className="cb-word1">地址  |  Address</Text>
-          <View className="cb-word2">上海市静安区中兴路科技园305号</View>
+          <View className="cb-word2">上海市嘉定区嘉行公路3188号8幢J274室</View>
           <View className="sb-icon icon-address"></View>
         </View>
         <View className="contact-block" onClick={this.callingPhone}>

@@ -1,1 +1,8 @@
-<block wx:if="{{$taroCompReady}}"><view class="pwd-keyboard-demo"><at-button compid="{{$compid__19}}">支付密码带键盘</at-button><at-button compid="{{$compid__20}}">test</at-button><pwd-key-board compid="{{$compid__21}}"></pwd-key-board><at-message></at-message></view></block>
+<block wx:if="{{$taroCompReady}}">
+    <view class="pwd-keyboard-demo">
+        <at-button compid="{{$compid__19}}">支付密码带键盘</at-button>
+        <at-button compid="{{$compid__20}}">test</at-button>
+        <pwd-key-board compid="{{$compid__21}}"></pwd-key-board>
+        <at-message></at-message>
+    </view>
+</block>

@@ -35,7 +35,7 @@ export default class OtpDemo extends Component<any, any>{
     return <View>
       <AtButton onClick={this.openOtpModal}>打开验证码弹窗</AtButton>
       <View className="demo-otp-modal">
-        <OtpModal isOpen={isOpen} onSendRequest={this.sendRequest}></OtpModal>
+        <OtpModal isOpen={isOpen} onSendRequest={this.sendRequest} onInputFinish={this.onInputFinish}></OtpModal>
       </View>
       <AtMessage></AtMessage>
     </View>
