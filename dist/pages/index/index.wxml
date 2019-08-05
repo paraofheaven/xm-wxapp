@@ -10,7 +10,7 @@
                 </swiper-item>
             </swiper>
             <view class="swiper-dots">
-                <view class="{{em.$loopState__temp3}}" wx:key="$loopState__temp5" wx:for="{{loopArray27}}" wx:for-item="em" wx:for-index="index"></view>
+                <view class="{{em.$loopState__temp3}}" wx:key="$loopState__temp5" wx:for="{{loopArray0}}" wx:for-item="em" wx:for-index="index"></view>
             </view>
         </view>
         <view class="portal-list">
@@ -28,7 +28,7 @@
             </view>
         </view>
         <view class="empty-padding ep-small"></view>
-        <notice-bar v-class="index-notice" v-noticebar-notice="index-noticebar-notice" compid="{{$compid__316}}">认真提供技术服务，提供各领域专业的解决方案，打通线上线下营销场景</notice-bar>
+        <notice-bar v-class="index-notice" v-noticebar-notice="index-noticebar-notice" compid="{{$compid__0}}">认真提供技术服务，提供各领域专业的解决方案，打通线上线下营销场景</notice-bar>
         <view class="empty-padding"></view>
         <view class="block" id="introduction">
             <view class="block-head">

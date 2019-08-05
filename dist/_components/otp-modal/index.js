@@ -38,7 +38,12 @@ var OtpModal = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = OtpModal.__proto__ || Object.getPrototypeOf(OtpModal)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__587", "$compid__588", "$compid__589", "codeNumbers", "codeValue", "btnDisabled", "btnLoading", "title", "desc", "isOpen", "onSendRequest", "__fn_call"], _this.handleInput = function (e) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = OtpModal.__proto__ || Object.getPrototypeOf(OtpModal)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp3", "loopArray26", "$compid__137", "$compid__138", "$compid__139", "codeNumbers", "codeValue", "btnDisabled", "btnLoading", "title", "desc", "isOpen", "closeOnClickOverlay", "color", "onSendRequest", "__fn_call"], _this.clearInputState = function () {
+      _this.setState({
+        codeNumbers: defaultNumbers,
+        codeValue: ''
+      });
+    }, _this.handleInput = function (e) {
       var value = e.detail.value;
       _this.setInputState(value);
     }, _this.setInputState = function (value) {
@@ -57,11 +62,14 @@ var OtpModal = (_temp2 = _class = function (_BaseComponent) {
           btnDisabled: true
         });
       }
-    }, _this.submit = function (value) {
-      if (value || value.length !== 6) {
+    }, _this.submit = function () {
+      var value = _this.state.codeValue;
+      if (!value || value.length !== 6) {
         return;
       }
       _this.props.onInputFinish(value);
+      _this.clearInputState();
+      _this.props.onClose();
     }, _this.customComponents = ["Modal", "MyIcon", "Otp"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -85,14 +93,17 @@ var OtpModal = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__587 = (0, _index.genCompid)(__prefix + "$compid__587");
-      var $compid__588 = (0, _index.genCompid)(__prefix + "$compid__588");
-      var $compid__589 = (0, _index.genCompid)(__prefix + "$compid__589");
+      var $compid__137 = (0, _index.genCompid)(__prefix + "$compid__137");
+      var $compid__138 = (0, _index.genCompid)(__prefix + "$compid__138");
+      var $compid__139 = (0, _index.genCompid)(__prefix + "$compid__139");
 
       var _props = this.__props,
           isOpen = _props.isOpen,
+          closeOnClickOverlay = _props.closeOnClickOverlay,
+          onClose = _props.onClose,
           title = _props.title,
           desc = _props.desc,
+          color = _props.color,
           onSendRequest = _props.onSendRequest;
       var _state = this.__state,
           codeNumbers = _state.codeNumbers,
@@ -100,25 +111,40 @@ var OtpModal = (_temp2 = _class = function (_BaseComponent) {
           btnDisabled = _state.btnDisabled,
           btnLoading = _state.btnLoading;
 
-      var $props__587 = {
-        "isOpen": isOpen
+      var anonymousState__temp3 = (0, _index.internal_inline_style)({ color: color });
+      var $props__137 = {
+        "isOpen": isOpen,
+        "closeOnClickOverlay": closeOnClickOverlay
       };
-      var $props__588 = {
+      var $props__138 = {
         "value": "close",
         "size": 22,
-        "color": "#999"
+        "color": "#999",
+        "onClick": this.__props.onClose
       };
-      var $props__589 = {
+      var $props__139 = {
         "autoStart": true,
         "onSendRequest": this.__props.onSendRequest
       };
-      _index.propsManager.set($props__587, $compid__587);
-      _index.propsManager.set($props__588, $compid__588);
-      _index.propsManager.set($props__589, $compid__589);
+      var loopArray26 = codeNumbers.map(function (item, _anonIdx) {
+        item = {
+          $original: (0, _index.internal_get_original)(item)
+        };
+        var $loopState__temp2 = (0, _index.internal_inline_style)({ color: color });
+        return {
+          $loopState__temp2: $loopState__temp2,
+          $original: item.$original
+        };
+      });
+      _index.propsManager.set($props__137, $compid__137);
+      _index.propsManager.set($props__138, $compid__138);
+      _index.propsManager.set($props__139, $compid__139);
       Object.assign(this.__state, {
-        $compid__587: $compid__587,
-        $compid__588: $compid__588,
-        $compid__589: $compid__589,
+        anonymousState__temp3: anonymousState__temp3,
+        loopArray26: loopArray26,
+        $compid__137: $compid__137,
+        $compid__138: $compid__138,
+        $compid__139: $compid__139,
         title: title,
         desc: desc
       });
@@ -133,8 +159,13 @@ var OtpModal = (_temp2 = _class = function (_BaseComponent) {
 OtpModal.defaultProps = {
   title: '请输入短信验证码',
   desc: '请输入发送到您手机的验证码',
+  color: '#1FC756',
   closeOnClickOverlay: false,
+  onClose: function onClose() {},
   onInputFinish: function onInputFinish() {},
+  beforeSendRequest: function beforeSendRequest() {
+    return true;
+  },
   onSendRequest: function onSendRequest() {}
 };
 OtpModal.externalClass = ['v-class'];

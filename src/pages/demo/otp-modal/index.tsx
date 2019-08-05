@@ -26,7 +26,13 @@ export default class OtpDemo extends Component<any, any>{
 
   public openOtpModal = () => {
     this.setState({
-      isOpen: true
+      isOpen: true,
+    });
+  }
+
+  public closeOtpMoal = () => {
+    this.setState({
+      isOpen: false,
     });
   }
 
@@ -35,7 +41,11 @@ export default class OtpDemo extends Component<any, any>{
     return <View>
       <AtButton onClick={this.openOtpModal}>打开验证码弹窗</AtButton>
       <View className="demo-otp-modal">
-        <OtpModal isOpen={isOpen} onSendRequest={this.sendRequest} onInputFinish={this.onInputFinish}></OtpModal>
+        <OtpModal isOpen={isOpen}
+          color={"#000"}
+          onSendRequest={this.sendRequest}
+          onInputFinish={this.onInputFinish}
+          onClose={this.closeOtpMoal}></OtpModal>
       </View>
       <AtMessage></AtMessage>
     </View>

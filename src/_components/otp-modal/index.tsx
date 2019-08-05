@@ -9,7 +9,9 @@ interface IOtpModal {
   isOpen: boolean;
   title?: string;
   desc?: string;
+  color?: string;
   closeOnClickOverlay?: boolean;
+  onClose: any;
   onInputFinish: any;
   beforeSendRequest?: () => boolean;
   onSendRequest: () => Promise<any>;
@@ -21,8 +23,11 @@ export default class OtpModal extends Component<IOtpModal, any>{
   public static defaultProps = {
     title: '请输入短信验证码',
     desc: '请输入发送到您手机的验证码',
+    color: '#1FC756',
     closeOnClickOverlay: false,
+    onClose: () => { },
     onInputFinish: () => { },
+    beforeSendRequest: () => true,
     onSendRequest: () => { },
   }
 
@@ -33,6 +38,13 @@ export default class OtpModal extends Component<IOtpModal, any>{
     codeValue: '',
     btnDisabled: true,
     btnLoading: false,
+  }
+
+  public clearInputState = () => {
+    this.setState({
+      codeNumbers: defaultNumbers,
+      codeValue: '',
+    });
   }
 
   private handleInput = (e) => {
@@ -58,25 +70,28 @@ export default class OtpModal extends Component<IOtpModal, any>{
     }
   }
 
-  private submit = (value) => {
-    if (value || value.length !== 6) {
+  private submit = () => {
+    const value = this.state.codeValue;
+    if (!value || value.length !== 6) {
       return;
     }
     this.props.onInputFinish(value);
+    this.clearInputState();
+    this.props.onClose();
   }
 
   public render() {
-    const { isOpen, title, desc, onSendRequest } = this.props;
+    const { isOpen, closeOnClickOverlay, onClose, title, desc, color, onSendRequest } = this.props;
     const { codeNumbers, codeValue, btnDisabled, btnLoading } = this.state;
-    return (<Modal isOpen={isOpen} v-class="v-otp-modal-class">
+    return (<Modal isOpen={isOpen} v-class="v-otp-modal-class" closeOnClickOverlay={closeOnClickOverlay}>
       <View className="v-otp-modal">
-        <MyIcon value="close" size={22} color="#999" v-class="v-otp-modal-close"></MyIcon>
+        <MyIcon value="close" size={22} color="#999" v-class="v-otp-modal-close" onClick={onClose}></MyIcon>
         <View className="v-otp-modal-header">{title}</View>
         <View className="v-otp-modal-desc">{desc}</View>
         <View className="v-otp-modal-content">
           <View className="v-otp-modal-number">
             {codeNumbers.map((item) => {
-              return (<View className="v-class-num">
+              return (<View className="v-class-num" style={{ color }}>
                 {item ? <Text>{item}</Text> : <Text decode space="nbsp">&nbsp;</Text>}
               </View>);
             })}
@@ -91,7 +106,7 @@ export default class OtpModal extends Component<IOtpModal, any>{
         <View className="v-otp-modal-otp-wap">
           <Otp autoStart onSendRequest={onSendRequest} v-class="v-otp-modal-otp"></Otp>
         </View>
-        <Button className="v-otp-modal-btn" disabled={btnDisabled} loading={btnLoading} onClick={this.submit}>  确定</Button>
+        <Button style={{ color }} className="v-otp-modal-btn" disabled={btnDisabled} loading={btnLoading} onClick={this.submit}>  确定</Button>
       </View>
     </Modal>);
   }

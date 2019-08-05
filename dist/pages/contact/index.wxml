@@ -25,7 +25,7 @@
             <view class="cb-word3" bindtap="showActionSheet">常见问题</view>
             <view class="sb-icon icon-question"></view>
         </view>
-        <at-action-sheet compid="{{$compid__319}}">
+        <at-action-sheet compid="{{$compid__1}}">
             <at-action-sheet-item>我想做后台OA系统，大数据整合系统，可以找你们吗？</at-action-sheet-item>
             <at-action-sheet-item>我想做多平台小程序和营销H5，可以找你们吗？</at-action-sheet-item>
         </at-action-sheet>

@@ -79,7 +79,7 @@
   padding: 30rpx 40rpx;
   font-size: 28rpx;
   color: #333;
-  margin-top: 320rpx;
+  margin-top: 340rpx;
 }
 .source .content-title .ct-word2 {
   font-size: 26rpx;

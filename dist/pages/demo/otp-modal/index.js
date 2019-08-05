@@ -36,7 +36,7 @@ var OtpDemo = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = OtpDemo.__proto__ || Object.getPrototypeOf(OtpDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__464", "$compid__465", "isOpen"], _this.sendRequest = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = OtpDemo.__proto__ || Object.getPrototypeOf(OtpDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__135", "$compid__136", "isOpen"], _this.sendRequest = function () {
       return new Promise(function (resolve) {
         setTimeout(function () {
           resolve();
@@ -49,6 +49,10 @@ var OtpDemo = (_temp2 = _class = function (_BaseComponent) {
     }, _this.openOtpModal = function () {
       _this.setState({
         isOpen: true
+      });
+    }, _this.closeOtpMoal = function () {
+      _this.setState({
+        isOpen: false
       });
     }, _this.customComponents = ["AtButton", "OtpModal", "AtMessage"], _temp), _possibleConstructorReturn(_this, _ret);
   }
@@ -70,23 +74,26 @@ var OtpDemo = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__464 = (0, _index.genCompid)(__prefix + "$compid__464");
-      var $compid__465 = (0, _index.genCompid)(__prefix + "$compid__465");
+      var $compid__135 = (0, _index.genCompid)(__prefix + "$compid__135");
+      var $compid__136 = (0, _index.genCompid)(__prefix + "$compid__136");
 
       var isOpen = this.__state.isOpen;
 
-      var $props__464 = {
+      var $props__135 = {
         "onClick": this.openOtpModal
       };
-      var $props__465 = {
+      var $props__136 = {
         "isOpen": isOpen,
-        "onSendRequest": this.sendRequest
+        "color": "#000",
+        "onSendRequest": this.sendRequest,
+        "onInputFinish": this.onInputFinish,
+        "onClose": this.closeOtpMoal
       };
-      _index.propsManager.set($props__464, $compid__464);
-      _index.propsManager.set($props__465, $compid__465);
+      _index.propsManager.set($props__135, $compid__135);
+      _index.propsManager.set($props__136, $compid__136);
       Object.assign(this.__state, {
-        $compid__464: $compid__464,
-        $compid__465: $compid__465
+        $compid__135: $compid__135,
+        $compid__136: $compid__136
       });
       return this.__state;
     }

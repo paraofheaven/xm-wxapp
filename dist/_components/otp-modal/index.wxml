@@ -1,14 +1,14 @@
 <block wx:if="{{$taroCompReady}}">
-    <modal v-class="v-otp-modal-class" compid="{{$compid__587}}">
+    <modal v-class="v-otp-modal-class" compid="{{$compid__137}}">
         <view class="v-otp-modal">
-            <my-icon v-class="v-otp-modal-close" compid="{{$compid__588}}"></my-icon>
+            <my-icon v-class="v-otp-modal-close" compid="{{$compid__138}}"></my-icon>
             <view class="v-otp-modal-header">{{title}}</view>
             <view class="v-otp-modal-desc">{{desc}}</view>
             <view class="v-otp-modal-content">
                 <view class="v-otp-modal-number">
-                    <view class="v-class-num" wx:for="{{codeNumbers}}" wx:for-item="item" wx:for-index="_anonIdx2">
+                    <view class="v-class-num" style="{{item.$loopState__temp2}}" wx:for="{{loopArray26}}" wx:for-item="item" wx:for-index="_anonIdx2">
                         <block>
-                            <block wx:if="{{item}}"><text>{{item}}</text>
+                            <block wx:if="{{item.$original}}"><text>{{item.$original}}</text>
                             </block>
                             <block wx:else><text decode="{{true}}" space="nbsp">&nbsp;</text>
                             </block>
@@ -18,9 +18,9 @@
                 <input class="v-otp-modal-input" maxlength="{{6}}" focus="{{true}}" value="{{codeValue}}" type="number" bindinput="handleInput" />
             </view>
             <view class="v-otp-modal-otp-wap">
-                <otp v-class="v-otp-modal-otp" compid="{{$compid__589}}"></otp>
+                <otp v-class="v-otp-modal-otp" compid="{{$compid__139}}"></otp>
             </view>
-            <button class="v-otp-modal-btn" disabled="{{btnDisabled}}" loading="{{btnLoading}}" bindtap="submit">确定</button>
+            <button style="{{anonymousState__temp3}}" class="v-otp-modal-btn" disabled="{{btnDisabled}}" loading="{{btnLoading}}" bindtap="submit">确定</button>
         </view>
     </modal>
 </block>
