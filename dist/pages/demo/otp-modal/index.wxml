@@ -1,9 +1,1 @@
-<block wx:if="{{$taroCompReady}}">
-    <view>
-        <at-button compid="{{$compid__135}}">打开验证码弹窗</at-button>
-        <view class="demo-otp-modal">
-            <otp-modal compid="{{$compid__136}}"></otp-modal>
-        </view>
-        <at-message></at-message>
-    </view>
-</block>
+<block wx:if="{{$taroCompReady}}"><view><at-button compid="{{$compid__16}}">打开验证码弹窗</at-button><view class="demo-otp-modal"><otp-modal compid="{{$compid__17}}"></otp-modal></view><at-message></at-message></view></block>
