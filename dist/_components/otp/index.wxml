@@ -1,1 +1,2 @@
-<block wx:if="{{$taroCompReady}}"><text class="{{anonymousState__temp}}" bindtap="handleStart">{{ticksNumber}}</text></block>
+<block wx:if="{{$taroCompReady}}"><text class="{{anonymousState__temp}}" bindtap="handleStart">{{ticksNumber}}</text>
+</block>

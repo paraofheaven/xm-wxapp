@@ -11,7 +11,8 @@
     "pages/demo/otp/index",
     "pages/demo/otp-modal/index",
     "pages/demo/pwd-box/index",
-    "pages/demo/pwd-keyboard/index"
+    "pages/demo/pwd-keyboard/index",
+    "pages/demo/utils/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

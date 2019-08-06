@@ -46,6 +46,10 @@ export default class Demo extends Component {
           <Navigator url={"/pages/demo/pwd-keyboard/index"}># 密码输入带键盘</Navigator>
           <MyIcon v-class="demo-right" value="right"></MyIcon>
         </View>
+        <View className="demo-item">
+          <Navigator url={"/pages/demo/utils/index"}># 工具</Navigator>
+          <MyIcon v-class="demo-right" value="right"></MyIcon>
+        </View>
       </View>
     )
   }

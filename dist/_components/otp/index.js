@@ -1,1 +1,173 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var _class,_temp2,_createClass=function(){function r(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,r.key,r)}}return function(t,e,n){return e&&r(t.prototype,e),n&&r(t,n),t}}(),_get=function t(e,n,r){null===e&&(e=Function.prototype);var o=Object.getOwnPropertyDescriptor(e,n);if(void 0===o){var s=Object.getPrototypeOf(e);return null===s?void 0:t(s,n,r)}if("value"in o)return o.value;var i=o.get;return void 0!==i?i.call(r):void 0},_index=require("../../npm/@tarojs/taro-weapp/index.js"),_index2=_interopRequireDefault(_index),_index3=require("../../npm/classnames/index.js"),_index4=_interopRequireDefault(_index3);function _interopRequireDefault(t){return t&&t.__esModule?t:{default:t}}function _classCallCheck(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(t,e){if(!t)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!e||"object"!=typeof e&&"function"!=typeof e?t:e}function _inherits(t,e){if("function"!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function, not "+typeof e);t.prototype=Object.create(e&&e.prototype,{constructor:{value:t,enumerable:!1,writable:!0,configurable:!0}}),e&&(Object.setPrototypeOf?Object.setPrototypeOf(t,e):t.__proto__=e)}var Otp=(_temp2=_class=function(){function i(){var t,e,s;_classCallCheck(this,i);for(var n=arguments.length,r=Array(n),o=0;o<n;o++)r[o]=arguments[o];return(e=s=_possibleConstructorReturn(this,(t=i.__proto__||Object.getPrototypeOf(i)).call.apply(t,[this].concat(r)))).$usedState=["anonymousState__temp","ticksNumber","running","sendTxt","autoStart","beforeSendRequest","processingTxt","totalTicks","duration","sentTxt","format"],s.handleStart=function(){var t=s.props,e=t.beforeSendRequest,n=t.processingTxt,r=(t.onSendRequest,t.sendTxt),o=t.totalTicks;if(e()&&!s.state.running){s.setState({ticksNumber:n,running:!0});try{s.props.onSendRequest().then(function(){s._startTicker(o)})}catch(t){s.setState({ticksNumber:r,running:!1})}}},s._startTicker=function(t){var e=s.props,n=e.duration,r=e.sentTxt;s.setState({ticksNumber:s._formatMessage(t),running:!0}),s.ticksTimer=setTimeout(function(){1<t?s._startTicker(t-1):s.setState({ticksNumber:r,running:!1})},n)},s._formatMessage=function(t){var e=s.props.format;return(void 0===e?"":e).replace("{t}",t)},s.customComponents=[],_possibleConstructorReturn(s,e)}return _inherits(i,_index.Component),_createClass(i,[{key:"_constructor",value:function(){_get(i.prototype.__proto__||Object.getPrototypeOf(i.prototype),"_constructor",this).apply(this,arguments),this.state={running:!1,ticksNumber:""},this.$$refs=[]}},{key:"componentDidMount",value:function(){var t=this.props,e=t.sendTxt,n=t.autoStart;this.ticksTimer&&clearTimeout(this.ticksTimer),n?this.handleStart():this.setState({ticksNumber:e})}},{key:"componentWillUnmount",value:function(){clearTimeout(this.ticksTimer)}},{key:"_createData",value:function(t,e,n){this.__state=t||this.state||{},this.__props=e||this.props||{};this.$prefix;var r=this.__state,o=r.running,s=(r.ticksNumber,(0,_index4.default)("v-otp","v-class",{"v-optlite-running":o}));return Object.assign(this.__state,{anonymousState__temp:s}),this.__state}}]),i}(),_class.$$events=["handleStart"],_class.$$componentPath="_components/otp/index",_temp2);Otp.defaultProps={totalTicks:60,duration:1e3,autoStart:!1,format:"{t}s后可重发",sendTxt:"获取验证码",sentTxt:"重新获取",processingTxt:"发送中...",beforeSendRequest:function(){return!0},onSendRequest:function(){}},Otp.externalClasses=["v-class"],exports.default=Otp,Component(require("../../npm/@tarojs/taro-weapp/index.js").default.createComponent(Otp));
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+var _class, _temp2;
+
+var _index = require("../../npm/@tarojs/taro-weapp/index.js");
+
+var _index2 = _interopRequireDefault(_index);
+
+var _index3 = require("../../npm/classnames/index.js");
+
+var _index4 = _interopRequireDefault(_index3);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Otp = (_temp2 = _class = function (_BaseComponent) {
+  _inherits(Otp, _BaseComponent);
+
+  function Otp() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, Otp);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Otp.__proto__ || Object.getPrototypeOf(Otp)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "ticksNumber", "running", "sendTxt", "autoStart", "beforeSendRequest", "processingTxt", "totalTicks", "duration", "sentTxt", "format"], _this.handleStart = function () {
+      var _this$props = _this.props,
+          beforeSendRequest = _this$props.beforeSendRequest,
+          processingTxt = _this$props.processingTxt,
+          onSendRequest = _this$props.onSendRequest,
+          sendTxt = _this$props.sendTxt,
+          totalTicks = _this$props.totalTicks;
+      // 如果该函数返回false，则不请求
+
+      if (!beforeSendRequest()) {
+        return;
+      }
+      if (_this.state.running) {
+        return;
+      }
+      _this.setState({
+        ticksNumber: processingTxt,
+        running: true
+      });
+      try {
+        _this.props.onSendRequest().then(function () {
+          _this._startTicker(totalTicks);
+        });
+      } catch (error) {
+        _this.setState({
+          ticksNumber: sendTxt,
+          running: false
+        });
+      }
+    }, _this._startTicker = function (count) {
+      var _this$props2 = _this.props,
+          duration = _this$props2.duration,
+          sentTxt = _this$props2.sentTxt;
+
+      _this.setState({
+        ticksNumber: _this._formatMessage(count),
+        running: true
+      });
+      _this.ticksTimer = setTimeout(function () {
+        if (count > 1) {
+          _this._startTicker(count - 1);
+        } else {
+          _this.setState({
+            ticksNumber: sentTxt,
+            running: false
+          });
+        }
+      }, duration);
+    }, _this._formatMessage = function (count) {
+      var _this$props$format = _this.props.format,
+          format = _this$props$format === undefined ? '' : _this$props$format;
+
+      return format.replace('{t}', count);
+    }, _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(Otp, [{
+    key: "_constructor",
+    value: function _constructor() {
+      _get(Otp.prototype.__proto__ || Object.getPrototypeOf(Otp.prototype), "_constructor", this).apply(this, arguments);
+      this.state = {
+        running: false,
+        ticksNumber: ''
+      };
+      this.$$refs = [];
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _props = this.props,
+          sendTxt = _props.sendTxt,
+          autoStart = _props.autoStart;
+
+      if (this.ticksTimer) {
+        clearTimeout(this.ticksTimer);
+      }
+      if (autoStart) {
+        this.handleStart();
+      } else {
+        this.setState({
+          ticksNumber: sendTxt
+        });
+      }
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      clearTimeout(this.ticksTimer);
+    }
+  }, {
+    key: "_createData",
+    value: function _createData() {
+      this.__state = arguments[0] || this.state || {};
+      this.__props = arguments[1] || this.props || {};
+      var __isRunloopRef = arguments[2];
+      var __prefix = this.$prefix;
+      ;
+
+      var _state = this.__state,
+          running = _state.running,
+          ticksNumber = _state.ticksNumber;
+
+      var anonymousState__temp = (0, _index4.default)('v-otp', 'v-class', { 'v-optlite-running': running });
+      Object.assign(this.__state, {
+        anonymousState__temp: anonymousState__temp
+      });
+      return this.__state;
+    }
+  }]);
+
+  return Otp;
+}(_index.Component), _class.$$events = ["handleStart"], _class.$$componentPath = "_components/otp/index", _temp2);
+
+
+Otp.defaultProps = {
+  totalTicks: 60,
+  duration: 1000,
+  autoStart: false,
+  format: "{t}s后可重发",
+  sendTxt: '获取验证码',
+  sentTxt: '重新获取',
+  processingTxt: '发送中...',
+  beforeSendRequest: function beforeSendRequest() {
+    return true;
+  },
+  onSendRequest: function onSendRequest() {}
+};
+Otp.externalClasses = ['v-class'];
+exports.default = Otp;
+
+Component(require('../../npm/@tarojs/taro-weapp/index.js').default.createComponent(Otp));

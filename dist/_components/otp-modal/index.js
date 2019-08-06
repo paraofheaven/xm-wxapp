@@ -1,1 +1,174 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var _class,_temp2,_createClass=function(){function o(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(e,t,n){return t&&o(e.prototype,t),n&&o(e,n),e}}(),_get=function e(t,n,o){null===t&&(t=Function.prototype);var r=Object.getOwnPropertyDescriptor(t,n);if(void 0===r){var s=Object.getPrototypeOf(t);return null===s?void 0:e(s,n,o)}if("value"in r)return r.value;var i=r.get;return void 0!==i?i.call(o):void 0},_index=require("../../npm/@tarojs/taro-weapp/index.js"),_index2=_interopRequireDefault(_index);function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function _inherits(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}var defaultNumbers=["","","","","",""],OtpModal=(_temp2=_class=function(){function i(){var e,t,n;_classCallCheck(this,i);for(var o=arguments.length,r=Array(o),s=0;s<o;s++)r[s]=arguments[s];return(t=n=_possibleConstructorReturn(this,(e=i.__proto__||Object.getPrototypeOf(i)).call.apply(e,[this].concat(r)))).$usedState=["anonymousState__temp3","loopArray3","$compid__27","$compid__28","$compid__29","codeNumbers","codeValue","btnDisabled","btnLoading","title","desc","isOpen","closeOnClickOverlay","color","onSendRequest","__fn_call"],n.clearInputState=function(){n.setState({codeNumbers:defaultNumbers,codeValue:""})},n.handleInput=function(e){var t=e.detail.value;n.setInputState(t)},n.setInputState=function(e){var t=Object.assign({length:6},defaultNumbers,e.split(""));t=Array.prototype.slice.call(t),n.setState({codeNumbers:t,codeValue:e}),6<=e.length?n.setState({btnDisabled:!1}):n.setState({btnDisabled:!0})},n.submit=function(){var e=n.state.codeValue;e&&6===e.length&&(n.props.onInputFinish(e),n.clearInputState(),n.props.onClose())},n.customComponents=["Modal","MyIcon","Otp"],_possibleConstructorReturn(n,t)}return _inherits(i,_index.Component),_createClass(i,[{key:"_constructor",value:function(){_get(i.prototype.__proto__||Object.getPrototypeOf(i.prototype),"_constructor",this).apply(this,arguments),this.state={codeNumbers:defaultNumbers,codeValue:"",btnDisabled:!0,btnLoading:!1},this.$$refs=[]}},{key:"_createData",value:function(e,t,n){this.__state=e||this.state||{},this.__props=t||this.props||{};var o=this.$prefix,r=(0,_index.genCompid)(o+"$compid__27"),s=(0,_index.genCompid)(o+"$compid__28"),i=(0,_index.genCompid)(o+"$compid__29"),a=this.__props,l=a.isOpen,c=a.closeOnClickOverlay,p=(a.onClose,a.title),u=a.desc,_=a.color,d=(a.onSendRequest,this.__state),f=d.codeNumbers,b=(d.codeValue,d.btnDisabled,d.btnLoading,(0,_index.internal_inline_style)({color:_})),m={isOpen:l,closeOnClickOverlay:c},h={value:"close",size:22,color:"#999",onClick:this.__props.onClose},y={autoStart:!0,onSendRequest:this.__props.onSendRequest},O=f.map(function(e,t){return e={$original:(0,_index.internal_get_original)(e)},{$loopState__temp2:(0,_index.internal_inline_style)({color:_}),$original:e.$original}});return _index.propsManager.set(m,r),_index.propsManager.set(h,s),_index.propsManager.set(y,i),Object.assign(this.__state,{anonymousState__temp3:b,loopArray3:O,$compid__27:r,$compid__28:s,$compid__29:i,title:p,desc:u}),this.__state}}]),i}(),_class.$$events=["handleInput","submit"],_class.$$componentPath="_components/otp-modal/index",_temp2);OtpModal.defaultProps={title:"请输入短信验证码",desc:"请输入发送到您手机的验证码",color:"#1FC756",closeOnClickOverlay:!1,onClose:function(){},onInputFinish:function(){},beforeSendRequest:function(){return!0},onSendRequest:function(){}},OtpModal.externalClass=["v-class"],exports.default=OtpModal,Component(require("../../npm/@tarojs/taro-weapp/index.js").default.createComponent(OtpModal));
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+var _class, _temp2;
+
+var _index = require('../../npm/@tarojs/taro-weapp/index.js');
+
+var _index2 = _interopRequireDefault(_index);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var defaultNumbers = ['', '', '', '', '', ''];
+
+var OtpModal = (_temp2 = _class = function (_BaseComponent) {
+  _inherits(OtpModal, _BaseComponent);
+
+  function OtpModal() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, OtpModal);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = OtpModal.__proto__ || Object.getPrototypeOf(OtpModal)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp3", "loopArray3", "$compid__27", "$compid__28", "$compid__29", "codeNumbers", "codeValue", "btnDisabled", "btnLoading", "title", "desc", "isOpen", "closeOnClickOverlay", "color", "onSendRequest", "__fn_call"], _this.clearInputState = function () {
+      _this.setState({
+        codeNumbers: defaultNumbers,
+        codeValue: ''
+      });
+    }, _this.handleInput = function (e) {
+      var value = e.detail.value;
+      _this.setInputState(value);
+    }, _this.setInputState = function (value) {
+      var codeNumbers = Object.assign({ length: 6 }, defaultNumbers, value.split(''));
+      codeNumbers = Array.prototype.slice.call(codeNumbers);
+      _this.setState({
+        codeNumbers: codeNumbers,
+        codeValue: value
+      });
+      if (value.length >= 6) {
+        _this.setState({
+          btnDisabled: false
+        });
+      } else {
+        _this.setState({
+          btnDisabled: true
+        });
+      }
+    }, _this.submit = function () {
+      var value = _this.state.codeValue;
+      if (!value || value.length !== 6) {
+        return;
+      }
+      _this.props.onInputFinish(value);
+      _this.clearInputState();
+      _this.props.onClose();
+    }, _this.customComponents = ["Modal", "MyIcon", "Otp"], _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(OtpModal, [{
+    key: '_constructor',
+    value: function _constructor() {
+      _get(OtpModal.prototype.__proto__ || Object.getPrototypeOf(OtpModal.prototype), '_constructor', this).apply(this, arguments);
+      this.state = {
+        codeNumbers: defaultNumbers,
+        codeValue: '',
+        btnDisabled: true,
+        btnLoading: false
+      };
+      this.$$refs = [];
+    }
+  }, {
+    key: '_createData',
+    value: function _createData() {
+      this.__state = arguments[0] || this.state || {};
+      this.__props = arguments[1] || this.props || {};
+      var __isRunloopRef = arguments[2];
+      var __prefix = this.$prefix;
+      ;
+      var $compid__27 = (0, _index.genCompid)(__prefix + "$compid__27");
+      var $compid__28 = (0, _index.genCompid)(__prefix + "$compid__28");
+      var $compid__29 = (0, _index.genCompid)(__prefix + "$compid__29");
+
+      var _props = this.__props,
+          isOpen = _props.isOpen,
+          closeOnClickOverlay = _props.closeOnClickOverlay,
+          onClose = _props.onClose,
+          title = _props.title,
+          desc = _props.desc,
+          color = _props.color,
+          onSendRequest = _props.onSendRequest;
+      var _state = this.__state,
+          codeNumbers = _state.codeNumbers,
+          codeValue = _state.codeValue,
+          btnDisabled = _state.btnDisabled,
+          btnLoading = _state.btnLoading;
+
+      var anonymousState__temp3 = (0, _index.internal_inline_style)({ color: color });
+      var $props__27 = {
+        "isOpen": isOpen,
+        "closeOnClickOverlay": closeOnClickOverlay
+      };
+      var $props__28 = {
+        "value": "close",
+        "size": 22,
+        "color": "#999",
+        "onClick": this.__props.onClose
+      };
+      var $props__29 = {
+        "autoStart": true,
+        "onSendRequest": this.__props.onSendRequest
+      };
+      var loopArray3 = codeNumbers.map(function (item, _anonIdx) {
+        item = {
+          $original: (0, _index.internal_get_original)(item)
+        };
+        var $loopState__temp2 = (0, _index.internal_inline_style)({ color: color });
+        return {
+          $loopState__temp2: $loopState__temp2,
+          $original: item.$original
+        };
+      });
+      _index.propsManager.set($props__27, $compid__27);
+      _index.propsManager.set($props__28, $compid__28);
+      _index.propsManager.set($props__29, $compid__29);
+      Object.assign(this.__state, {
+        anonymousState__temp3: anonymousState__temp3,
+        loopArray3: loopArray3,
+        $compid__27: $compid__27,
+        $compid__28: $compid__28,
+        $compid__29: $compid__29,
+        title: title,
+        desc: desc
+      });
+      return this.__state;
+    }
+  }]);
+
+  return OtpModal;
+}(_index.Component), _class.$$events = ["handleInput", "submit"], _class.$$componentPath = "_components/otp-modal/index", _temp2);
+
+
+OtpModal.defaultProps = {
+  title: '请输入短信验证码',
+  desc: '请输入发送到您手机的验证码',
+  color: '#1FC756',
+  closeOnClickOverlay: false,
+  onClose: function onClose() {},
+  onInputFinish: function onInputFinish() {},
+  beforeSendRequest: function beforeSendRequest() {
+    return true;
+  },
+  onSendRequest: function onSendRequest() {}
+};
+OtpModal.externalClass = ['v-class'];
+exports.default = OtpModal;
+
+Component(require('../../npm/@tarojs/taro-weapp/index.js').default.createComponent(OtpModal));

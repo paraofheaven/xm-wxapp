@@ -32,6 +32,7 @@ class App extends Component {
       'pages/demo/otp-modal/index',
       'pages/demo/pwd-box/index',
       'pages/demo/pwd-keyboard/index',
+      'pages/demo/utils/index',
     ],
     window: {
       backgroundTextStyle: 'light',
