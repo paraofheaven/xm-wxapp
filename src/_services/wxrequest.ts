@@ -14,8 +14,6 @@ export class Request {
           }, config.header),
           success: (res) => {
             const statusCode = res.statusCode;
-            // let errMsg = res.errMsg;
-            // let data = res.data;
             const isSuccess = statusCode >= 200 && statusCode < 300 || statusCode === 304;
             if (isSuccess) {
               resolve(res);
