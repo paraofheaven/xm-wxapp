@@ -38,7 +38,7 @@ var PwdKeyBoard = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PwdKeyBoard.__proto__ || Object.getPrototypeOf(PwdKeyBoard)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__30", "$compid__31", "$compid__32", "$compid__33", "animation1", "withConfirm", "animation2", "message", "pwdboxValue", "confirm", "isOpen", "closeOnClickOverlay", "pwdbox1Config", "pwdbox2Config", "confirmErrorMsg"], _this.onKeyboradNumber = function (value) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PwdKeyBoard.__proto__ || Object.getPrototypeOf(PwdKeyBoard)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__33", "$compid__34", "$compid__35", "$compid__36", "animation1", "withConfirm", "animation2", "message", "pwdboxValue", "confirm", "isOpen", "closeOnClickOverlay", "pwdbox1Config", "pwdbox2Config", "confirmErrorMsg"], _this.onKeyboradNumber = function (value) {
       var _this$state = _this.state,
           pwdboxValue = _this$state.pwdboxValue,
           confirm = _this$state.confirm;
@@ -153,21 +153,21 @@ var PwdKeyBoard = (_temp2 = _class = function (_BaseComponent) {
       };
       this.$$refs = [{
         type: "component",
-        id: "EoHFE",
+        id: "Bvrne",
         refName: "",
         fn: function fn(ref) {
           _this2.bottomupRef = ref;
         }
       }, {
         type: "component",
-        id: "UzxbW",
+        id: "OSsrf",
         refName: "",
         fn: function fn(ref) {
           _this2.pwdboxRef1 = ref;
         }
       }, {
         type: "component",
-        id: "nyPrX",
+        id: "ztxnB",
         refName: "",
         fn: function fn(ref) {
           _this2.pwdboxRef2 = ref;
@@ -195,10 +195,10 @@ var PwdKeyBoard = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__30 = (0, _index.genCompid)(__prefix + "$compid__30");
-      var $compid__31 = (0, _index.genCompid)(__prefix + "$compid__31");
-      var $compid__32 = (0, _index.genCompid)(__prefix + "$compid__32");
       var $compid__33 = (0, _index.genCompid)(__prefix + "$compid__33");
+      var $compid__34 = (0, _index.genCompid)(__prefix + "$compid__34");
+      var $compid__35 = (0, _index.genCompid)(__prefix + "$compid__35");
+      var $compid__36 = (0, _index.genCompid)(__prefix + "$compid__36");
 
       var _props = this.__props,
           isOpen = _props.isOpen,
@@ -212,31 +212,31 @@ var PwdKeyBoard = (_temp2 = _class = function (_BaseComponent) {
           animation2 = _state.animation2,
           message = _state.message;
 
-      var $props__30 = {
+      var $props__33 = {
         "isOpen": isOpen,
         "closeOnClickOverlay": closeOnClickOverlay,
         "onClose": this.__props.onClose
       };
-      var $props__31 = _extends({}, pwdbox1Config, {
+      var $props__34 = _extends({}, pwdbox1Config, {
         "onInputFinish": this.onInputFinish
       });
-      var $props__32 = _extends({}, pwdbox2Config, {
+      var $props__35 = _extends({}, pwdbox2Config, {
         "onInputFinish": this.onInputFinishConfirm
       });
-      var $props__33 = {
+      var $props__36 = {
         "hideFinishBtn": true,
         "onKeyboradNumber": this.onKeyboradNumber,
         "onKeyboradDelete": this.onKeyboradDelete
       };
-      _index.propsManager.set($props__30, $compid__30);
-      _index.propsManager.set($props__31, $compid__31);
-      withConfirm && _index.propsManager.set($props__32, $compid__32);
       _index.propsManager.set($props__33, $compid__33);
+      _index.propsManager.set($props__34, $compid__34);
+      withConfirm && _index.propsManager.set($props__35, $compid__35);
+      _index.propsManager.set($props__36, $compid__36);
       Object.assign(this.__state, {
-        $compid__30: $compid__30,
-        $compid__31: $compid__31,
-        $compid__32: $compid__32,
         $compid__33: $compid__33,
+        $compid__34: $compid__34,
+        $compid__35: $compid__35,
+        $compid__36: $compid__36,
         withConfirm: withConfirm
       });
       return this.__state;

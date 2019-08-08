@@ -51,7 +51,7 @@ export default class KeyboardDemo extends Component<any, any>{
       <View>
         <KeyBoard
           v-class="demo-keyboard"
-          onKeyboradClear={this.handleInputDelete}
+          onKeyboradDelete={this.handleInputDelete}
           onKeyboradFinish={this.handleInputConfirm}
           onKeyboradNumber={this.handleInput}
         ></KeyBoard>

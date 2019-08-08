@@ -36,7 +36,7 @@ var OtpDemo = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = OtpDemo.__proto__ || Object.getPrototypeOf(OtpDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__108"], _this.sendRequest = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = OtpDemo.__proto__ || Object.getPrototypeOf(OtpDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__17"], _this.sendRequest = function () {
       return new Promise(function (resolve) {
         setTimeout(function () {
           resolve();
@@ -60,8 +60,8 @@ var OtpDemo = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__108 = (0, _index.genCompid)(__prefix + "$compid__108");
-      var $props__108 = {
+      var $compid__17 = (0, _index.genCompid)(__prefix + "$compid__17");
+      var $props__17 = {
         "autoStart": true,
         "totalTicks": 100,
         "format": "{t}s后重发",
@@ -69,9 +69,9 @@ var OtpDemo = (_temp2 = _class = function (_BaseComponent) {
         "processingTxt": '短信发送中',
         "onSendRequest": this.sendRequest
       };
-      _index.propsManager.set($props__108, $compid__108);
+      _index.propsManager.set($props__17, $compid__17);
       Object.assign(this.__state, {
-        $compid__108: $compid__108
+        $compid__17: $compid__17
       });
       return this.__state;
     }

@@ -36,7 +36,7 @@ var OtpDemo = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = OtpDemo.__proto__ || Object.getPrototypeOf(OtpDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__109", "$compid__110", "isOpen"], _this.sendRequest = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = OtpDemo.__proto__ || Object.getPrototypeOf(OtpDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__18", "$compid__19", "isOpen"], _this.sendRequest = function () {
       return new Promise(function (resolve) {
         setTimeout(function () {
           resolve();
@@ -74,26 +74,26 @@ var OtpDemo = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__109 = (0, _index.genCompid)(__prefix + "$compid__109");
-      var $compid__110 = (0, _index.genCompid)(__prefix + "$compid__110");
+      var $compid__18 = (0, _index.genCompid)(__prefix + "$compid__18");
+      var $compid__19 = (0, _index.genCompid)(__prefix + "$compid__19");
 
       var isOpen = this.__state.isOpen;
 
-      var $props__109 = {
+      var $props__18 = {
         "onClick": this.openOtpModal
       };
-      var $props__110 = {
+      var $props__19 = {
         "isOpen": isOpen,
         "color": "#000",
         "onSendRequest": this.sendRequest,
         "onInputFinish": this.onInputFinish,
         "onClose": this.closeOtpMoal
       };
-      _index.propsManager.set($props__109, $compid__109);
-      _index.propsManager.set($props__110, $compid__110);
+      _index.propsManager.set($props__18, $compid__18);
+      _index.propsManager.set($props__19, $compid__19);
       Object.assign(this.__state, {
-        $compid__109: $compid__109,
-        $compid__110: $compid__110
+        $compid__18: $compid__18,
+        $compid__19: $compid__19
       });
       return this.__state;
     }

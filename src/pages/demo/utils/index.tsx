@@ -31,6 +31,6 @@ export default class UtilsDemo extends Component<any, any>{
     return <View>
       <AtButton onClick={this.authOrigin.bind(this, true)}>获取授权</AtButton>
       <AtMessage></AtMessage>
-    </View>
+    </View >
   }
 }

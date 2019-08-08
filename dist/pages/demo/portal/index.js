@@ -36,7 +36,7 @@ var Demo = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Demo.__proto__ || Object.getPrototypeOf(Demo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__116", "$compid__117", "$compid__118", "$compid__119", "$compid__120", "$compid__121", "$compid__122", "$compid__123", "bottomupOpen", "value1"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Demo.__proto__ || Object.getPrototypeOf(Demo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__4", "$compid__5", "$compid__6", "$compid__7", "$compid__8", "$compid__9", "$compid__10", "$compid__11", "$compid__12", "bottomupOpen", "value1"], _this.config = {
       navigationBarTitleText: 'demo'
     }, _this.customComponents = ["MyIcon"], _temp), _possibleConstructorReturn(_this, _ret);
   }
@@ -60,55 +60,61 @@ var Demo = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__116 = (0, _index.genCompid)(__prefix + "$compid__116");
-      var $compid__117 = (0, _index.genCompid)(__prefix + "$compid__117");
-      var $compid__118 = (0, _index.genCompid)(__prefix + "$compid__118");
-      var $compid__119 = (0, _index.genCompid)(__prefix + "$compid__119");
-      var $compid__120 = (0, _index.genCompid)(__prefix + "$compid__120");
-      var $compid__121 = (0, _index.genCompid)(__prefix + "$compid__121");
-      var $compid__122 = (0, _index.genCompid)(__prefix + "$compid__122");
-      var $compid__123 = (0, _index.genCompid)(__prefix + "$compid__123");
-      var $props__116 = {
+      var $compid__4 = (0, _index.genCompid)(__prefix + "$compid__4");
+      var $compid__5 = (0, _index.genCompid)(__prefix + "$compid__5");
+      var $compid__6 = (0, _index.genCompid)(__prefix + "$compid__6");
+      var $compid__7 = (0, _index.genCompid)(__prefix + "$compid__7");
+      var $compid__8 = (0, _index.genCompid)(__prefix + "$compid__8");
+      var $compid__9 = (0, _index.genCompid)(__prefix + "$compid__9");
+      var $compid__10 = (0, _index.genCompid)(__prefix + "$compid__10");
+      var $compid__11 = (0, _index.genCompid)(__prefix + "$compid__11");
+      var $compid__12 = (0, _index.genCompid)(__prefix + "$compid__12");
+      var $props__4 = {
         "value": "right"
       };
-      var $props__117 = {
+      var $props__5 = {
         "value": "right"
       };
-      var $props__118 = {
+      var $props__6 = {
         "value": "right"
       };
-      var $props__119 = {
+      var $props__7 = {
         "value": "right"
       };
-      var $props__120 = {
+      var $props__8 = {
         "value": "right"
       };
-      var $props__121 = {
+      var $props__9 = {
         "value": "right"
       };
-      var $props__122 = {
+      var $props__10 = {
         "value": "right"
       };
-      var $props__123 = {
+      var $props__11 = {
         "value": "right"
       };
-      _index.propsManager.set($props__116, $compid__116);
-      _index.propsManager.set($props__117, $compid__117);
-      _index.propsManager.set($props__118, $compid__118);
-      _index.propsManager.set($props__119, $compid__119);
-      _index.propsManager.set($props__120, $compid__120);
-      _index.propsManager.set($props__121, $compid__121);
-      _index.propsManager.set($props__122, $compid__122);
-      _index.propsManager.set($props__123, $compid__123);
+      var $props__12 = {
+        "value": "right"
+      };
+      _index.propsManager.set($props__4, $compid__4);
+      _index.propsManager.set($props__5, $compid__5);
+      _index.propsManager.set($props__6, $compid__6);
+      _index.propsManager.set($props__7, $compid__7);
+      _index.propsManager.set($props__8, $compid__8);
+      _index.propsManager.set($props__9, $compid__9);
+      _index.propsManager.set($props__10, $compid__10);
+      _index.propsManager.set($props__11, $compid__11);
+      _index.propsManager.set($props__12, $compid__12);
       Object.assign(this.__state, {
-        $compid__116: $compid__116,
-        $compid__117: $compid__117,
-        $compid__118: $compid__118,
-        $compid__119: $compid__119,
-        $compid__120: $compid__120,
-        $compid__121: $compid__121,
-        $compid__122: $compid__122,
-        $compid__123: $compid__123
+        $compid__4: $compid__4,
+        $compid__5: $compid__5,
+        $compid__6: $compid__6,
+        $compid__7: $compid__7,
+        $compid__8: $compid__8,
+        $compid__9: $compid__9,
+        $compid__10: $compid__10,
+        $compid__11: $compid__11,
+        $compid__12: $compid__12
       });
       return this.__state;
     }

@@ -33,6 +33,7 @@ class App extends Component {
       'pages/demo/pwd-box/index',
       'pages/demo/pwd-keyboard/index',
       'pages/demo/utils/index',
+      'pages/demo/native/index',
     ],
     window: {
       backgroundTextStyle: 'light',

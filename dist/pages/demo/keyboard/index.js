@@ -36,7 +36,7 @@ var KeyboardDemo = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = KeyboardDemo.__proto__ || Object.getPrototypeOf(KeyboardDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__106", "$compid__107", "value1"], _this.handleChange = function (value) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = KeyboardDemo.__proto__ || Object.getPrototypeOf(KeyboardDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__15", "$compid__16", "value1"], _this.handleChange = function (value) {
       _this.setState({
         value1: value
       });
@@ -72,12 +72,12 @@ var KeyboardDemo = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__106 = (0, _index.genCompid)(__prefix + "$compid__106");
-      var $compid__107 = (0, _index.genCompid)(__prefix + "$compid__107");
+      var $compid__15 = (0, _index.genCompid)(__prefix + "$compid__15");
+      var $compid__16 = (0, _index.genCompid)(__prefix + "$compid__16");
 
       var value1 = this.__state.value1;
 
-      var $props__106 = {
+      var $props__15 = {
         "name": "value1",
         "type": "text",
         "disabled": true,
@@ -85,16 +85,16 @@ var KeyboardDemo = (_temp2 = _class = function (_BaseComponent) {
         "value": value1,
         "onChange": this.handleChange.bind(this)
       };
-      var $props__107 = {
+      var $props__16 = {
         "onKeyboradClear": this.handleInputDelete,
         "onKeyboradFinish": this.handleInputConfirm,
         "onKeyboradNumber": this.handleInput
       };
-      _index.propsManager.set($props__106, $compid__106);
-      _index.propsManager.set($props__107, $compid__107);
+      _index.propsManager.set($props__15, $compid__15);
+      _index.propsManager.set($props__16, $compid__16);
       Object.assign(this.__state, {
-        $compid__106: $compid__106,
-        $compid__107: $compid__107
+        $compid__15: $compid__15,
+        $compid__16: $compid__16
       });
       return this.__state;
     }

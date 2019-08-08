@@ -36,7 +36,7 @@ var ModalDemo = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ModalDemo.__proto__ || Object.getPrototypeOf(ModalDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__94", "$compid__95", "isOpen"], _this.openModal = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ModalDemo.__proto__ || Object.getPrototypeOf(ModalDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__2", "$compid__3", "isOpen"], _this.openModal = function () {
       _this.setState({
         isOpen: true
       });
@@ -60,22 +60,22 @@ var ModalDemo = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__94 = (0, _index.genCompid)(__prefix + "$compid__94");
-      var $compid__95 = (0, _index.genCompid)(__prefix + "$compid__95");
+      var $compid__2 = (0, _index.genCompid)(__prefix + "$compid__2");
+      var $compid__3 = (0, _index.genCompid)(__prefix + "$compid__3");
 
       var isOpen = this.__state.isOpen;
 
-      var $props__94 = {
+      var $props__2 = {
         "onClick": this.openModal
       };
-      var $props__95 = {
+      var $props__3 = {
         "isOpen": isOpen
       };
-      _index.propsManager.set($props__94, $compid__94);
-      _index.propsManager.set($props__95, $compid__95);
+      _index.propsManager.set($props__2, $compid__2);
+      _index.propsManager.set($props__3, $compid__3);
       Object.assign(this.__state, {
-        $compid__94: $compid__94,
-        $compid__95: $compid__95
+        $compid__2: $compid__2,
+        $compid__3: $compid__3
       });
       return this.__state;
     }

@@ -76,14 +76,14 @@ var MyIcon = (_temp2 = _class = function (_BaseComponent) {
       return this.__state;
     }
   }, {
-    key: "funPrivatenyHDk",
-    value: function funPrivatenyHDk() {
+    key: "funPrivateBYmVp",
+    value: function funPrivateBYmVp() {
       return this.props.onClick.apply(undefined, Array.prototype.slice.call(arguments, 1));
     }
   }]);
 
   return MyIcon;
-}(_index.Component), _class.$$events = ["funPrivatenyHDk"], _class.$$componentPath = "_components/myicon/index", _temp2);
+}(_index.Component), _class.$$events = ["funPrivateBYmVp"], _class.$$componentPath = "_components/myicon/index", _temp2);
 
 
 MyIcon.externalClasses = ['v-class'];

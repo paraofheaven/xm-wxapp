@@ -12,7 +12,7 @@
                     <view class="v-class-title v-bottomup-header">
                         <block wx:if="{{title}}"><text class="v-bottomup-title">{{title}}</text>
                         </block>
-                        <my-icon v-class="v-icon-class" compid="{{$compid__26}}"></my-icon>
+                        <my-icon v-class="v-icon-class" compid="{{$compid__29}}"></my-icon>
                     </view>
                     <slot></slot>
                 </view>

@@ -4,7 +4,7 @@
     </block>
     <block wx:else="{{true}}">
         <view class="v-class v-noticebar">
-            <my-icon v-class="v-noticebar-notice" compid="{{$compid__22}}"></my-icon>
+            <my-icon v-class="v-noticebar-notice" compid="{{$compid__25}}"></my-icon>
             <view class="v-noticebar-wrap">
                 <view class="{{anonymousState__temp}}" animation="{{animationData}}">
                     <slot></slot>
@@ -12,7 +12,7 @@
             </view>
             <block>
                 <block wx:if="{{closable}}">
-                    <my-icon v-class="v-noticebar-close" compid="{{$compid__23}}"></my-icon>
+                    <my-icon v-class="v-noticebar-close" compid="{{$compid__26}}"></my-icon>
                 </block>
                 <block wx:else>
                     <view class="v-noticebar-gap"></view>

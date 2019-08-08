@@ -1,7 +1,7 @@
 <block wx:if="{{$taroCompReady}}">
-    <modal v-class="v-otp-modal-class" compid="{{$compid__27}}">
+    <modal v-class="v-otp-modal-class" compid="{{$compid__30}}">
         <view class="v-otp-modal">
-            <my-icon v-class="v-otp-modal-close" compid="{{$compid__28}}"></my-icon>
+            <my-icon v-class="v-otp-modal-close" compid="{{$compid__31}}"></my-icon>
             <view class="v-otp-modal-header">{{title}}</view>
             <view class="v-otp-modal-desc">{{desc}}</view>
             <view class="v-otp-modal-content">
@@ -18,7 +18,7 @@
                 <input class="v-otp-modal-input" maxlength="{{6}}" focus="{{true}}" value="{{codeValue}}" type="number" bindinput="handleInput" />
             </view>
             <view class="v-otp-modal-otp-wap">
-                <otp v-class="v-otp-modal-otp" compid="{{$compid__29}}"></otp>
+                <otp v-class="v-otp-modal-otp" compid="{{$compid__32}}"></otp>
             </view>
             <button style="{{anonymousState__temp3}}" class="v-otp-modal-btn" disabled="{{btnDisabled}}" loading="{{btnLoading}}" bindtap="submit">确定</button>
         </view>

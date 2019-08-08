@@ -50,6 +50,10 @@ export default class Demo extends Component {
           <Navigator url={"/pages/demo/utils/index"}># 工具</Navigator>
           <MyIcon v-class="demo-right" value="right"></MyIcon>
         </View>
+        <View className="demo-item">
+        <Navigator url={"/pages/demo/native/index"}># 原生小程序</Navigator>
+        <MyIcon v-class="demo-right" value="right"></MyIcon>
+      </View>
       </View>
     )
   }
