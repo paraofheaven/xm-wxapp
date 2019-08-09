@@ -1,6 +1,7 @@
 import Taro, { Component, Config } from '@tarojs/taro'
-import { View, Navigator } from '@tarojs/components';
+import { View } from '@tarojs/components';
 import MyIcon from '../../../_components/myicon';
+import { navigateTo } from '../../../_utils/uri';
 import './index.less';
 
 export default class Demo extends Component {
@@ -14,46 +15,54 @@ export default class Demo extends Component {
     value1: '',
   }
 
+  public skipToModule = (url) => {
+    navigateTo(url);
+  }
+
   render() {
 
     return (
       <View className="demo">
         <View className="demo-item">
-          <Navigator url={"/pages/demo/modal/index"}># 弹窗</Navigator>
+          <View onClick={this.skipToModule.bind(this, '/pages/demo/modal/index')}># 弹窗</View>
           <MyIcon v-class="demo-right" value="right"></MyIcon>
         </View>
         <View className="demo-item">
-          <Navigator url={"/pages/demo/bottomup/index"}># 底部弹窗</Navigator>
+          <View onClick={this.skipToModule.bind(this, '/pages/demo/bottomup/index')}># 底部弹窗</View>
           <MyIcon v-class="demo-right" value="right"></MyIcon>
         </View>
         <View className="demo-item">
-          <Navigator url={"/pages/demo/keyboard/index"}># 自定义键盘</Navigator>
+          <View onClick={this.skipToModule.bind(this, '/pages/demo/keyboard/index')}># 自定义键盘</View>
           <MyIcon v-class="demo-right" value="right"></MyIcon>
         </View>
         <View className="demo-item">
-          <Navigator url={"/pages/demo/otp/index"}># 短信验证码</Navigator>
+          <View onClick={this.skipToModule.bind(this, '/pages/demo/otp/index')}># 短信验证码</View>
           <MyIcon v-class="demo-right" value="right"></MyIcon>
         </View>
         <View className="demo-item">
-          <Navigator url={"/pages/demo/otp-modal/index"}># 短信验证码弹窗</Navigator>
+          <View onClick={this.skipToModule.bind(this, '/pages/demo/otp-modal/index')}># 短信验证码弹窗</View>
           <MyIcon v-class="demo-right" value="right"></MyIcon>
         </View>
         <View className="demo-item">
-          <Navigator url={"/pages/demo/pwd-box/index"}># 密码输入框</Navigator>
+          <View onClick={this.skipToModule.bind(this, '/pages/demo/pwd-box/index')}># 密码输入框</View>
           <MyIcon v-class="demo-right" value="right"></MyIcon>
         </View>
         <View className="demo-item">
-          <Navigator url={"/pages/demo/pwd-keyboard/index"}># 密码输入带键盘</Navigator>
+          <View onClick={this.skipToModule.bind(this, '/pages/demo/pwd-keyboard/index')}># 密码输入带键盘</View>
           <MyIcon v-class="demo-right" value="right"></MyIcon>
         </View>
         <View className="demo-item">
-          <Navigator url={"/pages/demo/utils/index"}># 工具</Navigator>
+          <View onClick={this.skipToModule.bind(this, '/pages/demo/utils/index')}># 工具</View>
           <MyIcon v-class="demo-right" value="right"></MyIcon>
         </View>
         <View className="demo-item">
-        <Navigator url={"/pages/demo/native/index"}># 原生小程序</Navigator>
-        <MyIcon v-class="demo-right" value="right"></MyIcon>
-      </View>
+          <View onClick={this.skipToModule.bind(this, '/pages/demo/native/index')}># 原生小程序</View>
+          <MyIcon v-class="demo-right" value="right"></MyIcon>
+        </View>
+        <View className="demo-item">
+          <View onClick={this.skipToModule.bind(this, '/pages/demo/request/index')}># 请求</View>
+          <MyIcon v-class="demo-right" value="right"></MyIcon>
+        </View>
       </View>
     )
   }

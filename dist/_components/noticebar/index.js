@@ -42,7 +42,7 @@ var NoticeBar = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = NoticeBar.__proto__ || Object.getPrototypeOf(NoticeBar)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "$compid__25", "$compid__26", "visible", "animationData", "closable", "duration", "delay", "loop", "children"], _this.initAnimation = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = NoticeBar.__proto__ || Object.getPrototypeOf(NoticeBar)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp", "$compid__26", "$compid__27", "visible", "animationData", "closable", "duration", "delay", "loop", "children"], _this.initAnimation = function () {
       var duration = _this.state.duration;
 
       var animation = _index2.default.createAnimation({
@@ -125,8 +125,8 @@ var NoticeBar = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__25 = (0, _index.genCompid)(__prefix + "$compid__25");
       var $compid__26 = (0, _index.genCompid)(__prefix + "$compid__26");
+      var $compid__27 = (0, _index.genCompid)(__prefix + "$compid__27");
 
       var _state = this.__state,
           visible = _state.visible,
@@ -139,19 +139,19 @@ var NoticeBar = (_temp2 = _class = function (_BaseComponent) {
         return null;
       }
       var anonymousState__temp = (0, _index4.default)('v-noticebar-content', _defineProperty({}, 'v-noticebar-loop', loop));
-      var $props__25 = {
+      var $props__26 = {
         "value": "horn"
       };
-      var $props__26 = {
+      var $props__27 = {
         "value": "close",
         "onClick": this.closeNoticeBar
       };
-      _index.propsManager.set($props__25, $compid__25);
-      closable && _index.propsManager.set($props__26, $compid__26);
+      _index.propsManager.set($props__26, $compid__26);
+      closable && _index.propsManager.set($props__27, $compid__27);
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
-        $compid__25: $compid__25,
         $compid__26: $compid__26,
+        $compid__27: $compid__27,
         closable: closable
       });
       return this.__state;

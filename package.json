@@ -42,7 +42,6 @@
     "classnames": "^2.2.6",
     "nerv-devtools": "^1.4.0",
     "nervjs": "^1.4.0",
-    "para-utils": "^1.5.1",
     "taro-ui": "^2.2.1",
     "wxa-plugin-canvas": "^1.1.11"
   },

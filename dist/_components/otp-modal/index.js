@@ -38,7 +38,7 @@ var OtpModal = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = OtpModal.__proto__ || Object.getPrototypeOf(OtpModal)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp3", "loopArray3", "$compid__30", "$compid__31", "$compid__32", "codeNumbers", "codeValue", "btnDisabled", "btnLoading", "title", "desc", "isOpen", "closeOnClickOverlay", "color", "onSendRequest", "__fn_call"], _this.clearInputState = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = OtpModal.__proto__ || Object.getPrototypeOf(OtpModal)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["anonymousState__temp3", "loopArray3", "$compid__31", "$compid__32", "$compid__33", "codeNumbers", "codeValue", "btnDisabled", "btnLoading", "title", "desc", "isOpen", "closeOnClickOverlay", "color", "onSendRequest", "__fn_call"], _this.clearInputState = function () {
       _this.setState({
         codeNumbers: defaultNumbers,
         codeValue: ''
@@ -93,9 +93,9 @@ var OtpModal = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__30 = (0, _index.genCompid)(__prefix + "$compid__30");
       var $compid__31 = (0, _index.genCompid)(__prefix + "$compid__31");
       var $compid__32 = (0, _index.genCompid)(__prefix + "$compid__32");
+      var $compid__33 = (0, _index.genCompid)(__prefix + "$compid__33");
 
       var _props = this.__props,
           isOpen = _props.isOpen,
@@ -112,17 +112,17 @@ var OtpModal = (_temp2 = _class = function (_BaseComponent) {
           btnLoading = _state.btnLoading;
 
       var anonymousState__temp3 = (0, _index.internal_inline_style)({ color: color });
-      var $props__30 = {
+      var $props__31 = {
         "isOpen": isOpen,
         "closeOnClickOverlay": closeOnClickOverlay
       };
-      var $props__31 = {
+      var $props__32 = {
         "value": "close",
         "size": 22,
         "color": "#999",
         "onClick": this.__props.onClose
       };
-      var $props__32 = {
+      var $props__33 = {
         "autoStart": true,
         "onSendRequest": this.__props.onSendRequest
       };
@@ -136,15 +136,15 @@ var OtpModal = (_temp2 = _class = function (_BaseComponent) {
           $original: item.$original
         };
       });
-      _index.propsManager.set($props__30, $compid__30);
       _index.propsManager.set($props__31, $compid__31);
       _index.propsManager.set($props__32, $compid__32);
+      _index.propsManager.set($props__33, $compid__33);
       Object.assign(this.__state, {
         anonymousState__temp3: anonymousState__temp3,
         loopArray3: loopArray3,
-        $compid__30: $compid__30,
         $compid__31: $compid__31,
         $compid__32: $compid__32,
+        $compid__33: $compid__33,
         title: title,
         desc: desc
       });

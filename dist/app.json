@@ -13,7 +13,8 @@
     "pages/demo/pwd-box/index",
     "pages/demo/pwd-keyboard/index",
     "pages/demo/utils/index",
-    "pages/demo/native/index"
+    "pages/demo/native/index",
+    "pages/demo/request/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -54,5 +55,6 @@
         "text": "联系我们"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

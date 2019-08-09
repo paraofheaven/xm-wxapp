@@ -14,6 +14,8 @@ var _index = require("../../../npm/@tarojs/taro-weapp/index.js");
 
 var _index2 = _interopRequireDefault(_index);
 
+var _uri = require("../../../_utils/uri.js");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -36,8 +38,10 @@ var Demo = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Demo.__proto__ || Object.getPrototypeOf(Demo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__4", "$compid__5", "$compid__6", "$compid__7", "$compid__8", "$compid__9", "$compid__10", "$compid__11", "$compid__12", "bottomupOpen", "value1"], _this.config = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Demo.__proto__ || Object.getPrototypeOf(Demo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__468", "$compid__469", "$compid__470", "$compid__471", "$compid__472", "$compid__473", "$compid__474", "$compid__475", "$compid__476", "$compid__477", "bottomupOpen", "value1"], _this.config = {
       navigationBarTitleText: 'demo'
+    }, _this.skipToModule = function (url) {
+      (0, _uri.navigateTo)(url);
     }, _this.customComponents = ["MyIcon"], _temp), _possibleConstructorReturn(_this, _ret);
   }
 
@@ -60,68 +64,74 @@ var Demo = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__4 = (0, _index.genCompid)(__prefix + "$compid__4");
-      var $compid__5 = (0, _index.genCompid)(__prefix + "$compid__5");
-      var $compid__6 = (0, _index.genCompid)(__prefix + "$compid__6");
-      var $compid__7 = (0, _index.genCompid)(__prefix + "$compid__7");
-      var $compid__8 = (0, _index.genCompid)(__prefix + "$compid__8");
-      var $compid__9 = (0, _index.genCompid)(__prefix + "$compid__9");
-      var $compid__10 = (0, _index.genCompid)(__prefix + "$compid__10");
-      var $compid__11 = (0, _index.genCompid)(__prefix + "$compid__11");
-      var $compid__12 = (0, _index.genCompid)(__prefix + "$compid__12");
-      var $props__4 = {
+      var $compid__468 = (0, _index.genCompid)(__prefix + "$compid__468");
+      var $compid__469 = (0, _index.genCompid)(__prefix + "$compid__469");
+      var $compid__470 = (0, _index.genCompid)(__prefix + "$compid__470");
+      var $compid__471 = (0, _index.genCompid)(__prefix + "$compid__471");
+      var $compid__472 = (0, _index.genCompid)(__prefix + "$compid__472");
+      var $compid__473 = (0, _index.genCompid)(__prefix + "$compid__473");
+      var $compid__474 = (0, _index.genCompid)(__prefix + "$compid__474");
+      var $compid__475 = (0, _index.genCompid)(__prefix + "$compid__475");
+      var $compid__476 = (0, _index.genCompid)(__prefix + "$compid__476");
+      var $compid__477 = (0, _index.genCompid)(__prefix + "$compid__477");
+      var $props__468 = {
         "value": "right"
       };
-      var $props__5 = {
+      var $props__469 = {
         "value": "right"
       };
-      var $props__6 = {
+      var $props__470 = {
         "value": "right"
       };
-      var $props__7 = {
+      var $props__471 = {
         "value": "right"
       };
-      var $props__8 = {
+      var $props__472 = {
         "value": "right"
       };
-      var $props__9 = {
+      var $props__473 = {
         "value": "right"
       };
-      var $props__10 = {
+      var $props__474 = {
         "value": "right"
       };
-      var $props__11 = {
+      var $props__475 = {
         "value": "right"
       };
-      var $props__12 = {
+      var $props__476 = {
         "value": "right"
       };
-      _index.propsManager.set($props__4, $compid__4);
-      _index.propsManager.set($props__5, $compid__5);
-      _index.propsManager.set($props__6, $compid__6);
-      _index.propsManager.set($props__7, $compid__7);
-      _index.propsManager.set($props__8, $compid__8);
-      _index.propsManager.set($props__9, $compid__9);
-      _index.propsManager.set($props__10, $compid__10);
-      _index.propsManager.set($props__11, $compid__11);
-      _index.propsManager.set($props__12, $compid__12);
+      var $props__477 = {
+        "value": "right"
+      };
+      _index.propsManager.set($props__468, $compid__468);
+      _index.propsManager.set($props__469, $compid__469);
+      _index.propsManager.set($props__470, $compid__470);
+      _index.propsManager.set($props__471, $compid__471);
+      _index.propsManager.set($props__472, $compid__472);
+      _index.propsManager.set($props__473, $compid__473);
+      _index.propsManager.set($props__474, $compid__474);
+      _index.propsManager.set($props__475, $compid__475);
+      _index.propsManager.set($props__476, $compid__476);
+      _index.propsManager.set($props__477, $compid__477);
       Object.assign(this.__state, {
-        $compid__4: $compid__4,
-        $compid__5: $compid__5,
-        $compid__6: $compid__6,
-        $compid__7: $compid__7,
-        $compid__8: $compid__8,
-        $compid__9: $compid__9,
-        $compid__10: $compid__10,
-        $compid__11: $compid__11,
-        $compid__12: $compid__12
+        $compid__468: $compid__468,
+        $compid__469: $compid__469,
+        $compid__470: $compid__470,
+        $compid__471: $compid__471,
+        $compid__472: $compid__472,
+        $compid__473: $compid__473,
+        $compid__474: $compid__474,
+        $compid__475: $compid__475,
+        $compid__476: $compid__476,
+        $compid__477: $compid__477
       });
       return this.__state;
     }
   }]);
 
   return Demo;
-}(_index.Component), _class.$$events = [], _class.$$componentPath = "pages/demo/portal/index", _temp2);
+}(_index.Component), _class.$$events = ["skipToModule"], _class.$$componentPath = "pages/demo/portal/index", _temp2);
 exports.default = Demo;
 
 Component(require('../../../npm/@tarojs/taro-weapp/index.js').default.createComponent(Demo, true));

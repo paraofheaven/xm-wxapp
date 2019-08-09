@@ -36,7 +36,7 @@ var KeyboardDemo = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = KeyboardDemo.__proto__ || Object.getPrototypeOf(KeyboardDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__15", "$compid__16", "value1"], _this.handleChange = function (value) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = KeyboardDemo.__proto__ || Object.getPrototypeOf(KeyboardDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__16", "$compid__17", "value1"], _this.handleChange = function (value) {
       _this.setState({
         value1: value
       });
@@ -72,12 +72,12 @@ var KeyboardDemo = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__15 = (0, _index.genCompid)(__prefix + "$compid__15");
       var $compid__16 = (0, _index.genCompid)(__prefix + "$compid__16");
+      var $compid__17 = (0, _index.genCompid)(__prefix + "$compid__17");
 
       var value1 = this.__state.value1;
 
-      var $props__15 = {
+      var $props__16 = {
         "name": "value1",
         "type": "text",
         "disabled": true,
@@ -85,16 +85,16 @@ var KeyboardDemo = (_temp2 = _class = function (_BaseComponent) {
         "value": value1,
         "onChange": this.handleChange.bind(this)
       };
-      var $props__16 = {
-        "onKeyboradClear": this.handleInputDelete,
+      var $props__17 = {
+        "onKeyboradDelete": this.handleInputDelete,
         "onKeyboradFinish": this.handleInputConfirm,
         "onKeyboradNumber": this.handleInput
       };
-      _index.propsManager.set($props__15, $compid__15);
       _index.propsManager.set($props__16, $compid__16);
+      _index.propsManager.set($props__17, $compid__17);
       Object.assign(this.__state, {
-        $compid__15: $compid__15,
-        $compid__16: $compid__16
+        $compid__16: $compid__16,
+        $compid__17: $compid__17
       });
       return this.__state;
     }

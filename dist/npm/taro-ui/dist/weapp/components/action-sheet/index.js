@@ -52,7 +52,7 @@ var AtActionSheet = (_temp2 = _class = function (_AtComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = AtActionSheet.__proto__ || Object.getPrototypeOf(AtActionSheet)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__27", "rootClass", "title", "cancelText", "_isOpened", "className", "isOpened", "children"], _this.handleClose = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = AtActionSheet.__proto__ || Object.getPrototypeOf(AtActionSheet)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__28", "rootClass", "title", "cancelText", "_isOpened", "className", "isOpened", "children"], _this.handleClose = function () {
       if ((0, _isFunction3.default)(_this.props.onClose)) {
         _this.props.onClose();
       }
@@ -104,7 +104,7 @@ var AtActionSheet = (_temp2 = _class = function (_AtComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__27 = (0, _index.genCompid)(__prefix + "$compid__27");
+      var $compid__28 = (0, _index.genCompid)(__prefix + "$compid__28");
 
       var _props = this.__props,
           title = _props.title,
@@ -117,12 +117,12 @@ var AtActionSheet = (_temp2 = _class = function (_AtComponent) {
         'at-action-sheet--active': _isOpened
       }, className);
 
-      var $props__27 = {
+      var $props__28 = {
         "onClick": this.handleCancel
       };
-      cancelText && _index.propsManager.set($props__27, $compid__27);
+      cancelText && _index.propsManager.set($props__28, $compid__28);
       Object.assign(this.__state, {
-        $compid__27: $compid__27,
+        $compid__28: $compid__28,
         rootClass: rootClass,
         title: title,
         cancelText: cancelText

@@ -10,7 +10,7 @@
 		"minified": false,
 		"newFeature": true,
 		"coverView": true,
-		"nodeModules": false,
+		"nodeModules": true,
 		"autoAudits": false,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
@@ -48,7 +48,7 @@
 					"id": 0,
 					"name": "pages/demo/portal/index",
 					"pathName": "pages/demo/portal/index",
-					"query": "",
+					"query": "env=me",
 					"scene": null
 				}
 			]

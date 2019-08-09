@@ -36,7 +36,7 @@ var OtpDemo = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = OtpDemo.__proto__ || Object.getPrototypeOf(OtpDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__18", "$compid__19", "isOpen"], _this.sendRequest = function () {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = OtpDemo.__proto__ || Object.getPrototypeOf(OtpDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__19", "$compid__20", "isOpen"], _this.sendRequest = function () {
       return new Promise(function (resolve) {
         setTimeout(function () {
           resolve();
@@ -74,26 +74,26 @@ var OtpDemo = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__18 = (0, _index.genCompid)(__prefix + "$compid__18");
       var $compid__19 = (0, _index.genCompid)(__prefix + "$compid__19");
+      var $compid__20 = (0, _index.genCompid)(__prefix + "$compid__20");
 
       var isOpen = this.__state.isOpen;
 
-      var $props__18 = {
+      var $props__19 = {
         "onClick": this.openOtpModal
       };
-      var $props__19 = {
+      var $props__20 = {
         "isOpen": isOpen,
         "color": "#000",
         "onSendRequest": this.sendRequest,
         "onInputFinish": this.onInputFinish,
         "onClose": this.closeOtpMoal
       };
-      _index.propsManager.set($props__18, $compid__18);
       _index.propsManager.set($props__19, $compid__19);
+      _index.propsManager.set($props__20, $compid__20);
       Object.assign(this.__state, {
-        $compid__18: $compid__18,
-        $compid__19: $compid__19
+        $compid__19: $compid__19,
+        $compid__20: $compid__20
       });
       return this.__state;
     }

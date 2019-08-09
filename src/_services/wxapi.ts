@@ -1,9 +1,11 @@
 
 
-import { extend, isPlainObject, isFunction, set, promisify, get, getQueryString, isObject, } from 'para-utils';
+import { extend, isPlainObject, isFunction, set, get, isObject, } from 'lodash';
+import { promisify } from '../_utils/promisify';
+import { getQueryString } from '../_utils/uri';
 import { wxPromisify } from '../_utils/wxPromisify';
 import Taro from '@tarojs/taro';
-import { Request } from './wxrequest';
+import request from './wxrequest';
 
 const baseDefaultDto = (result) => {
   return result;
@@ -11,41 +13,30 @@ const baseDefaultDto = (result) => {
 
 const AUTH_TOKEN = 'token';
 export const AUTH_ERROR_EXCEED_MAX_COUNT = 'AUTH_ERROR_EXCEED_MAX_COUNT';
-const AUTH_ERROR_GET_WX_CODE = 'AUTH_ERROR_GET_WX_CODE';
-const AUTH_ERROR_API_TOKEN_EXPIRED = '9000';
+export const AUTH_ERROR_GET_WX_CODE = 'AUTH_ERROR_GET_WX_CODE';
+export const AUTH_ERROR_API_TOKEN_EXPIRED = '9000';
 
 export class WxApi {
   private $requestService;
 
   public serviceApi = {
-    homeApi: {
-      me: 'http://me.ly.com:3000/api',
-      inte: 'http://jr.me.ly.com/home/api',
-      rc: 'http://jr.t.me.com/home/api',
-      prod: 'http://jr.me.com/home/api'
-    },
-    detailApi: {
-      me: 'http://me.ly.com:3000/api',
-      inte: 'http://jr.me.ly.com/detail/api',
-      rc: 'http://jr.t.me.com/detail/api',
-      prod: 'http://jr.me.com/detail/api'
-    }
+
   };
 
   // 授信置换token次数
   private $authTestCount = 0 as number;
 
   constructor() {
-    this.$requestService = Request;
+    this.$requestService = request();
   }
 
-  public $getReqData(servicename, reqParam) {
+  public $getReqData(servicename, reqParam?) {
     const protocol = this.$getProtocol();
     const finalReqData = extend(true, protocol, {
       param: reqParam
     });
     const customServiceConfig = this.$getYourCustomServiceConfig();
-    extend(true, {}, this.serviceApi, customServiceConfig);
+    this.serviceApi = extend(true, {}, this.serviceApi, customServiceConfig);
     const domainUrl = this.get(`serviceApi.${servicename}`);
     return {
       url: domainUrl,
@@ -196,21 +187,13 @@ export class WxApi {
     let dto = baseDefaultDto;
 
     if (isPlainObject(url)) {
+      data = url.data;
       url = url.url;
-      delete url.url;
-      data = url;
     }
-    if (isFunction(config)) {
-      dto = config;
-      config = {};
-    } else if (isPlainObject(config)) {
-      if (isFunction(config.dto)) {
-        dto = config.dto;
-        delete config.dto;
-      }
-    } else {
-      config = {};
+    if (data.dto) {
+      dto = data.dto;
     }
+
     return { url, data, dto, config };
   }
 

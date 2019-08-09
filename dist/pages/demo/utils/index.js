@@ -38,7 +38,7 @@ var UtilsDemo = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = UtilsDemo.__proto__ || Object.getPrototypeOf(UtilsDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__38"], _this.authOrigin = function (force) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = UtilsDemo.__proto__ || Object.getPrototypeOf(UtilsDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__25"], _this.authOrigin = function (force) {
       (0, _common.authorizeUserLocation)(function (res) {
         if (res.status === 'fail') {
           return;
@@ -71,13 +71,13 @@ var UtilsDemo = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__38 = (0, _index.genCompid)(__prefix + "$compid__38");
-      var $props__38 = {
+      var $compid__25 = (0, _index.genCompid)(__prefix + "$compid__25");
+      var $props__25 = {
         "onClick": this.authOrigin.bind(this, true)
       };
-      _index.propsManager.set($props__38, $compid__38);
+      _index.propsManager.set($props__25, $compid__25);
       Object.assign(this.__state, {
-        $compid__38: $compid__38
+        $compid__25: $compid__25
       });
       return this.__state;
     }

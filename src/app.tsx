@@ -34,6 +34,7 @@ class App extends Component {
       'pages/demo/pwd-keyboard/index',
       'pages/demo/utils/index',
       'pages/demo/native/index',
+      'pages/demo/request/index',
     ],
     window: {
       backgroundTextStyle: 'light',
