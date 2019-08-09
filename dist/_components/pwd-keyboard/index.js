@@ -153,21 +153,21 @@ var PwdKeyBoard = (_temp2 = _class = function (_BaseComponent) {
       };
       this.$$refs = [{
         type: "component",
-        id: "cWxch",
+        id: "sJEHS",
         refName: "",
         fn: function fn(ref) {
           _this2.bottomupRef = ref;
         }
       }, {
         type: "component",
-        id: "devYr",
+        id: "PbUBW",
         refName: "",
         fn: function fn(ref) {
           _this2.pwdboxRef1 = ref;
         }
       }, {
         type: "component",
-        id: "DVztt",
+        id: "QJYpe",
         refName: "",
         fn: function fn(ref) {
           _this2.pwdboxRef2 = ref;

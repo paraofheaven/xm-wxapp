@@ -7,7 +7,7 @@ export function request(method?) {
       method = method || 'GET';
       Taro.request({
         url, data, method,
-        header: extend(true, {
+        header: extend({
           'Content-Type': 'application/json'
         }, config.header),
         success: (res) => {

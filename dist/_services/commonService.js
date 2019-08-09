@@ -37,6 +37,16 @@ var CommonService = exports.CommonService = function (_WxApi) {
       });
     }
   }, {
+    key: '$getProtocol',
+    value: function $getProtocol() {
+      return {
+        protocol: {
+          fromPlatform: this.$getPlatform(),
+          functionCode: 'a_bc'
+        }
+      };
+    }
+  }, {
     key: '$getYourCustomServiceConfig',
     value: function $getYourCustomServiceConfig() {
       return {

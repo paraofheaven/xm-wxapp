@@ -12,6 +12,15 @@ export class CommonService extends WxApi {
     });
   }
 
+  public $getProtocol() {
+    return {
+      protocol: {
+        fromPlatform: this.$getPlatform(),
+        functionCode: 'a_bc',
+      },
+    };
+  }
+
   public $getYourCustomServiceConfig() {
     return {
       homeApi: {

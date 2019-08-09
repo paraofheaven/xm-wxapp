@@ -4,7 +4,7 @@
 	"description": "湘昕科技公司官网信息展示wxapp",
 	"appid": "wx5a280f562b924049",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": false,
 		"postcss": false,
 		"minified": false,

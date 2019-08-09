@@ -67,11 +67,11 @@ var WxApi = exports.WxApi = function () {
     key: "$getReqData",
     value: function $getReqData(servicename, reqParam) {
       var protocol = this.$getProtocol();
-      var finalReqData = (0, _lodash.extend)(true, protocol, {
+      var finalReqData = (0, _lodash.extend)({}, protocol, {
         param: reqParam
       });
       var customServiceConfig = this.$getYourCustomServiceConfig();
-      this.serviceApi = (0, _lodash.extend)(true, {}, this.serviceApi, customServiceConfig);
+      this.serviceApi = (0, _lodash.extend)({}, this.serviceApi, customServiceConfig);
       var domainUrl = this.get("serviceApi." + servicename);
       return {
         url: domainUrl,
@@ -228,15 +228,16 @@ var WxApi = exports.WxApi = function () {
     key: "$adjustParameter",
     value: function $adjustParameter(url) {
       var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-      var config = arguments[2];
+      var config = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
 
       var dto = baseDefaultDto;
       if ((0, _lodash.isPlainObject)(url)) {
-        data = url.data;
+        data = (0, _lodash.extend)({}, url.data, data);
         url = url.url;
       }
       if (data.dto) {
         dto = data.dto;
+        delete data.dto;
       }
       return { url: url, data: data, dto: dto, config: config };
     }
@@ -280,7 +281,7 @@ var WxApi = exports.WxApi = function () {
       var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
       var config = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
 
-      return this.$request('POST', url, data, (0, _lodash.extend)(false, {}, config));
+      return this.$request('POST', url, data, (0, _lodash.extend)({}, config));
     }
   }, {
     key: "$requestGet",
@@ -288,7 +289,7 @@ var WxApi = exports.WxApi = function () {
       var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
       var config = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
 
-      return this.$request('GET', url, data, (0, _lodash.extend)(false, {}, config));
+      return this.$request('GET', url, data, (0, _lodash.extend)({}, config));
     }
   }]);
 

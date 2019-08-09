@@ -76,14 +76,14 @@ var MyIcon = (_temp2 = _class = function (_BaseComponent) {
       return this.__state;
     }
   }, {
-    key: "funPrivateqhDnz",
-    value: function funPrivateqhDnz() {
+    key: "funPrivatetXrYi",
+    value: function funPrivatetXrYi() {
       return this.props.onClick.apply(undefined, Array.prototype.slice.call(arguments, 1));
     }
   }]);
 
   return MyIcon;
-}(_index.Component), _class.$$events = ["funPrivateqhDnz"], _class.$$componentPath = "_components/myicon/index", _temp2);
+}(_index.Component), _class.$$events = ["funPrivatetXrYi"], _class.$$componentPath = "_components/myicon/index", _temp2);
 
 
 MyIcon.externalClasses = ['v-class'];

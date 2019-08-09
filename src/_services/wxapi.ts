@@ -1,6 +1,6 @@
 
 
-import { extend, isPlainObject, isFunction, set, get, isObject, } from 'lodash';
+import { extend, isPlainObject, set, get, isObject, } from 'lodash';
 import { promisify } from '../_utils/promisify';
 import { getQueryString } from '../_utils/uri';
 import { wxPromisify } from '../_utils/wxPromisify';
@@ -32,11 +32,11 @@ export class WxApi {
 
   public $getReqData(servicename, reqParam?) {
     const protocol = this.$getProtocol();
-    const finalReqData = extend(true, protocol, {
+    const finalReqData = extend({}, protocol, {
       param: reqParam
     });
     const customServiceConfig = this.$getYourCustomServiceConfig();
-    this.serviceApi = extend(true, {}, this.serviceApi, customServiceConfig);
+    this.serviceApi = extend({}, this.serviceApi, customServiceConfig);
     const domainUrl = this.get(`serviceApi.${servicename}`);
     return {
       url: domainUrl,
@@ -183,15 +183,16 @@ export class WxApi {
    * @param  {Object|Function}   config 必选如果是函数直接当成dto，否则当成配置对象，对象里面可以包含dto对象，和其他属性
    * @return {Object} 转换之后的参数: {url, data, dto, config}.
    */
-  $adjustParameter(url, data = {} as any, config) {
+  $adjustParameter(url, data = {} as any, config = {}) {
     let dto = baseDefaultDto;
 
     if (isPlainObject(url)) {
-      data = url.data;
+      data = extend({}, url.data, data);
       url = url.url;
     }
     if (data.dto) {
       dto = data.dto;
+      delete data.dto;
     }
 
     return { url, data, dto, config };
@@ -225,11 +226,11 @@ export class WxApi {
    * @param {Object} config optional
    */
   public $requestPost(url, data = {}, config = {}) {
-    return this.$request('POST', url, data, extend(false, {}, config));
+    return this.$request('POST', url, data, extend({}, config));
   }
 
   public $requestGet(url, data = {}, config = {}) {
-    return this.$request('GET', url, data, extend(false, {}, config));
+    return this.$request('GET', url, data, extend({}, config));
   }
 
 }

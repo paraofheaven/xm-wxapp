@@ -35,7 +35,7 @@ function request(method) {
       method = method || 'GET';
       _index2.default.request({
         url: url, data: data, method: method,
-        header: (0, _lodash.extend)(true, {
+        header: (0, _lodash.extend)({
           'Content-Type': 'application/json'
         }, config.header),
         success: function success(res) {
