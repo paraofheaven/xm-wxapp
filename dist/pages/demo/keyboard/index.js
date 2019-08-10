@@ -36,7 +36,7 @@ var KeyboardDemo = (_temp2 = _class = function (_BaseComponent) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = KeyboardDemo.__proto__ || Object.getPrototypeOf(KeyboardDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__16", "$compid__17", "value1"], _this.handleChange = function (value) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = KeyboardDemo.__proto__ || Object.getPrototypeOf(KeyboardDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__42", "$compid__43", "value1"], _this.handleChange = function (value) {
       _this.setState({
         value1: value
       });
@@ -46,7 +46,7 @@ var KeyboardDemo = (_temp2 = _class = function (_BaseComponent) {
       });
     }, _this.handleInputConfirm = function () {
       _index2.default.atMessage({
-        message: "\u5F53\u524Dinput\u503C:" + _this.state.value1
+        message: "\u5F53\u524Dinput\u503C\u4E3A:" + _this.state.value1
       });
     }, _this.handleInput = function (text) {
       _this.setState({
@@ -72,12 +72,12 @@ var KeyboardDemo = (_temp2 = _class = function (_BaseComponent) {
       var __isRunloopRef = arguments[2];
       var __prefix = this.$prefix;
       ;
-      var $compid__16 = (0, _index.genCompid)(__prefix + "$compid__16");
-      var $compid__17 = (0, _index.genCompid)(__prefix + "$compid__17");
+      var $compid__42 = (0, _index.genCompid)(__prefix + "$compid__42");
+      var $compid__43 = (0, _index.genCompid)(__prefix + "$compid__43");
 
       var value1 = this.__state.value1;
 
-      var $props__16 = {
+      var $props__42 = {
         "name": "value1",
         "type": "text",
         "disabled": true,
@@ -85,16 +85,16 @@ var KeyboardDemo = (_temp2 = _class = function (_BaseComponent) {
         "value": value1,
         "onChange": this.handleChange.bind(this)
       };
-      var $props__17 = {
+      var $props__43 = {
         "onKeyboradDelete": this.handleInputDelete,
         "onKeyboradFinish": this.handleInputConfirm,
         "onKeyboradNumber": this.handleInput
       };
-      _index.propsManager.set($props__16, $compid__16);
-      _index.propsManager.set($props__17, $compid__17);
+      _index.propsManager.set($props__42, $compid__42);
+      _index.propsManager.set($props__43, $compid__43);
       Object.assign(this.__state, {
-        $compid__16: $compid__16,
-        $compid__17: $compid__17
+        $compid__42: $compid__42,
+        $compid__43: $compid__43
       });
       return this.__state;
     }
