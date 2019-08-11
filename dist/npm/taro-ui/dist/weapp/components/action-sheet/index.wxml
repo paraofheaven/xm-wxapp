@@ -1,16 +1,1 @@
-<block wx:if="{{$taroCompReady}}">
-    <view class="{{rootClass}}" catchtouchmove="handleTouchMove">
-        <view bindtap="close" class="at-action-sheet__overlay"></view>
-        <view class="at-action-sheet__container">
-            <block wx:if="{{title}}">
-                <at-action-sheet-header>{{title}}</at-action-sheet-header>
-            </block>
-            <at-action-sheet-body>
-                <slot></slot>
-            </at-action-sheet-body>
-            <block wx:if="{{cancelText}}">
-                <at-action-sheet-footer compid="{{$compid__28}}">{{cancelText}}</at-action-sheet-footer>
-            </block>
-        </view>
-    </view>
-</block>
+<block wx:if="{{$taroCompReady}}"><view class="{{rootClass}}" catchtouchmove="handleTouchMove"><view bindtap="close" class="at-action-sheet__overlay"></view><view class="at-action-sheet__container"><block wx:if="{{title}}"><at-action-sheet-header>{{title}}</at-action-sheet-header></block><at-action-sheet-body><slot></slot></at-action-sheet-body><block wx:if="{{cancelText}}"><at-action-sheet-footer compid="{{$compid__28}}">{{cancelText}}</at-action-sheet-footer></block></view></view></block>
