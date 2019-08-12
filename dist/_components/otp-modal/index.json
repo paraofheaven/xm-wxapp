@@ -1,8 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "modal": "../modal/index",
-    "my-icon": "../myicon/index",
-    "otp": "../otp/index"
-  }
-}

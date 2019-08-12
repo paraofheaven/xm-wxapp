@@ -1,9 +1,0 @@
-<block wx:if="{{$taroCompReady}}">
-    <view class="modal-demo">
-        <at-button compid="{{$compid__2}}">打开弹窗</at-button>
-        <modal compid="{{$compid__3}}">
-            <view class="modal-block"></view>
-            <view class="modal-block"></view>
-        </modal>
-    </view>
-</block>

@@ -1,6 +1,0 @@
-<block wx:if="{{$taroCompReady}}">
-    <view>
-        <at-button compid="{{$compid__26}}">获取授权</at-button>
-        <at-message></at-message>
-    </view>
-</block>

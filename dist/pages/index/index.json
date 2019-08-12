@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "notice-bar": "../../_components/noticebar/index"
-  },
-  "navigationBarTitleText": "首页"
-}

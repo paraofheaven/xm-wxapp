@@ -1,8 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "bottom-up": "../bottomup/index",
-    "pwd-box": "../pwd-box/index",
-    "key-board": "../keyboard/index"
-  }
-}

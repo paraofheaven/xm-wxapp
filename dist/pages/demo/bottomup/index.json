@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "at-button": "../../../npm/taro-ui/dist/weapp/components/button/index",
-    "bottom-up": "../../../_components/bottomup/index"
-  }
-}

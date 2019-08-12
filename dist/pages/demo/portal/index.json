@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "my-icon": "../../../_components/myicon/index"
-  },
-  "navigationBarTitleText": "demo"
-}

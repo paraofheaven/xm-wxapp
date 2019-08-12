@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "at-button": "../../../npm/taro-ui/dist/weapp/components/button/index",
-    "otp-modal": "../../../_components/otp-modal/index",
-    "at-message": "../../../npm/taro-ui/dist/weapp/components/message/index"
-  }
-}
