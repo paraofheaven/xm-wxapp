@@ -1,1 +1,28 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.wxPromisify=void 0;var _index=require("../npm/@tarojs/taro-weapp/index.js"),_index2=_interopRequireDefault(_index),_lodash=require("../npm/lodash/lodash.js"),_promisify=require("./promisify.js");function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}var wxPromisify=exports.wxPromisify=function(o,s){return(0,_promisify.promisify)(function(e){var r=e.resolve,i=e.reject;_index2.default[o]((0,_lodash.extend)(!0,{},s,{success:r,fail:i}))})()};
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.wxPromisify = undefined;
+
+var _index = require("../npm/@tarojs/taro-weapp/index.js");
+
+var _index2 = _interopRequireDefault(_index);
+
+var _lodash = require("../npm/lodash/lodash.js");
+
+var _promisify = require("./promisify.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var wxPromisify = exports.wxPromisify = function wxPromisify(wxApi, options) {
+  return (0, _promisify.promisify)(function (_ref) {
+    var resolve = _ref.resolve,
+        reject = _ref.reject;
+
+    _index2.default[wxApi]((0, _lodash.extend)(true, {}, options, {
+      success: resolve,
+      fail: reject
+    }));
+  })();
+};

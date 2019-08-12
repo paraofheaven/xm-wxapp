@@ -1,1 +1,70 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.CommonService=void 0;var _createClass=function(){function r(e,t){for(var o=0;o<t.length;o++){var r=t[o];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(e,t,o){return t&&r(e.prototype,t),o&&r(e,o),e}}(),_wxapi=require("./wxapi.js");function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function _inherits(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}var getHomeConfigDto=function(e){return e},CommonService=exports.CommonService=function(){function e(){return _classCallCheck(this,e),_possibleConstructorReturn(this,(e.__proto__||Object.getPrototypeOf(e)).apply(this,arguments))}return _inherits(e,_wxapi.WxApi),_createClass(e,[{key:"getHomeConfig",value:function(e){var t=this.$getReqData("homeApi",e);return this.$requestPost(t,{dto:getHomeConfigDto})}},{key:"getDetailInfo",value:function(e){var t=this.$getReqData("detailApi",e);return this.$requestGet(t,{dto:getHomeConfigDto})}},{key:"$getYourCustomServiceConfig",value:function(){return{homeApi:{me:"http://me.ly.com:9880/api/home",inte:"http://jr.qa.para.com/api/home",rc:"http://jr.t.para.com/api/home",prod:"http://jr.para.com/api/home"},detailApi:{me:"http://me.ly.com:9880/api/detail",inte:"http://jr.qa.para.com/detail/api",rc:"http://jr.t.para.com/detail/api",prod:"http://jr.para.com/detail/api"}}}}]),e}();exports.default=new CommonService;
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CommonService = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _wxapi = require('./wxapi.js');
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var getHomeConfigDto = function getHomeConfigDto(result) {
+  return result;
+};
+
+var CommonService = exports.CommonService = function (_WxApi) {
+  _inherits(CommonService, _WxApi);
+
+  function CommonService() {
+    _classCallCheck(this, CommonService);
+
+    return _possibleConstructorReturn(this, (CommonService.__proto__ || Object.getPrototypeOf(CommonService)).apply(this, arguments));
+  }
+
+  _createClass(CommonService, [{
+    key: 'getHomeConfig',
+    value: function getHomeConfig(param) {
+      var req = this.$getReqData('homeApi', param);
+      return this.$requestPost(req, {
+        dto: getHomeConfigDto
+      });
+    }
+  }, {
+    key: 'getDetailInfo',
+    value: function getDetailInfo(param) {
+      var req = this.$getReqData('detailApi', param);
+      return this.$requestGet(req, {
+        dto: getHomeConfigDto
+      });
+    }
+  }, {
+    key: '$getYourCustomServiceConfig',
+    value: function $getYourCustomServiceConfig() {
+      return {
+        homeApi: {
+          me: 'http://me.ly.com:9880/api/home',
+          inte: 'http://jr.qa.para.com/api/home',
+          rc: 'http://jr.t.para.com/api/home',
+          prod: 'http://jr.para.com/api/home'
+        },
+        detailApi: {
+          me: 'http://me.ly.com:9880/api/detail',
+          inte: 'http://jr.qa.para.com/detail/api',
+          rc: 'http://jr.t.para.com/detail/api',
+          prod: 'http://jr.para.com/detail/api'
+        }
+      };
+    }
+  }]);
+
+  return CommonService;
+}(_wxapi.WxApi);
+
+exports.default = new CommonService();

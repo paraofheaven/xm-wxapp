@@ -1,1 +1,271 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var _class,_temp2,_extends=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var o=arguments[t];for(var n in o)Object.prototype.hasOwnProperty.call(o,n)&&(e[n]=o[n])}return e},_createClass=function(){function n(e,t){for(var o=0;o<t.length;o++){var n=t[o];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(e,t,o){return t&&n(e.prototype,t),o&&n(e,o),e}}(),_get=function e(t,o,n){null===t&&(t=Function.prototype);var i=Object.getOwnPropertyDescriptor(t,o);if(void 0===i){var r=Object.getPrototypeOf(t);return null===r?void 0:e(r,o,n)}if("value"in i)return i.value;var a=i.get;return void 0!==a?a.call(n):void 0},_index=require("../../npm/@tarojs/taro-weapp/index.js"),_index2=_interopRequireDefault(_index);function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function _inherits(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}var PwdKeyBoard=(_temp2=_class=function(){function a(){var e,t,r;_classCallCheck(this,a);for(var o=arguments.length,n=Array(o),i=0;i<o;i++)n[i]=arguments[i];return(t=r=_possibleConstructorReturn(this,(e=a.__proto__||Object.getPrototypeOf(a)).call.apply(e,[this].concat(n)))).$usedState=["$compid__35","$compid__36","$compid__37","$compid__38","animation1","withConfirm","animation2","message","pwdboxValue","confirm","isOpen","closeOnClickOverlay","pwdbox1Config","pwdbox2Config","confirmErrorMsg"],r.onKeyboradNumber=function(e){var t=r.state,o=t.pwdboxValue,n=t.confirm;o.length<6&&(o+=e,r.setState({pwdboxValue:o}),n?r.pwdboxRef2.setInputState(o):r.pwdboxRef1.setInputState(o))},r.onKeyboradDelete=function(){var e=r.state,t=e.pwdboxValue,o=e.confirm;0<t.length&&(t=t.substring(0,t.length-1),r.setState({pwdboxValue:t}),o?r.pwdboxRef2.setInputState(t):r.pwdboxRef1.setInputState(t))},r.onBottomUpClose=function(){r.setState({confirm:!1,pwdboxValue:""}),r.props.onClose(),r.pwdboxRef1.clearInputState(),r.props.withConfirm&&(r.pwdboxRef2.clearInputState(),r.resetBoxAnimation())},r.onInputFinish=function(e){if(!r.props.withConfirm)return r.onBottomUpClose(),void r.props.onInputFinish(e);r.code1=e,r.setState({confirm:!0},function(){r.createAnimation()})},r.onInputFinishConfirm=function(e){if(r.code1!==e)return r.setState({message:r.props.confirmErrorMsg}),void setTimeout(function(){r.setState({message:""}),r.resetBoxAnimation()},1500);r.onBottomUpClose(),r.props.onInputFinish(r.code1)},r.resetBoxAnimation=function(){r.setState({confirm:!1}),r.createAnimation(!0)},r.createAnimation=function(e){var t=-r.screenWidth,o={duration:500,timingFunction:"ease",delay:0},n=_index2.default.createAnimation(o),i=_index2.default.createAnimation(o);n.translate(e?0:t).step(),i.translate(e?0:t).step(),r.setState({animation1:n.export(),animation2:i.export()}),r.pwdboxRef1.clearInputState(),r.pwdboxRef2.clearInputState(),r.setState({pwdboxValue:""})},r.customComponents=["BottomUp","PwdBox","KeyBoard"],_possibleConstructorReturn(r,t)}return _inherits(a,_index.Component),_createClass(a,[{key:"_constructor",value:function(){var t=this;_get(a.prototype.__proto__||Object.getPrototypeOf(a.prototype),"_constructor",this).apply(this,arguments),this.state={animation1:void 0,animation2:void 0,pwdboxValue:"",confirm:!1,message:""},this.$$refs=[{type:"component",id:"CBjzz",refName:"",fn:function(e){t.bottomupRef=e}},{type:"component",id:"uNLBF",refName:"",fn:function(e){t.pwdboxRef1=e}},{type:"component",id:"KeMOH",refName:"",fn:function(e){t.pwdboxRef2=e}}]}},{key:"componentDidMount",value:function(){try{var e=_index2.default.getSystemInfoSync();this.screenWidth=e.screenWidth||375}catch(e){_index2.default.showToast({title:e.message||"获取系统信息失败",icon:"failed"})}}},{key:"_createData",value:function(e,t,o){this.__state=e||this.state||{},this.__props=t||this.props||{};var n=this.$prefix,i=(0,_index.genCompid)(n+"$compid__35"),r=(0,_index.genCompid)(n+"$compid__36"),a=(0,_index.genCompid)(n+"$compid__37"),s=(0,_index.genCompid)(n+"$compid__38"),p=this.__props,c=p.isOpen,u=(p.onClose,p.withConfirm),d=p.closeOnClickOverlay,l=p.pwdbox1Config,f=p.pwdbox2Config,_=this.__state,m=(_.animation1,_.animation2,_.message,{isOpen:c,closeOnClickOverlay:d,onClose:this.__props.onClose}),h=_extends({},l,{onInputFinish:this.onInputFinish}),b=_extends({},f,{onInputFinish:this.onInputFinishConfirm}),x={hideFinishBtn:!0,onKeyboradNumber:this.onKeyboradNumber,onKeyboradDelete:this.onKeyboradDelete};return _index.propsManager.set(m,i),_index.propsManager.set(h,r),u&&_index.propsManager.set(b,a),_index.propsManager.set(x,s),Object.assign(this.__state,{$compid__35:i,$compid__36:r,$compid__37:a,$compid__38:s,withConfirm:u}),this.__state}}]),a}(),_class.$$events=[],_class.$$componentPath="_components/pwd-keyboard/index",_temp2);PwdKeyBoard.defaultProps={isOpen:!1,closeOnClickOverlay:!1,withConfirm:!1,confirmErrorMsg:"两次输入不一致，请重新输入！",pwdbox1Config:{title:"请输入支付密码",subTitle:"",showForgetPwd:!0},pwdbox2Config:{title:"再次确认",subTitle:"",showForgetPwd:!1},onClose:function(){},onInputFinish:function(){}},PwdKeyBoard.externalClass=["v-class"],exports.default=PwdKeyBoard,Component(require("../../npm/@tarojs/taro-weapp/index.js").default.createComponent(PwdKeyBoard));
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+var _class, _temp2;
+
+var _index = require("../../npm/@tarojs/taro-weapp/index.js");
+
+var _index2 = _interopRequireDefault(_index);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PwdKeyBoard = (_temp2 = _class = function (_BaseComponent) {
+  _inherits(PwdKeyBoard, _BaseComponent);
+
+  function PwdKeyBoard() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, PwdKeyBoard);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PwdKeyBoard.__proto__ || Object.getPrototypeOf(PwdKeyBoard)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["$compid__35", "$compid__36", "$compid__37", "$compid__38", "animation1", "withConfirm", "animation2", "message", "pwdboxValue", "confirm", "isOpen", "closeOnClickOverlay", "pwdbox1Config", "pwdbox2Config", "confirmErrorMsg"], _this.onKeyboradNumber = function (value) {
+      var _this$state = _this.state,
+          pwdboxValue = _this$state.pwdboxValue,
+          confirm = _this$state.confirm;
+
+      if (pwdboxValue.length < 6) {
+        pwdboxValue += value;
+        _this.setState({
+          pwdboxValue: pwdboxValue
+        });
+        if (!confirm) {
+          _this.pwdboxRef1.setInputState(pwdboxValue);
+        } else {
+          _this.pwdboxRef2.setInputState(pwdboxValue);
+        }
+      }
+    }, _this.onKeyboradDelete = function () {
+      var _this$state2 = _this.state,
+          pwdboxValue = _this$state2.pwdboxValue,
+          confirm = _this$state2.confirm;
+
+      if (pwdboxValue.length > 0) {
+        pwdboxValue = pwdboxValue.substring(0, pwdboxValue.length - 1);
+        _this.setState({
+          pwdboxValue: pwdboxValue
+        });
+        if (!confirm) {
+          _this.pwdboxRef1.setInputState(pwdboxValue);
+        } else {
+          _this.pwdboxRef2.setInputState(pwdboxValue);
+        }
+      }
+    }, _this.onBottomUpClose = function () {
+      _this.setState({
+        confirm: false,
+        pwdboxValue: ''
+      });
+      _this.props.onClose();
+      _this.pwdboxRef1.clearInputState();
+      if (_this.props.withConfirm) {
+        _this.pwdboxRef2.clearInputState();
+        _this.resetBoxAnimation();
+      }
+    }, _this.onInputFinish = function (code1) {
+      var withConfirm = _this.props.withConfirm;
+
+      if (!withConfirm) {
+        _this.onBottomUpClose();
+        _this.props.onInputFinish(code1);
+        return;
+      }
+      _this.code1 = code1;
+      _this.setState({
+        confirm: true
+      }, function () {
+        _this.createAnimation();
+      });
+    }, _this.onInputFinishConfirm = function (code2) {
+      if (_this.code1 !== code2) {
+        _this.setState({
+          message: _this.props.confirmErrorMsg
+        });
+        setTimeout(function () {
+          _this.setState({
+            message: ''
+          });
+          _this.resetBoxAnimation();
+        }, 1500);
+        return;
+      }
+      _this.onBottomUpClose();
+      _this.props.onInputFinish(_this.code1);
+    }, _this.resetBoxAnimation = function () {
+      _this.setState({
+        confirm: false
+      });
+      _this.createAnimation(true);
+    }, _this.createAnimation = function (reset) {
+      var translate = -_this.screenWidth;
+      var baseAnimateConfig = {
+        duration: 500,
+        timingFunction: 'ease',
+        delay: 0
+      };
+      var animation1 = _index2.default.createAnimation(baseAnimateConfig);
+      var animation2 = _index2.default.createAnimation(baseAnimateConfig);
+      animation1.translate(reset ? 0 : translate).step();
+      animation2.translate(reset ? 0 : translate).step();
+      _this.setState({
+        animation1: animation1.export(),
+        animation2: animation2.export()
+      });
+      _this.pwdboxRef1.clearInputState();
+      _this.pwdboxRef2.clearInputState();
+      _this.setState({
+        pwdboxValue: ''
+      });
+    }, _this.customComponents = ["BottomUp", "PwdBox", "KeyBoard"], _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(PwdKeyBoard, [{
+    key: "_constructor",
+    value: function _constructor() {
+      var _this2 = this;
+
+      _get(PwdKeyBoard.prototype.__proto__ || Object.getPrototypeOf(PwdKeyBoard.prototype), "_constructor", this).apply(this, arguments);
+      this.state = {
+        animation1: undefined,
+        animation2: undefined,
+        pwdboxValue: '',
+        confirm: false,
+        message: ''
+      };
+      this.$$refs = [{
+        type: "component",
+        id: "IsPYw",
+        refName: "",
+        fn: function fn(ref) {
+          _this2.bottomupRef = ref;
+        }
+      }, {
+        type: "component",
+        id: "uNbLu",
+        refName: "",
+        fn: function fn(ref) {
+          _this2.pwdboxRef1 = ref;
+        }
+      }, {
+        type: "component",
+        id: "uHYRt",
+        refName: "",
+        fn: function fn(ref) {
+          _this2.pwdboxRef2 = ref;
+        }
+      }];
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      try {
+        var res = _index2.default.getSystemInfoSync();
+        this.screenWidth = res.screenWidth || 375;
+      } catch (error) {
+        _index2.default.showToast({
+          title: error.message || '获取系统信息失败',
+          icon: 'failed'
+        });
+      }
+    }
+  }, {
+    key: "_createData",
+    value: function _createData() {
+      this.__state = arguments[0] || this.state || {};
+      this.__props = arguments[1] || this.props || {};
+      var __isRunloopRef = arguments[2];
+      var __prefix = this.$prefix;
+      ;
+      var $compid__35 = (0, _index.genCompid)(__prefix + "$compid__35");
+      var $compid__36 = (0, _index.genCompid)(__prefix + "$compid__36");
+      var $compid__37 = (0, _index.genCompid)(__prefix + "$compid__37");
+      var $compid__38 = (0, _index.genCompid)(__prefix + "$compid__38");
+
+      var _props = this.__props,
+          isOpen = _props.isOpen,
+          onClose = _props.onClose,
+          withConfirm = _props.withConfirm,
+          closeOnClickOverlay = _props.closeOnClickOverlay,
+          pwdbox1Config = _props.pwdbox1Config,
+          pwdbox2Config = _props.pwdbox2Config;
+      var _state = this.__state,
+          animation1 = _state.animation1,
+          animation2 = _state.animation2,
+          message = _state.message;
+
+      var $props__35 = {
+        "isOpen": isOpen,
+        "closeOnClickOverlay": closeOnClickOverlay,
+        "onClose": this.__props.onClose
+      };
+      var $props__36 = _extends({}, pwdbox1Config, {
+        "onInputFinish": this.onInputFinish
+      });
+      var $props__37 = _extends({}, pwdbox2Config, {
+        "onInputFinish": this.onInputFinishConfirm
+      });
+      var $props__38 = {
+        "hideFinishBtn": true,
+        "onKeyboradNumber": this.onKeyboradNumber,
+        "onKeyboradDelete": this.onKeyboradDelete
+      };
+      _index.propsManager.set($props__35, $compid__35);
+      _index.propsManager.set($props__36, $compid__36);
+      withConfirm && _index.propsManager.set($props__37, $compid__37);
+      _index.propsManager.set($props__38, $compid__38);
+      Object.assign(this.__state, {
+        $compid__35: $compid__35,
+        $compid__36: $compid__36,
+        $compid__37: $compid__37,
+        $compid__38: $compid__38,
+        withConfirm: withConfirm
+      });
+      return this.__state;
+    }
+  }]);
+
+  return PwdKeyBoard;
+}(_index.Component), _class.$$events = [], _class.$$componentPath = "_components/pwd-keyboard/index", _temp2);
+
+
+PwdKeyBoard.defaultProps = {
+  isOpen: false,
+  closeOnClickOverlay: false,
+  withConfirm: false,
+  confirmErrorMsg: '两次输入不一致，请重新输入！',
+  pwdbox1Config: {
+    title: '请输入支付密码',
+    subTitle: '',
+    showForgetPwd: true
+  },
+  pwdbox2Config: {
+    title: '再次确认',
+    subTitle: '',
+    showForgetPwd: false
+  },
+  onClose: function onClose() {},
+  onInputFinish: function onInputFinish() {}
+};
+PwdKeyBoard.externalClass = ['v-class'];
+exports.default = PwdKeyBoard;
+
+Component(require('../../npm/@tarojs/taro-weapp/index.js').default.createComponent(PwdKeyBoard));

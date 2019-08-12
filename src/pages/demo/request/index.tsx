@@ -4,10 +4,6 @@ import commonService from '../../../_services/commonService';
 
 export default class RequestDemo extends Component<any, any>{
 
-  public state = {
-
-  }
-
   public getHomeInfo() {
     commonService.getHomeConfig({
       index: 1,

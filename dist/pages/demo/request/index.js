@@ -1,1 +1,89 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var _class,_temp2,_createClass=function(){function n(e,t){for(var o=0;o<t.length;o++){var n=t[o];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(e,t,o){return t&&n(e.prototype,t),o&&n(e,o),e}}(),_get=function e(t,o,n){null===t&&(t=Function.prototype);var r=Object.getOwnPropertyDescriptor(t,o);if(void 0===r){var i=Object.getPrototypeOf(t);return null===i?void 0:e(i,o,n)}if("value"in r)return r.value;var s=r.get;return void 0!==s?s.call(n):void 0},_index=require("../../../npm/@tarojs/taro-weapp/index.js"),_index2=_interopRequireDefault(_index),_commonService=require("../../../_services/commonService.js"),_commonService2=_interopRequireDefault(_commonService);function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function _inherits(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}var RequestDemo=(_temp2=_class=function(){function s(){var e,t,o;_classCallCheck(this,s);for(var n=arguments.length,r=Array(n),i=0;i<n;i++)r[i]=arguments[i];return(t=o=_possibleConstructorReturn(this,(e=s.__proto__||Object.getPrototypeOf(s)).call.apply(e,[this].concat(r)))).$usedState=[],o.customComponents=[],_possibleConstructorReturn(o,t)}return _inherits(s,_index.Component),_createClass(s,[{key:"_constructor",value:function(){_get(s.prototype.__proto__||Object.getPrototypeOf(s.prototype),"_constructor",this).apply(this,arguments),this.state={},this.$$refs=[]}},{key:"getHomeInfo",value:function(){_commonService2.default.getHomeConfig({index:1,isLoop:!0}).then(function(e){console.log(JSON.stringify(e))})}},{key:"getDetialInfo",value:function(){_commonService2.default.getDetailInfo({index:2}).then(function(e){console.log(JSON.stringify(e))})}},{key:"_createData",value:function(e,t,o){this.__state=e||this.state||{},this.__props=t||this.props||{};this.$prefix;return Object.assign(this.__state,{}),this.__state}}]),s}(),_class.$$events=["getHomeInfo","getDetialInfo"],_class.$$componentPath="pages/demo/request/index",_temp2);exports.default=RequestDemo,Component(require("../../../npm/@tarojs/taro-weapp/index.js").default.createComponent(RequestDemo,!0));
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+var _class, _temp2;
+
+var _index = require("../../../npm/@tarojs/taro-weapp/index.js");
+
+var _index2 = _interopRequireDefault(_index);
+
+var _commonService = require("../../../_services/commonService.js");
+
+var _commonService2 = _interopRequireDefault(_commonService);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var RequestDemo = (_temp2 = _class = function (_BaseComponent) {
+  _inherits(RequestDemo, _BaseComponent);
+
+  function RequestDemo() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, RequestDemo);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = RequestDemo.__proto__ || Object.getPrototypeOf(RequestDemo)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = [], _this.customComponents = [], _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(RequestDemo, [{
+    key: "_constructor",
+    value: function _constructor() {
+      _get(RequestDemo.prototype.__proto__ || Object.getPrototypeOf(RequestDemo.prototype), "_constructor", this).apply(this, arguments);
+      this.state = {};
+      this.$$refs = [];
+    }
+  }, {
+    key: "getHomeInfo",
+    value: function getHomeInfo() {
+      _commonService2.default.getHomeConfig({
+        index: 1,
+        isLoop: true
+      }).then(function (result) {
+        console.log(JSON.stringify(result));
+      });
+    }
+  }, {
+    key: "getDetialInfo",
+    value: function getDetialInfo() {
+      _commonService2.default.getDetailInfo({
+        index: 2
+      }).then(function (result) {
+        console.log(JSON.stringify(result));
+      });
+    }
+  }, {
+    key: "_createData",
+    value: function _createData() {
+      this.__state = arguments[0] || this.state || {};
+      this.__props = arguments[1] || this.props || {};
+      var __isRunloopRef = arguments[2];
+      var __prefix = this.$prefix;
+      ;
+      Object.assign(this.__state, {});
+      return this.__state;
+    }
+  }]);
+
+  return RequestDemo;
+}(_index.Component), _class.$$events = ["getHomeInfo", "getDetialInfo"], _class.$$componentPath = "pages/demo/request/index", _temp2);
+exports.default = RequestDemo;
+
+Component(require('../../../npm/@tarojs/taro-weapp/index.js').default.createComponent(RequestDemo, true));
