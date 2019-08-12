@@ -63,6 +63,10 @@ export default class Demo extends Component {
           <View onClick={this.skipToModule.bind(this, '/pages/demo/request/index')}># 请求</View>
           <MyIcon v-class="demo-right" value="right"></MyIcon>
         </View>
+        <View className="demo-item">
+          <View onClick={this.skipToModule.bind(this, '/pages/demo/wxlogin/index')}># 微信授权登录</View>
+          <MyIcon v-class="demo-right" value="right"></MyIcon>
+        </View>
       </View>
     )
   }

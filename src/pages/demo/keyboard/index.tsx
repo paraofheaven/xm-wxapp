@@ -24,7 +24,7 @@ export default class KeyboardDemo extends Component<any, any>{
 
   public handleInputConfirm = () => {
     Taro.atMessage({
-      message: `当前input值为:${this.state.value1}`
+      message: `当前input值:${this.state.value1}`
     });
   }
 

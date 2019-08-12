@@ -35,6 +35,7 @@ class App extends Component {
       'pages/demo/utils/index',
       'pages/demo/native/index',
       'pages/demo/request/index',
+      // 'pages/demo/wxlogin/index',
     ],
     window: {
       backgroundTextStyle: 'light',
