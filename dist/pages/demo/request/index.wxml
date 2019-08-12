@@ -1,0 +1,1 @@
+<block wx:if="{{$taroCompReady}}"><view><button bindtap="getHomeInfo">发送POST请求</button><button bindtap="getDetialInfo">发送GET请求</button></view></block>

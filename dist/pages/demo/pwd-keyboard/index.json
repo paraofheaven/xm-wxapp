@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "at-button": "../../../npm/taro-ui/dist/weapp/components/button/index",
+    "pwd-key-board": "../../../_components/pwd-keyboard/index",
+    "at-message": "../../../npm/taro-ui/dist/weapp/components/message/index"
+  }
+}
