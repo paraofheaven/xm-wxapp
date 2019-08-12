@@ -17,9 +17,18 @@ export default class RequestDemo extends Component<any, any>{
     });
   }
 
+  public getDetialInfo() {
+    commonService.getDetailInfo({
+      index: 2,
+    }).then((result) => {
+      console.log(JSON.stringify(result));
+    });
+  }
+
   public render() {
     return <View>
-      <Button onClick={this.getHomeInfo}>发送请求</Button>
+      <Button onClick={this.getHomeInfo}>发送POST请求</Button>
+      <Button onClick={this.getDetialInfo}>发送GET请求</Button>
     </View>
   }
 }

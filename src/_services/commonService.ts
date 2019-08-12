@@ -12,25 +12,23 @@ export class CommonService extends WxApi {
     });
   }
 
-  public $getProtocol() {
-    return {
-      protocol: {
-        fromPlatform: this.$getPlatform(),
-        functionCode: 'a_bc',
-      },
-    };
+  public getDetailInfo(param) {
+    const req = this.$getReqData('detailApi', param);
+    return this.$requestGet(req, {
+      dto: getHomeConfigDto,
+    });
   }
 
   public $getYourCustomServiceConfig() {
     return {
       homeApi: {
-        me: 'http://me.ly.com:3000/api',
-        inte: 'http://jr.qa.para.com/home/api',
-        rc: 'http://jr.t.para.com/home/api',
-        prod: 'http://jr.para.com/home/api'
+        me: 'http://me.ly.com:9880/api/home',
+        inte: 'http://jr.qa.para.com/api/home',
+        rc: 'http://jr.t.para.com/api/home',
+        prod: 'http://jr.para.com/api/home'
       },
       detailApi: {
-        me: 'http://me.ly.com:3000/api',
+        me: 'http://me.ly.com:9880/api/detail',
         inte: 'http://jr.qa.para.com/detail/api',
         rc: 'http://jr.t.para.com/detail/api',
         prod: 'http://jr.para.com/detail/api'
