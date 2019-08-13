@@ -4,8 +4,8 @@ import commonService from '../../../_services/commonService';
 
 export default class RequestDemo extends Component<any, any>{
 
-  public getHomeInfo() {
-    commonService.getHomeConfig({
+  public fetchPostRequest() {
+    commonService.fetchPostRequest({
       index: 1,
       isLoop: true,
     }).then((result) => {
@@ -13,8 +13,8 @@ export default class RequestDemo extends Component<any, any>{
     });
   }
 
-  public getDetialInfo() {
-    commonService.getDetailInfo({
+  public fetchGetRequest() {
+    commonService.fetchGetRequest({
       index: 2,
     }).then((result) => {
       console.log(JSON.stringify(result));
@@ -23,8 +23,8 @@ export default class RequestDemo extends Component<any, any>{
 
   public render() {
     return <View>
-      <Button onClick={this.getHomeInfo}>发送POST请求</Button>
-      <Button onClick={this.getDetialInfo}>发送GET请求</Button>
+      <Button onClick={this.fetchPostRequest}>发送POST请求</Button>
+      <Button onClick={this.fetchGetRequest}>发送GET请求</Button>
     </View>
   }
 }

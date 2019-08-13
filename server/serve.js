@@ -15,7 +15,6 @@ const isInteractive = process.stdout.isTTY;
 
 const cwd = () => {
   try {
-    // 本地开发的时候使用当前venus-cli/packages/venus 作为Cwd环境.
     return process.env.DEV_MODE === 'true'
       ? require('pkg-dir').sync(__dirname)
       : process.cwd();
