@@ -41,7 +41,7 @@ const lunchNodeServer = (port) => {
   );
   nodeServerHasLunched = true;
   
-  execa('npm', ['run','dev:weapp'], {
+  execa('npm', ['run','build:weapp -- --watch'], {
     stdio: 'inherit',
     cwd: cwd(),
   });

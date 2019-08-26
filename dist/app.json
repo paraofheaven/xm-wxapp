@@ -2,19 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/source/index",
-    "pages/contact/index",
-    "pages/joinus/index",
-    "pages/demo/modal/index",
-    "pages/demo/portal/index",
-    "pages/demo/bottomup/index",
-    "pages/demo/keyboard/index",
-    "pages/demo/otp/index",
-    "pages/demo/otp-modal/index",
-    "pages/demo/pwd-box/index",
-    "pages/demo/pwd-keyboard/index",
-    "pages/demo/utils/index",
-    "pages/demo/native/index",
-    "pages/demo/request/index"
+    "pages/contact/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -56,5 +44,27 @@
       }
     ]
   },
-  "sitemapLocation": "sitemap.json"
+  "subPackages": [
+    {
+      "root": "pages/joinus",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "root": "pages/demo",
+      "pages": [
+        "portal/index",
+        "bottomup/index",
+        "keyboard/index",
+        "modal/index",
+        "otp/index",
+        "otp-modal/index",
+        "pwd-box/index",
+        "pwd-keyboard/index",
+        "native/index",
+        "request/index"
+      ]
+    }
+  ]
 }

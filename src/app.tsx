@@ -23,19 +23,6 @@ class App extends Component {
       'pages/index/index',
       'pages/source/index',
       'pages/contact/index',
-      'pages/joinus/index',
-      'pages/demo/modal/index',
-      'pages/demo/portal/index',
-      'pages/demo/bottomup/index',
-      'pages/demo/keyboard/index',
-      'pages/demo/otp/index',
-      'pages/demo/otp-modal/index',
-      'pages/demo/pwd-box/index',
-      'pages/demo/pwd-keyboard/index',
-      'pages/demo/utils/index',
-      'pages/demo/native/index',
-      'pages/demo/request/index',
-      // 'pages/demo/wxlogin/index',
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -87,9 +74,17 @@ class App extends Component {
       {
         root: "pages/demo",
         pages: [
-          "portal/index"
+          "portal/index",
+          "bottomup/index",
+          "keyboard/index",
+          "modal/index",
+          "otp/index",
+          "otp-modal/index",
+          "pwd-box/index",
+          "pwd-keyboard/index",
+          "native/index",
+          "request/index",
         ],
-        independent: true,
       }
     ]
   }
