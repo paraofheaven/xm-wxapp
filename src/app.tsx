@@ -77,6 +77,21 @@ class App extends Component {
         }
       ]
     },
+    subPackages: [
+      {
+        root: "pages/joinus",
+        pages: [
+          "index"
+        ]
+      },
+      {
+        root: "pages/demo",
+        pages: [
+          "portal/index"
+        ],
+        independent: true,
+      }
+    ]
   }
 
   componentDidMount() { }
