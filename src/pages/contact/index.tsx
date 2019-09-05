@@ -78,7 +78,7 @@ export default class Source extends Component {
         </View>
         <View className="contact-block">
           <View className="cb-word3" onClick={this.showActionSheet}>常见问题</View>
-          <View className="sb-icon icon-question"></View>
+          <View className="sb-icon sh-io icon-question"></View>
         </View>
 
         <AtActionSheet className="contact-action-sheet" isOpened={isActionOpened}>
