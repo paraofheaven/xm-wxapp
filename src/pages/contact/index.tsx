@@ -56,7 +56,7 @@ export default class Source extends Component {
         <View className="contact-block">
           <Text className="cb-word1">地址  |  Address</Text>
           <View className="cb-word2">上海市嘉定区嘉行公路3188号8幢J274室</View>
-          <View className="sb-icon icon-address"></View>
+          <View className="sb-icon itrung icon-address"></View>
         </View>
         <View className="contact-block" onClick={this.callingPhone}>
           <Text className="cb-word1">电话  |  Telephone</Text>
