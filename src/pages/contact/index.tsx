@@ -20,6 +20,13 @@ export default class Source extends Component {
     isActionOpened: false,
   }
 
+  public onShareAppMessage() {
+    return {
+      title: '湘昕科技公司，认真提供技术服务，提供各领域专业的解决方案',
+      path: 'pages/index/index',
+    }
+  }
+
   componentWillMount() {
     Taro.showLoading({
       title: '正在加载...'

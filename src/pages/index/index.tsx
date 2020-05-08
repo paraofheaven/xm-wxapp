@@ -1,7 +1,6 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Swiper, SwiperItem, Image, Text, ScrollView } from '@tarojs/components'
 import classnames from 'classnames';
-import { AtNoticebar } from 'taro-ui';
 import NoticeBar from '../../_components/noticebar';
 import './index.less';
 
@@ -31,6 +30,13 @@ export default class Index extends Component {
 
   componentDidMount() {
     Taro.hideLoading();
+  }
+
+  public onShareAppMessage() {
+    return {
+      title: '湘昕科技公司，认真提供技术服务，提供各领域专业的解决方案',
+      path: 'pages/index/index',
+    }
   }
 
   public changeSwiperIndex = (e) => {

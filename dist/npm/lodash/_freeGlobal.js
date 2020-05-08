@@ -1,1 +1,1 @@
-var freeGlobal="object"==typeof global&&global&&global.Object===Object&&global;module.exports=freeGlobal||this||global||{};
+!function(o,l,b){var e,t,a;e=o,t=b,a="object"==typeof global&&global&&global.Object===t&&global,e.exports=a}(module,exports,Object);

@@ -1,1 +1,1 @@
-module.exports=require("./factoryWithThrowingShims.js")();
+!function(r,o,e){var i;i=e,r.exports=i("./factoryWithThrowingShims.js")()}(module,exports,require);

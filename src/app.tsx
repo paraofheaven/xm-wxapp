@@ -86,10 +86,12 @@ class App extends Component {
           "request/index",
         ],
       }
-    ]
+    ],
   }
 
-  componentDidMount() { }
+  componentDidMount() {
+    Taro.showShareMenu();
+  }
 
   componentDidShow() { }
 

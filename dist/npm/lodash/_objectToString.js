@@ -1,1 +1,1 @@
-var objectProto=Object.prototype,nativeObjectToString=objectProto.toString;function objectToString(t){return nativeObjectToString.call(t)}module.exports=objectToString;
+!function(t,o,r){var e,n;e=t,n=r.prototype.toString,e.exports=function(t){return n.call(t)}}(module,exports,Object);

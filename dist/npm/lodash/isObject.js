@@ -1,1 +1,1 @@
-function isObject(t){var e=typeof t;return null!=t&&("object"==e||"function"==e)}module.exports=isObject;
+!function(t){t.exports=function(t){var n=typeof t;return null!=t&&("object"==n||"function"==n)}}(module,exports,Object);

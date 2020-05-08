@@ -1,1 +1,1 @@
-var root=require("./_root.js"),Symbol=root.Symbol;module.exports=Symbol;
+!function(o,r,e){var t,s;t=o,s=e("./_root.js").Symbol,t.exports=s}(module,exports,require);
