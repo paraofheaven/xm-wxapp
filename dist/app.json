@@ -66,5 +66,6 @@
         "request/index"
       ]
     }
-  ]
+  ],
+  "sitemapLocation": "sitemap.json"
 }

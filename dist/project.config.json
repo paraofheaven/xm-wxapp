@@ -1,57 +1,56 @@
 {
-  "miniprogramRoot": "./",
-  "projectname": "xmApp",
-  "description": "湘昕科技公司官网信息展示wxapp",
-  "appid": "wx5a280f562b924049",
-  "setting": {
-    "urlCheck": false,
-    "es6": false,
-    "postcss": false,
-    "minified": false,
-    "newFeature": true,
-    "coverView": true,
-    "nodeModules": true,
-    "autoAudits": false,
-    "checkInvalidKey": true,
-    "checkSiteMap": true,
-    "uploadWithSourceMap": true,
-    "babelSetting": {
-      "ignore": [],
-      "disablePlugins": [],
-      "outputPath": ""
-    }
-  },
-  "compileType": "miniprogram",
-  "simulatorType": "wechat",
-  "simulatorPluginLibVersion": {},
-  "libVersion": "2.7.7",
-  "condition": {
-    "search": {
-      "current": -1,
-      "list": []
-    },
-    "conversation": {
-      "current": -1,
-      "list": []
-    },
-    "plugin": {
-      "current": -1,
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "miniprogram": {
-      "current": 0,
-      "list": [
-        {
-          "id": 0,
-          "name": "pages/demo/portal/index",
-          "pathName": "pages/demo/portal/index",
-          "query": "env=me",
-          "scene": null
-        }
-      ]
-    }
-  }
+	"projectname": "xmApp",
+	"description": "湘昕科技公司官网信息展示wxapp",
+	"appid": "wx5a280f562b924049",
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"libVersion": "2.7.7",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/demo/portal/index",
+					"pathName": "pages/demo/portal/index",
+					"query": "env=me",
+					"scene": null
+				}
+			]
+		}
+	}
 }
